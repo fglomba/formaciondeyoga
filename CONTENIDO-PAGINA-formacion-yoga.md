@@ -67,10 +67,17 @@ Una lista compacta de los 8 módulos, sin acordeón, con una línea cada uno:
 
 **El maestro, con foto:** **Dr. M. L. Gharote**, director de The Lonavla Yoga Institute (India) y Director Honorario de la formación. Viaja cada año desde la India para compartir con nuestra comunidad.
 
-**Una fila con los tres logos y el nombre debajo de cada uno:**
-- The Lonavla Yoga Institute (India) · Dr. M. L. Gharote
-- Ātmabodha · Escuela de Yoga Tradicional · Natalia Solvey
-- Fundación Holística de la Selva · Estela Puchalski
+**Una fila con los tres logos, el nombre debajo y sus links.** Cada logo lleva a su web, y debajo van los íconos de sus redes. Todos abren en pestaña nueva.
+- **The Lonavla Yoga Institute (India)** · Dr. M. L. Gharote
+  - Web: https://www.lonavlayoga.org/
+- **Ātmabodha · Escuela de Yoga Tradicional** · Natalia Solvey
+  - Web: https://yogatmabodha.com/
+  - Instagram: https://www.instagram.com/yogatmabodha/
+  - Facebook: https://www.facebook.com/atma.bodha.3
+  - Facebook: https://www.facebook.com/estudiaryoga
+- **Fundación Holística de la Selva** · Estela Puchalski
+  - Web: https://fundacionholisticadelaselva.org/
+  - Instagram: https://www.instagram.com/f.holisticadelaselva/
 
 **Línea final:** Equipo docente con formación universitaria y larga trayectoria en la práctica y enseñanza del Haṭha Yoga.
 
@@ -115,4 +122,11 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 > FORMARSE PARA ENSEÑAR. PRACTICAR PARA COMPRENDER.
 
 - **Botón grande:** Inscribirme por WhatsApp
-- **Pie mínimo:** los 3 logos chicos y los links a Instagram de @yogatmabodha y @f.holisticadelaselva.
+- **Pie:** los 3 logos chicos, cada uno con el link a su web, y una fila de links con todas las webs y redes:
+  - https://www.lonavlayoga.org/
+  - https://yogatmabodha.com/
+  - https://fundacionholisticadelaselva.org/
+  - https://www.instagram.com/yogatmabodha/
+  - https://www.instagram.com/f.holisticadelaselva/
+  - https://www.facebook.com/atma.bodha.3
+  - https://www.facebook.com/estudiaryoga

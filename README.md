@@ -76,6 +76,10 @@ Tiene exactamente los 7 bloques de `CONTENIDO-PAGINA-formacion-yoga.md`, en ese 
 
 Fotos que usa la página (máximo 4): `gharote-clase-manuscritos.jpg` (apertura), `practica-sarvangasana-grupo.jpg` (módulo 8), `gharote-retrato.jpg` (maestro) y los logos. `gharote-retrato.jpg` es también la imagen de vista previa al compartir (`og:image`). El resto de las fotos queda disponible en `assets/img/` pero no se usa.
 
+Links a las webs y redes de las tres instituciones: en el bloque 5 cada logo lleva a su web, debajo se ve la dirección escrita y después van los íconos de sus redes (SVG inline, definidos una vez al comienzo del `<body>` y reutilizados con `<use>`). El pie repite los logos con link y suma una fila con todas las webs y redes, con las direcciones a la vista.
+
+Ningún link usa `target="_blank"`: todos abren en la misma pestaña, porque el navegador interno de WhatsApp e Instagram en iPhone bloquea las pestañas nuevas y el toque no hace nada. No hay links armados con JavaScript. El botón flotante de WhatsApp está a 96 px del borde inferior (más el área segura de iPhone) para no quedar tapado por el cartel de Netlify.
+
 Constante para editar, arriba del `<script>` al final de `index.html`:
 
 - `WHATSAPP_URL`: reemplazar `XXXXXXXXXXX` por el número con código de país. Los tres botones de inscripción y el botón flotante la usan.
