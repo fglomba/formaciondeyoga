@@ -34,7 +34,7 @@ Las fotos están optimizadas: máximo 1600 px en el lado más largo, JPG calidad
 
 - `logo-atmabodha.png` — logo de Ātmabodha, Escuela de Yoga Tradicional ("En camino hacia la Sabiduría"), PNG con fondo transparente, 480×480.
 - `logo-fhs.png` — logo de la Fundación Holística de la Selva, verde salvia sobre fondo transparente, 1080×1080.
-- `logo-lonavla.jpg` — sello de The Lonavla Yoga Institute (India), 470×470.
+- `logo-lonavla.png` — sello de The Lonavla Yoga Institute (India), PNG con fondo transparente, 360×360.
 - `branding-fhs.png` — lámina del manual de marca FHS (logo, paleta, tipografía Fugi, íconos). Solo referencia.
 
 ### Dr. M. L. Gharote
