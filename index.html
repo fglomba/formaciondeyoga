@@ -246,28 +246,12 @@
     .trio img { width: 100%; height: auto; }
     .trio figcaption { margin-top: 12px; text-align: center; font-size: .95rem; color: var(--topo-osc); }
 
-    /* Galería de fotos */
-    .galeria-t { margin-top: clamp(56px, 9vw, 96px); text-align: center; }
-    .galeria-t h3 { font-size: var(--h-feature); }
-    .galeria { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 28px; }
-    .g-item { display: block; padding: 0; border: 0; background: var(--nude); border-radius: 12px; overflow: hidden; cursor: zoom-in; aspect-ratio: 4 / 3; -webkit-tap-highlight-color: transparent; }
-    .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
-    .g-item:hover img { transform: scale(1.04); }
-    .g-item.alto { grid-row: span 2; aspect-ratio: auto; }
-
-    .lb { position: fixed; inset: 0; z-index: 200; background: rgba(14,28,56,.94); display: flex; align-items: center; justify-content: center; padding: 56px 12px calc(56px + env(safe-area-inset-bottom, 0px)); }
-    .lb[hidden] { display: none; }
-    .lb figure { margin: 0; max-width: 100%; max-height: 100%; display: flex; flex-direction: column; align-items: center; gap: 10px; }
-    .lb img { max-width: 100%; max-height: calc(100vh - 150px); max-height: calc(100dvh - 150px); width: auto; height: auto; border-radius: 8px; object-fit: contain; }
-    .lb figcaption { color: var(--crema); font-size: .92rem; text-align: center; max-width: 60ch; margin: 0; }
-    .lb button { position: absolute; width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid rgba(244,236,228,.7); background: rgba(27,55,106,.9); color: var(--crema); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 2; }
-    .lb button:hover { background: var(--crema); color: var(--marino); }
-    .lb button:focus-visible { outline: 3px solid var(--azafran-claro); outline-offset: 2px; }
-    .lb .lb-close { top: max(12px, env(safe-area-inset-top, 0px)); right: 12px; }
-    .lb .lb-prev { left: 10px; top: 50%; transform: translateY(-50%); }
-    .lb .lb-next { right: 10px; top: 50%; transform: translateY(-50%); }
-    .lb button svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    body.lb-open { overflow: hidden; }
+    /* Cinta de fotos que se desliza sola */
+    .cinta { margin-top: clamp(56px, 9vw, 96px); overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent); }
+    .cinta-pista { display: flex; width: max-content; animation: cinta 90s linear infinite; will-change: transform; }
+    .cinta.pausa .cinta-pista { animation-play-state: paused; }
+    .cinta img { height: 200px; width: auto; flex: none; margin-right: 12px; border-radius: 12px; background: var(--nude); -webkit-user-drag: none; user-select: none; }
+    @keyframes cinta { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
     /* ============ 6 · TODO LO QUE NECESITÁS SABER ============ */
     .datos-grid { display: grid; gap: 22px; margin-top: 36px; align-items: start; }
@@ -343,6 +327,7 @@
     /* ---------- Tablet / escritorio ---------- */
     @media (min-width: 720px) {
       :root { --gutter: 32px; }
+      .cinta img { height: 250px; margin-right: 16px; }
       body { font-size: 18px; }
       .dim-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
       .logos { grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -354,7 +339,6 @@
       .satsang { grid-template-columns: 1fr 1.25fr; }
       .satsang .foto img { aspect-ratio: auto; height: 100%; min-height: 100%; }
       .satsang .cuerpo { padding: 34px 32px; }
-      .galeria { grid-template-columns: repeat(3, 1fr); gap: 14px; }
       .maestro { grid-template-columns: 1fr 1.1fr; }
       .maestro .foto img { aspect-ratio: auto; height: 100%; min-height: 340px; }
       .maestro .cuerpo { padding: 40px 44px; }
@@ -365,7 +349,6 @@
     }
     @media (min-width: 960px) {
       .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 64px; }
-      .galeria { grid-template-columns: repeat(4, 1fr); }
       .datos-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
       .col { gap: 28px; }
       .wa-float { right: 28px; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); width: auto; height: 60px; padding: 0 26px 0 20px; }
@@ -375,6 +358,9 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
       .js .reveal { opacity: 1; transform: none; }
+      .cinta { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+      .cinta-pista { animation: none; }
+      .cinta .copia { display: none; }
     }
   </style>
 </head>
@@ -599,24 +585,36 @@
 
         <p class="linea-final reveal">Equipo docente con formación universitaria y larga trayectoria en la práctica y enseñanza del <span class="skt">Haṭha Yoga</span>.</p>
 
-        <div class="galeria-t reveal" id="galeria">
-          <h3>Galería</h3>
-        </div>
-        <div class="galeria reveal">
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="640" height="427" loading="lazy" alt="El Dr. M. L. Gharote dibuja en una pizarra un esquema de cuerpo y alma"></button>
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="640" height="394" loading="lazy" alt="El Dr. M. L. Gharote, en blanco y negro, frente a una diapositiva con el linaje de maestros (Parampara)"></button>
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="640" height="425" loading="lazy" alt="El Dr. M. L. Gharote en una charla, con un manuscrito desenfocado en primer plano"></button>
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="640" height="477" loading="lazy" alt="El Dr. M. L. Gharote ajusta la postura de un alumno recostado durante una práctica"></button>
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="640" height="427" loading="lazy" alt="Una instructora junto a un pizarrón con las palabras Yoga Tradicional y el Om, con alumnas que levantan el brazo"></button>
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="640" height="798" loading="lazy" alt="Alumnas sentadas con las manos unidas sobre la cabeza durante una práctica de yoga"></button>
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="640" height="425" loading="lazy" alt="Grupo de alumnos con el Dr. M. L. Gharote en un parque arbolado"></button>
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="640" height="344" loading="lazy" alt="Foto grupal en blanco y negro de alumnos con el Dr. M. L. Gharote sentado al centro"></button>
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="640" height="425" loading="lazy" alt="Manos sosteniendo un manuscrito antiguo, con mats de yoga de fondo"></button>
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="640" height="564" loading="lazy" alt="Pila de libros con la Haṭhapradīpikā en primer plano"></button>
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="640" height="490" loading="lazy" alt="El Dr. M. L. Gharote sonríe con las manos en namasté frente a una diapositiva que dice Om Shantih"></button>
-          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/natalia-y-gharote.jpg" width="640" height="466" loading="lazy" alt="Natalia Solvey y el Dr. M. L. Gharote al aire libre"></button>
-        </div>
+      </div>
 
+      <!-- Cinta de fotos: se desliza sola, sin textos -->
+      <div class="cinta" id="cinta" role="group" aria-label="Fotos de la formación">
+        <div class="cinta-pista">
+          <img src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="640" height="427" loading="lazy" alt="El Dr. M. L. Gharote dibuja en una pizarra un esquema de cuerpo y alma">
+          <img src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="640" height="394" loading="lazy" alt="El Dr. M. L. Gharote, en blanco y negro, frente a una diapositiva con el linaje de maestros (Parampara)">
+          <img src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="640" height="425" loading="lazy" alt="El Dr. M. L. Gharote en una charla, con un manuscrito desenfocado en primer plano">
+          <img src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="640" height="477" loading="lazy" alt="El Dr. M. L. Gharote ajusta la postura de un alumno recostado durante una práctica">
+          <img src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="640" height="427" loading="lazy" alt="Una instructora junto a un pizarrón con las palabras Yoga Tradicional y el Om, con alumnas que levantan el brazo">
+          <img src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="640" height="798" loading="lazy" alt="Alumnas sentadas con las manos unidas sobre la cabeza durante una práctica de yoga">
+          <img src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="640" height="425" loading="lazy" alt="Grupo de alumnos con el Dr. M. L. Gharote en un parque arbolado">
+          <img src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="640" height="344" loading="lazy" alt="Foto grupal en blanco y negro de alumnos con el Dr. M. L. Gharote sentado al centro">
+          <img src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="640" height="425" loading="lazy" alt="Manos sosteniendo un manuscrito antiguo, con mats de yoga de fondo">
+          <img src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="640" height="564" loading="lazy" alt="Pila de libros con la Haṭhapradīpikā en primer plano">
+          <img src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="640" height="490" loading="lazy" alt="El Dr. M. L. Gharote sonríe con las manos en namasté frente a una diapositiva que dice Om Shantih">
+          <img src="assets/img/thumbs/natalia-y-gharote.jpg" width="640" height="466" loading="lazy" alt="Natalia Solvey y el Dr. M. L. Gharote al aire libre">
+          <img class="copia" src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="640" height="427" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="640" height="394" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="640" height="425" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="640" height="477" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="640" height="427" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="640" height="798" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="640" height="425" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="640" height="344" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="640" height="425" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="640" height="564" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="640" height="490" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/natalia-y-gharote.jpg" width="640" height="466" loading="lazy" alt="" aria-hidden="true">
+        </div>
       </div>
     </section>
 
@@ -749,14 +747,6 @@
     <span class="lbl">Inscribirme</span>
   </a>
 
-  <!-- Visor de la galería -->
-  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería de fotos" hidden>
-    <button type="button" class="lb-close" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
-    <button type="button" class="lb-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button type="button" class="lb-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-    <figure><img id="lbImg" src="" alt=""><figcaption id="lbCap"></figcaption></figure>
-  </div>
-
   <script>
     /* ====== Configuración (cambiar acá) ====== */
     // PENDIENTE: reemplazar XXXXXXXXXXX por el número de WhatsApp con código de país (ej. 5493764123456)
@@ -786,53 +776,20 @@
       });
     });
 
-    /* ====== Galería con visor (botones, sin ventanas nuevas) ====== */
+    /* ====== Cinta de fotos: pausa al mantener apretado o pasar el mouse; carga las fotos al acercarse ====== */
     (function () {
-      const thumbs = [...document.querySelectorAll('.g-item img')];
-      if (!thumbs.length) return;
-      const lb = document.getElementById('lb');
-      const img = document.getElementById('lbImg');
-      const cap = document.getElementById('lbCap');
-      let idx = 0, opener = null, startX = null;
-      const full = t => t.getAttribute('src').replace('/thumbs/', '/');
-      function show(i) {
-        idx = (i + thumbs.length) % thumbs.length;
-        img.src = full(thumbs[idx]);
-        img.alt = thumbs[idx].alt;
-        cap.textContent = thumbs[idx].alt;
+      const cinta = document.getElementById('cinta');
+      if (!cinta) return;
+      const pausar = v => cinta.classList.toggle('pausa', v);
+      cinta.addEventListener('mouseenter', () => pausar(true));
+      cinta.addEventListener('mouseleave', () => pausar(false));
+      cinta.addEventListener('touchstart', () => pausar(true), { passive: true });
+      ['touchend', 'touchcancel'].forEach(t => cinta.addEventListener(t, () => pausar(false), { passive: true }));
+      // las fotos arrancan en lazy; al acercarse a la cinta se cargan todas para que no aparezcan de golpe
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { cinta.querySelectorAll('img').forEach(i => { i.loading = 'eager'; }); io.disconnect(); } }, { rootMargin: '900px 0px' });
+        io.observe(cinta);
       }
-      function open(i, btn) {
-        opener = btn; show(i);
-        lb.hidden = false; document.body.classList.add('lb-open');
-        lb.querySelector('.lb-close').focus();
-      }
-      function close() {
-        lb.hidden = true; document.body.classList.remove('lb-open'); img.removeAttribute('src');
-        if (opener) opener.focus();
-      }
-      thumbs.forEach((t, i) => t.closest('button').addEventListener('click', e => open(i, e.currentTarget)));
-      lb.querySelector('.lb-close').addEventListener('click', close);
-      lb.querySelector('.lb-prev').addEventListener('click', () => show(idx - 1));
-      lb.querySelector('.lb-next').addEventListener('click', () => show(idx + 1));
-      lb.addEventListener('click', e => { if (e.target === lb) close(); });
-      document.addEventListener('keydown', e => {
-        if (lb.hidden) return;
-        if (e.key === 'Escape') close();
-        else if (e.key === 'ArrowLeft') show(idx - 1);
-        else if (e.key === 'ArrowRight') show(idx + 1);
-        else if (e.key === 'Tab') {            // el foco se queda dentro del visor
-          const f = [...lb.querySelectorAll('button')];
-          const first = f[0], last = f[f.length - 1];
-          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-        }
-      });
-      lb.addEventListener('touchstart', e => { startX = e.changedTouches[0].clientX; }, { passive: true });
-      lb.addEventListener('touchend', e => {
-        if (startX === null) return;
-        const dx = e.changedTouches[0].clientX - startX; startX = null;
-        if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
-      }, { passive: true });
     })();
 
     /* ====== Aparición suave al hacer scroll ====== */

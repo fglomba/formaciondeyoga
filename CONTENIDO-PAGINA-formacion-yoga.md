@@ -91,7 +91,7 @@ Los módulos se numeran 1, 2, 3… 8 (sin ceros a la izquierda).
 
 **Línea final:** Equipo docente con formación universitaria y larga trayectoria en la práctica y enseñanza del Haṭha Yoga.
 
-**Galería de fotos** (al final del bloque): miniaturas que se agrandan al tocarlas, con botones para pasar a la anterior o a la siguiente.
+**Cinta de fotos** (al final del bloque): una tira de fotos que se desliza sola hacia un costado, sin textos ni descripciones. Se pausa al pasar el mouse o mantener apretado.
 
 ---
 

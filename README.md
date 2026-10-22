@@ -76,7 +76,7 @@ Tiene exactamente los 7 bloques de `CONTENIDO-PAGINA-formacion-yoga.md`, en ese 
 
 Fotos de la página: `gharote-clase-manuscritos.jpg` (apertura), `practica-sarvangasana-grupo.jpg` (módulo 8), `gharote-sonriendo-manuscritos.jpg` (Satsaṅga), `gharote-retrato.jpg` (maestro), `estela-natalia-gharote.jpg` (los tres directores), los retratos `avatar-*.jpg` y los logos. `gharote-retrato.jpg` es también la imagen de vista previa al compartir (`og:image`).
 
-Galería: 12 fotos con miniaturas de 640 px en `assets/img/thumbs/` (mismo nombre que la foto grande). Para sumar una foto a la galería: agregar la foto en `assets/img/`, su miniatura en `assets/img/thumbs/` y un `<button class="g-item">` con la miniatura dentro de `.galeria` en `index.html`. El visor usa la foto grande automáticamente.
+Cinta de fotos: al final del bloque 5 hay una tira con 12 fotos que se desliza sola hacia un costado, sin textos. Usa miniaturas de 640 px que están en `assets/img/thumbs/` (mismo nombre que la foto grande). Para sumar una foto: agregar su miniatura en `assets/img/thumbs/` y un `<img>` con su `alt` dentro de `.cinta-pista` en `index.html`, y repetirlo en el segundo juego (el que lleva `class="copia"`, con `alt=""` y `aria-hidden="true"`), porque el segundo juego es lo que hace que el movimiento no tenga saltos. Las fotos no son links. Para quienes tienen activada la opción de reducir movimiento, la tira queda quieta y se desplaza a mano.
 
 Tipografía: Cormorant Garamond para títulos, números, frases y sánscrito; Jost para texto, etiquetas y botones; Fugi solo en la frase final de cierre.
 
