@@ -59,6 +59,14 @@ Una lista compacta de los 8 módulos, sin acordeón, con una línea cada uno:
 7. **Filosofía del Yoga** · 40 h. Yogasūtra de Patañjali y los ocho miembros del Aṣṭāṅga Yoga.
 8. **Práctica del Yoga Tradicional** · 240 h. El corazón de la formación. *(destacar)*
 
+Los módulos se numeran 1, 2, 3… 8 (sin ceros a la izquierda).
+
+**Satsaṅga** (tarjeta con foto, debajo del módulo 8):
+- Etiquetas: Un domingo al mes · De 10:30 a 12 · Por Zoom
+- Encuentro en vivo desde la India con el Dr. M. L. Gharote
+- Traducción simultánea de Natalia Solvey
+- **Texto:** A lo largo del año, un domingo al mes de 10:30 a 12 nos encontramos para el estudio de los manuscritos antiguos de reciente publicación. Esto nos permite conocer de manera directa y guiada las enseñanzas originales de los maestros del Haṭha Yoga tradicional.
+
 ---
 
 ## BLOQUE 5 · QUIÉNES NOS RESPALDAN
@@ -67,7 +75,9 @@ Una lista compacta de los 8 módulos, sin acordeón, con una línea cada uno:
 
 **El maestro, con foto:** **Dr. M. L. Gharote**, director de The Lonavla Yoga Institute (India) y Director Honorario de la formación. Viaja cada año desde la India para compartir con nuestra comunidad.
 
-**Una fila con los tres logos, el nombre debajo y sus links.** Cada logo lleva a su web, y debajo van los íconos de sus redes. Todos abren en pestaña nueva.
+**Foto de los tres juntos** (Estela Puchalski, el Dr. M. L. Gharote y Natalia Solvey), debajo de la tarjeta del maestro.
+
+**Una fila con los tres logos, el nombre debajo y sus links**, cada uno con el retrato de su director/a. Cada logo lleva a su web, y debajo van los íconos de sus redes. Todos abren en pestaña nueva.
 - **The Lonavla Yoga Institute (India)** · Dr. M. L. Gharote
   - Web: https://www.lonavlayoga.org/
 - **Ātmabodha · Escuela de Yoga Tradicional** · Natalia Solvey
@@ -81,6 +91,8 @@ Una lista compacta de los 8 módulos, sin acordeón, con una línea cada uno:
 
 **Línea final:** Equipo docente con formación universitaria y larga trayectoria en la práctica y enseñanza del Haṭha Yoga.
 
+**Galería de fotos** (al final del bloque): miniaturas que se agrandan al tocarlas, con botones para pasar a la anterior o a la siguiente.
+
 ---
 
 ## BLOQUE 6 · TODO LO QUE NECESITÁS SABER
@@ -91,7 +103,7 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 - Inicio: 13 de marzo · Receso: 15 al 30 de julio · Cierre: 27 de noviembre · Diciembre: evaluaciones
 - Sábados de 8:30 a 12:45 (teoría + práctica)
 - 1 clase de práctica semanal obligatoria, con opciones de día y horario ⚠️ PENDIENTE: días y horarios
-- Satsaṅga: un domingo al mes
+- Satsaṅga: un domingo al mes, de 10:30 a 12, por Zoom
 - Las clases quedan grabadas
 - 512 h cátedra: 297 en vivo + 215 de trabajo domiciliario
 
@@ -101,7 +113,7 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 
 **Inversión**
 - Matrícula: AR$ 210.000
-- 10 cuotas de AR$ 180.000
+- 10 cuotas de AR$ 210.000
 - Afiliación a Lonavla: USD 60
 - Certificación de Lonavla: USD 99
 

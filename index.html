@@ -24,7 +24,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="preload" href="assets/img/gharote-clase-manuscritos.jpg" as="image">
 
   <script>document.documentElement.classList.add('js');</script>
@@ -64,6 +64,15 @@
       --f-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
       --f-sans: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
+      /* Escala tipográfica (un solo sistema):
+         Cormorant Garamond = títulos, números, frases y sánscrito · Jost = texto, etiquetas y botones
+         Fugi = solo la frase final de cierre */
+      --h-feature: clamp(2rem, 4.6vw, 2.6rem);  /* títulos grandes de tarjeta destacada */
+      --h-card: 1.6rem;                         /* títulos de tarjeta */
+      --h-item: 1.35rem;                        /* títulos de ítem de lista */
+      --q-md: clamp(1.8rem, 4.8vw, 2.6rem);     /* frases destacadas */
+      --q-xl: clamp(2.1rem, 6vw, 3.6rem);       /* frases centrales */
+
       --radius: 16px;
       --gutter: 20px;
       --line: rgba(154,139,120,.35);
@@ -84,6 +93,7 @@
     a { color: var(--salvia-osc); text-underline-offset: 3px; }
     a:hover { color: var(--marino); }
     h1, h2, h3 { font-family: var(--f-serif); color: var(--marino); line-height: 1.15; margin: 0; font-weight: 600; }
+    h3 { font-weight: 700; }
     p { margin: 0 0 1em; }
     ul, ol { margin: 0; padding: 0; list-style: none; }
     button { font: inherit; color: inherit; }
@@ -101,9 +111,8 @@
     .dark a { color: var(--azafran-claro); }
     .dark a:hover { color: var(--crema); }
 
-    h1, h2, h3, .frase, .promo .pct, .timeline .fecha { font-variant-numeric: lining-nums; }
+    h1, h2, h3, .frase, .frase-xl, .promo .pct, .timeline .fecha, .mod-num, .carga .num, .horas .num { font-variant-numeric: lining-nums; }
     .skt { font-family: var(--f-serif); font-style: italic; font-size: 1.1em; letter-spacing: .005em; }
-    .fugi { font-family: var(--f-display); font-weight: 400; }
     .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
     .eyebrow { font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; color: var(--salvia-osc); margin: 0 0 14px; }
@@ -117,10 +126,11 @@
     .center .lead { margin-inline: auto; }
 
     /* ---------- Frases destacadas ---------- */
-    .frase {
+    .frase, .frase-xl {
       font-family: var(--f-serif); font-style: italic; font-weight: 500; color: var(--marino);
-      font-size: clamp(1.6rem, 4.4vw, 2.5rem); line-height: 1.26; margin: 0;
+      font-size: var(--q-md); line-height: 1.26; margin: 0;
     }
+    .frase-xl { font-size: var(--q-xl); line-height: 1.18; }
 
     /* ---------- Etiquetas / pendientes ---------- */
     .pend {
@@ -150,7 +160,6 @@
     .hero { padding-block: 40px clamp(56px, 9vw, 96px); }
     .hero-grid { display: grid; gap: 48px; align-items: center; }
     .hero h1 { font-size: clamp(2.6rem, 7.4vw, 4.2rem); margin-bottom: 22px; }
-    .hero .eyebrow .nivel { font-family: var(--f-display); font-size: 1.45em; letter-spacing: .03em; text-transform: none; color: var(--salvia); vertical-align: -.08em; white-space: nowrap; }
     .hero .frase { margin-bottom: 22px; }
     .hero .texto { max-width: 54ch; }
     .datos { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 22px 0 30px; padding: 0; font-weight: 500; color: var(--marino); font-size: .98rem; }
@@ -161,27 +170,26 @@
     /* ============ 2 · LA PROPUESTA ============ */
     .dim-grid { display: grid; gap: 22px; margin-top: 44px; }
     .dim { background: var(--blanco); border-radius: var(--radius); border: 1px solid rgba(154,139,120,.3); padding: 28px 24px 30px; }
-    .dim h3 { font-size: clamp(1.9rem, 4vw, 2.3rem); margin-bottom: 4px; }
-    .dim .sub { font-family: var(--f-serif); font-size: 1.3rem; color: var(--salvia-osc); font-weight: 600; margin: 0 0 14px; line-height: 1.2; }
+    .dim h3 { font-size: var(--h-feature); margin-bottom: 4px; }
+    .dim .sub { font-family: var(--f-serif); font-size: var(--h-item); color: var(--salvia-osc); font-weight: 700; margin: 0 0 14px; line-height: 1.2; }
     .dim p:last-child { margin: 0; }
     .cierre-bloque { margin-top: clamp(56px, 9vw, 96px); text-align: center; }
-    .cierre-bloque .frase { font-size: clamp(1.9rem, 5.6vw, 3.2rem); max-width: 18ch; margin-inline: auto; }
+    .cierre-bloque .frase-xl { max-width: 18ch; margin-inline: auto; }
     .cierre-bloque .linea { width: 56px; height: 3px; background: var(--azafran); border-radius: 3px; margin: 0 auto 28px; }
 
     /* ============ 3 · FRASE CENTRAL ============ */
     .banda { padding-block: clamp(72px, 12vw, 136px); text-align: center; }
-    .banda .principal { font-family: var(--f-serif); font-weight: 500; color: var(--crema); margin: 0 auto; font-size: clamp(2.1rem, 6.4vw, 4rem); line-height: 1.16; max-width: 20ch; }
+    .banda .principal { font-family: var(--f-serif); font-weight: 500; color: var(--crema); margin: 0 auto; font-size: calc(var(--q-xl) * 1.1); line-height: 1.16; max-width: 20ch; }
     .banda .linea { width: 64px; height: 3px; background: var(--azafran); border-radius: 3px; margin: 30px auto; }
     .banda .secundaria { font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--azafran-claro); margin: 0 auto; max-width: 34ch; }
 
     /* ============ 4 · QUÉ VAS A ESTUDIAR ============ */
     .prog-head { max-width: 760px; }
-    .prog-head .frase { font-size: clamp(1.9rem, 5vw, 2.9rem); }
     .mods { margin-top: 44px; background: var(--blanco); border: 1px solid rgba(154,139,120,.35); border-radius: var(--radius); padding: 4px 20px; }
     .mod { display: grid; grid-template-columns: 3rem 1fr; gap: 0 14px; padding: 18px 0; border-bottom: 1px solid var(--line); }
     .mod:last-child { border-bottom: 0; }
-    .mod-num { font-family: var(--f-display); font-size: 2.2rem; line-height: 1; color: var(--salvia); }
-    .mod-title { font-family: var(--f-serif); font-weight: 600; font-size: 1.35rem; line-height: 1.2; color: var(--marino); margin: 0; }
+    .mod-num { font-family: var(--f-serif); font-weight: 700; font-size: 2.3rem; line-height: 1; color: var(--salvia); text-align: center; }
+    .mod-title { font-family: var(--f-serif); font-weight: 700; font-size: var(--h-item); line-height: 1.2; color: var(--marino); margin: 0; }
     .mod-hours { font-weight: 600; color: var(--topo-osc); font-size: .92rem; white-space: nowrap; font-family: var(--f-sans); }
     .mod-top { display: flex; align-items: baseline; gap: 14px; margin-bottom: 4px; }
     .mod-top .mod-title { flex: 1; min-width: 0; }
@@ -191,18 +199,28 @@
     .mod-destacado { margin-top: 20px; background: var(--blanco); border: 2px solid var(--azafran); border-radius: var(--radius); overflow: hidden; }
     .mod-destacado .foto img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
     .mod-destacado .cuerpo { padding: 26px 22px 30px; }
-    .mod-destacado .top { display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px; }
-    .mod-destacado .mod-num { color: var(--azafran-texto); }
-    .mod-destacado h3 { font-size: clamp(1.9rem, 4.4vw, 2.4rem); margin-bottom: 8px; }
-    .mod-destacado .horas { font-size: 1.15rem; font-weight: 600; color: var(--azafran-texto); margin-bottom: 10px; }
-    .mod-destacado .horas .fugi { font-size: 2.6rem; line-height: 1; margin-right: 4px; vertical-align: -.08em; }
-    .mod-destacado .mod-sum { font-family: var(--f-serif); font-style: italic; font-weight: 500; font-size: 1.5rem; line-height: 1.3; color: var(--marino); margin: 0; }
+    .mod-destacado .top { margin-bottom: 4px; }
+    .mod-destacado .mod-num { color: var(--azafran-texto); font-size: 2.6rem; text-align: left; }
+    .mod-destacado h3 { font-size: var(--h-feature); margin-bottom: 8px; }
+    .mod-destacado .horas { font-size: 1.05rem; font-weight: 600; color: var(--azafran-texto); margin-bottom: 10px; }
+    .mod-destacado .horas .num { font-family: var(--f-serif); font-weight: 700; font-size: 2.4rem; line-height: 1; margin-right: 4px; vertical-align: -.06em; }
+    .mod-destacado .mod-sum { font-family: var(--f-serif); font-style: italic; font-weight: 500; font-size: var(--h-card); line-height: 1.3; color: var(--marino); margin: 0; }
+
+    /* Satsaṅga */
+    .satsang { margin-top: 28px; background: var(--blanco); border: 1px solid rgba(154,139,120,.35); border-left: 4px solid var(--salvia); border-radius: var(--radius); overflow: hidden; display: grid; }
+    .satsang .foto img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 30%; }
+    .satsang .cuerpo { padding: 26px 22px 30px; }
+    .satsang .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+    .satsang .chips li { padding: 5px 14px; border-radius: 999px; background: var(--crema); border: 1px solid rgba(96,127,109,.4); color: var(--salvia-osc); font-size: .9rem; font-weight: 500; line-height: 1.4; }
+    .satsang h3 { font-size: var(--h-feature); margin-bottom: 10px; }
+    .satsang .linea-dato { font-family: var(--f-serif); font-weight: 700; font-size: var(--h-item); line-height: 1.25; color: var(--salvia-osc); margin: 0 0 4px; }
+    .satsang .texto { margin: 16px 0 0; }
 
     /* ============ 5 · QUIÉNES NOS RESPALDAN ============ */
     .maestro { margin-top: 44px; background: var(--noche); color: var(--crema); border-radius: var(--radius); overflow: hidden; display: grid; }
     .maestro .foto img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 30%; }
     .maestro .cuerpo { padding: 28px 24px 32px; display: flex; flex-direction: column; justify-content: center; }
-    .maestro h3 { font-size: clamp(2.1rem, 5vw, 2.9rem); color: var(--crema); margin-bottom: 8px; }
+    .maestro h3 { font-size: var(--h-feature); color: var(--crema); margin-bottom: 8px; }
     .maestro .rol { color: var(--azafran-claro); font-weight: 500; margin-bottom: 14px; }
     .maestro .texto { margin: 0; font-size: 1.08rem; }
     .logos { display: grid; gap: 22px; margin-top: 44px; }
@@ -210,8 +228,11 @@
     .logo-item .l { height: 104px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; border-radius: 12px; transition: transform .2s; }
     .logo-item a.l:hover { transform: scale(1.04); }
     .logo-item .l img { max-height: 104px; width: auto; object-fit: contain; }
-    .logo-item h3 { font-size: 1.45rem; margin-bottom: 8px; }
-    .logo-item .dir { margin: 0; font-weight: 500; color: var(--salvia-osc); }
+    .logo-item h3 { font-size: var(--h-card); margin-bottom: 14px; }
+    .director { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 0 auto; text-align: left; }
+    .director img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid var(--blanco); box-shadow: 0 0 0 1px var(--salvia); }
+    .director small { display: block; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; color: var(--topo-osc); line-height: 1.3; }
+    .director strong { display: block; font-family: var(--f-serif); font-weight: 700; font-size: var(--h-item); color: var(--marino); line-height: 1.2; }
     .logo-item a.url { display: inline-block; align-self: center; margin-top: 12px; padding: 10px 6px; min-height: 44px; font-weight: 600; font-size: 1rem; color: var(--marino); word-break: break-word; }
     .logo-item a.url:hover { color: var(--azafran-texto); }
     .redes { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 18px; }
@@ -220,11 +241,39 @@
     .ico { width: 22px; height: 22px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
     .linea-final { margin: 40px auto 0; text-align: center; max-width: 52ch; font-size: 1.12rem; }
 
+    .trio { margin: 36px auto 0; max-width: 820px; }
+    .trio .photo { border-radius: var(--radius); overflow: hidden; background: var(--nude); }
+    .trio img { width: 100%; height: auto; }
+    .trio figcaption { margin-top: 12px; text-align: center; font-size: .95rem; color: var(--topo-osc); }
+
+    /* Galería de fotos */
+    .galeria-t { margin-top: clamp(56px, 9vw, 96px); text-align: center; }
+    .galeria-t h3 { font-size: var(--h-feature); }
+    .galeria { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 28px; }
+    .g-item { display: block; padding: 0; border: 0; background: var(--nude); border-radius: 12px; overflow: hidden; cursor: zoom-in; aspect-ratio: 4 / 3; -webkit-tap-highlight-color: transparent; }
+    .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .g-item:hover img { transform: scale(1.04); }
+    .g-item.alto { grid-row: span 2; aspect-ratio: auto; }
+
+    .lb { position: fixed; inset: 0; z-index: 200; background: rgba(14,28,56,.94); display: flex; align-items: center; justify-content: center; padding: 56px 12px calc(56px + env(safe-area-inset-bottom, 0px)); }
+    .lb[hidden] { display: none; }
+    .lb figure { margin: 0; max-width: 100%; max-height: 100%; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .lb img { max-width: 100%; max-height: calc(100vh - 150px); max-height: calc(100dvh - 150px); width: auto; height: auto; border-radius: 8px; object-fit: contain; }
+    .lb figcaption { color: var(--crema); font-size: .92rem; text-align: center; max-width: 60ch; margin: 0; }
+    .lb button { position: absolute; width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid rgba(244,236,228,.7); background: rgba(27,55,106,.9); color: var(--crema); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 2; }
+    .lb button:hover { background: var(--crema); color: var(--marino); }
+    .lb button:focus-visible { outline: 3px solid var(--azafran-claro); outline-offset: 2px; }
+    .lb .lb-close { top: max(12px, env(safe-area-inset-top, 0px)); right: 12px; }
+    .lb .lb-prev { left: 10px; top: 50%; transform: translateY(-50%); }
+    .lb .lb-next { right: 10px; top: 50%; transform: translateY(-50%); }
+    .lb button svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    body.lb-open { overflow: hidden; }
+
     /* ============ 6 · TODO LO QUE NECESITÁS SABER ============ */
     .datos-grid { display: grid; gap: 22px; margin-top: 36px; align-items: start; }
     .col { display: grid; gap: 22px; }
     .card { background: var(--blanco); border: 1px solid rgba(154,139,120,.3); border-radius: var(--radius); padding: 26px 22px 24px; }
-    .card h3 { font-size: 1.7rem; margin-bottom: 16px; }
+    .card h3 { font-size: var(--h-card); margin-bottom: 16px; }
     .card ul.puntos li { position: relative; padding-left: 18px; margin-bottom: 10px; }
     .card ul.puntos li::before { content: ""; position: absolute; left: 0; top: .72em; width: 7px; height: 7px; border-radius: 50%; background: var(--salvia); }
     .card ul.puntos li:last-child { margin-bottom: 0; }
@@ -234,10 +283,10 @@
     .timeline li:last-child { margin-bottom: 0; }
     .timeline li::before { content: ""; position: absolute; left: -31px; top: 4px; width: 14px; height: 14px; border-radius: 50%; background: var(--blanco); border: 2px solid var(--salvia); }
     .timeline li.hito::before { background: var(--azafran); border-color: var(--azafran); }
-    .timeline .fecha { font-family: var(--f-serif); font-weight: 600; font-size: 1.35rem; color: var(--marino); margin-right: 8px; }
+    .timeline .fecha { font-family: var(--f-serif); font-weight: 700; font-size: var(--h-item); color: var(--marino); margin-right: 8px; }
     .carga { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 20px; text-align: center; }
     .carga div { background: var(--crema); border-radius: 12px; padding: 12px 6px; }
-    .carga .num { display: block; font-family: var(--f-display); font-size: 2.1rem; color: var(--azafran-texto); line-height: 1.1; }
+    .carga .num { display: block; font-family: var(--f-serif); font-weight: 700; font-size: 2.2rem; color: var(--azafran-texto); line-height: 1.1; }
     .carga .lbl { font-size: .82rem; line-height: 1.25; display: block; margin-top: 4px; }
     .carga .total { background: var(--marino); }
     .carga .total .num { color: var(--azafran-claro); }
@@ -253,10 +302,10 @@
 
     .promos { display: grid; gap: 12px; }
     .promo { background: var(--blanco); border: 2px solid var(--azafran); border-radius: var(--radius); padding: 16px 20px; display: grid; grid-template-columns: 5.4rem 1fr; gap: 0 14px; align-items: center; }
-    .promo .pct { font-family: var(--f-serif); font-weight: 600; font-size: 2.9rem; line-height: 1; color: var(--azafran-texto); white-space: nowrap; }
+    .promo .pct { font-family: var(--f-serif); font-weight: 700; font-size: 2.9rem; line-height: 1; color: var(--azafran-texto); white-space: nowrap; }
     .promo .pct small { font-family: var(--f-sans); font-size: .78rem; font-weight: 600; margin-left: 3px; letter-spacing: .04em; }
     .promo p { margin: 0; font-size: 1.02rem; line-height: 1.4; }
-    .promos-t { font-size: 1.7rem; margin: 0 0 14px; }
+    .promos-t { font-size: var(--h-card); margin: 0 0 14px; }
     .dato { display: grid; grid-template-columns: 1fr; gap: 8px; justify-items: start; padding: 14px 0; border-top: 1px solid rgba(154,139,120,.3); }
     .dato .k { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--topo-osc); font-weight: 500; line-height: 1; }
     .dato .v { font-weight: 600; font-size: 1.2rem; color: var(--marino); word-break: break-all; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
@@ -302,6 +351,10 @@
       .mod-destacado { display: grid; grid-template-columns: 1.1fr 1fr; }
       .mod-destacado .foto img { aspect-ratio: auto; height: 100%; }
       .mod-destacado .cuerpo { order: -1; padding: 36px 34px; align-self: center; }
+      .satsang { grid-template-columns: 1fr 1.25fr; }
+      .satsang .foto img { aspect-ratio: auto; height: 100%; min-height: 100%; }
+      .satsang .cuerpo { padding: 34px 32px; }
+      .galeria { grid-template-columns: repeat(3, 1fr); gap: 14px; }
       .maestro { grid-template-columns: 1fr 1.1fr; }
       .maestro .foto img { aspect-ratio: auto; height: 100%; min-height: 340px; }
       .maestro .cuerpo { padding: 40px 44px; }
@@ -312,6 +365,7 @@
     }
     @media (min-width: 960px) {
       .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 64px; }
+      .galeria { grid-template-columns: repeat(4, 1fr); }
       .datos-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
       .col { gap: 28px; }
       .wa-float { right: 28px; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); width: auto; height: 60px; padding: 0 26px 0 20px; }
@@ -339,7 +393,7 @@
     <section class="bloque hero" aria-labelledby="h-hero">
       <div class="wrap hero-grid">
         <div>
-          <p class="eyebrow">Formación Profesional · <span class="nivel">Nivel I · 2027</span></p>
+          <p class="eyebrow">Formación Profesional · Nivel I · 2027</p>
           <h1 id="h-hero">Instructorado en Yoga Tradicional</h1>
           <p class="frase">Una formación que integra tradición, conocimiento y experiencia personal.</p>
           <p class="texto" style="margin-top:22px">Para quienes desean profundizar en la práctica del Yoga y adquirir las bases para transmitirlo con responsabilidad, respetando las enseñanzas de los antiguos maestros y los textos tradicionales.</p>
@@ -383,7 +437,7 @@
 
         <div class="cierre-bloque reveal">
           <div class="linea" aria-hidden="true"></div>
-          <p class="frase">Una escuela de vida y un camino de liberación.</p>
+          <p class="frase-xl">Una escuela de vida y un camino de liberación.</p>
         </div>
       </div>
     </section>
@@ -407,49 +461,49 @@
 
         <ol class="mods reveal">
           <li class="mod">
-            <span class="mod-num" aria-hidden="true">01</span>
+            <span class="mod-num" aria-hidden="true">1</span>
             <div>
               <div class="mod-top"><h3 class="mod-title"><span class="sr-only">Módulo 1: </span>Introducción e Historia del Yoga</h3><span class="mod-hours">40 h</span></div>
               <p class="mod-sum">De las raíces védicas a Patañjali y el <span class="skt">Haṭha Yoga</span>.</p>
             </div>
           </li>
           <li class="mod">
-            <span class="mod-num" aria-hidden="true">02</span>
+            <span class="mod-num" aria-hidden="true">2</span>
             <div>
               <div class="mod-top"><h3 class="mod-title"><span class="sr-only">Módulo 2: </span>Fundamentos del <span class="skt">Āsana</span></h3><span class="mod-hours">40 h</span></div>
               <p class="mod-sum">Propósito, clasificación y principios de las posturas tradicionales.</p>
             </div>
           </li>
           <li class="mod">
-            <span class="mod-num" aria-hidden="true">03</span>
+            <span class="mod-num" aria-hidden="true">3</span>
             <div>
               <div class="mod-top"><h3 class="mod-title"><span class="sr-only">Módulo 3: </span>Anatomía y Fisiología aplicadas</h3><span class="mod-hours">40 h</span></div>
               <p class="mod-sum">Columna, articulaciones y respiración, desde la mirada del practicante.</p>
             </div>
           </li>
           <li class="mod">
-            <span class="mod-num" aria-hidden="true">04</span>
+            <span class="mod-num" aria-hidden="true">4</span>
             <div>
               <div class="mod-top"><h3 class="mod-title"><span class="sr-only">Módulo 4: </span>Respiración y <span class="skt">Prāṇāyāma</span></h3><span class="mod-hours">40 h</span></div>
               <p class="mod-sum"><span class="skt">Anuloma Viloma</span>, <span class="skt">Ujjāyī</span> y <span class="skt">Laharī</span>.</p>
             </div>
           </li>
           <li class="mod">
-            <span class="mod-num" aria-hidden="true">05</span>
+            <span class="mod-num" aria-hidden="true">5</span>
             <div>
               <div class="mod-top"><h3 class="mod-title"><span class="sr-only">Módulo 5: </span>Purificación · <span class="skt">Nāḍī Śuddhi</span></h3><span class="mod-hours">40 h</span></div>
               <p class="mod-sum">Armonizar cuerpo, mente, emociones y energía.</p>
             </div>
           </li>
           <li class="mod">
-            <span class="mod-num" aria-hidden="true">06</span>
+            <span class="mod-num" aria-hidden="true">6</span>
             <div>
               <div class="mod-top"><h3 class="mod-title"><span class="sr-only">Módulo 6: </span>Organización de la práctica personal</h3><span class="mod-hours">32 h</span></div>
               <p class="mod-sum">Una práctica sólida, segura y progresiva.</p>
             </div>
           </li>
           <li class="mod">
-            <span class="mod-num" aria-hidden="true">07</span>
+            <span class="mod-num" aria-hidden="true">7</span>
             <div>
               <div class="mod-top"><h3 class="mod-title"><span class="sr-only">Módulo 7: </span>Filosofía del Yoga</h3><span class="mod-hours">40 h</span></div>
               <p class="mod-sum"><span class="skt">Yogasūtra</span> de Patañjali y los ocho miembros del <span class="skt">Aṣṭāṅga Yoga</span>.</p>
@@ -464,10 +518,25 @@
                  alt="Un grupo de alumnas practica la postura sobre los hombros sobre mats violetas, con una instructora sentada a la izquierda">
           </div>
           <div class="cuerpo">
-            <div class="top"><span class="mod-num" aria-hidden="true">08</span></div>
+            <div class="top"><span class="mod-num" aria-hidden="true">8</span></div>
             <h3 id="h-m8"><span class="sr-only">Módulo 8: </span>Práctica del Yoga Tradicional</h3>
-            <p class="horas"><span class="fugi">240</span> h</p>
+            <p class="horas"><span class="num">240</span> h</p>
             <p class="mod-sum">El corazón de la formación.</p>
+          </div>
+        </article>
+
+        <!-- Satsaṅga: encuentros mensuales con el Dr. Gharote -->
+        <article class="satsang reveal" aria-labelledby="h-sat">
+          <div class="foto">
+            <img src="assets/img/gharote-sonriendo-manuscritos.jpg" width="1600" height="1161" loading="lazy"
+                 alt="El Dr. M. L. Gharote, con kurta roja, sostiene sonriendo dos manuscritos antiguos">
+          </div>
+          <div class="cuerpo">
+            <ul class="chips" aria-label="Datos del Satsaṅga"><li>Un domingo al mes</li><li>De 10:30 a 12</li><li>Por Zoom</li></ul>
+            <h3 id="h-sat"><span class="skt">Satsaṅga</span></h3>
+            <p class="linea-dato">Encuentro en vivo desde la India con el Dr. M. L. Gharote</p>
+            <p class="linea-dato">Traducción simultánea de Natalia Solvey</p>
+            <p class="texto">A lo largo del año, un domingo al mes de 10:30 a 12 nos encontramos para el estudio de los manuscritos antiguos de reciente publicación. Esto nos permite conocer de manera directa y guiada las enseñanzas originales de los maestros del <span class="skt">Haṭha Yoga</span> tradicional.</p>
           </div>
         </article>
       </div>
@@ -493,17 +562,23 @@
           </div>
         </article>
 
+
+        <figure class="trio reveal">
+          <div class="photo"><img src="assets/img/estela-natalia-gharote.jpg" width="1280" height="960" loading="lazy" alt="Estela Puchalski, el Dr. M. L. Gharote y Natalia Solvey sonriendo, con las manos en namasté"></div>
+          <figcaption>Estela Puchalski, el Dr. M. L. Gharote y Natalia Solvey</figcaption>
+        </figure>
+
         <ul class="logos">
           <li class="logo-item reveal">
             <a class="l" href="https://www.lonavlayoga.org/" aria-label="Sitio web de The Lonavla Yoga Institute"><img src="assets/img/logo-lonavla.png" width="360" height="360" loading="lazy" alt="Logo de The Lonavla Yoga Institute, India"></a>
             <h3>The Lonavla Yoga Institute (India)</h3>
-            <p class="dir">Dr. M. L. Gharote</p>
+            <div class="director"><img src="assets/img/avatar-gharote.jpg" width="480" height="480" loading="lazy" alt="Retrato del Dr. M. L. Gharote"><div><small>Dirigido por</small><strong>Dr. M. L. Gharote</strong></div></div>
             <a class="url" href="https://www.lonavlayoga.org/">www.lonavlayoga.org</a>
           </li>
           <li class="logo-item reveal">
             <a class="l" href="https://yogatmabodha.com/" aria-label="Sitio web de Ātmabodha"><img src="assets/img/logo-atmabodha.png" width="480" height="480" loading="lazy" alt="Logo de Ātmabodha, Escuela de Yoga Tradicional: figura meditando con alas y el lema En camino hacia la Sabiduría"></a>
             <h3>Ātmabodha · Escuela de Yoga Tradicional</h3>
-            <p class="dir">Natalia Solvey</p>
+            <div class="director"><img src="assets/img/avatar-natalia.jpg" width="480" height="480" loading="lazy" alt="Retrato de Natalia Solvey"><div><small>Dirigida por</small><strong>Natalia Solvey</strong></div></div>
             <a class="url" href="https://yogatmabodha.com/">yogatmabodha.com</a>
             <div class="redes" role="group" aria-label="Redes de Ātmabodha">
               <a href="https://www.instagram.com/yogatmabodha/" aria-label="Instagram de Ātmabodha" title="Instagram"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a>
@@ -514,7 +589,7 @@
           <li class="logo-item reveal">
             <a class="l" href="https://fundacionholisticadelaselva.org/" aria-label="Sitio web de la Fundación Holística de la Selva"><img src="assets/img/logo-fhs.png" width="1080" height="1080" loading="lazy" alt="Logo de la Fundación Holística de la Selva: figura con brazos abiertos sostenida por dos manos"></a>
             <h3>Fundación Holística de la Selva</h3>
-            <p class="dir">Estela Puchalski</p>
+            <div class="director"><img src="assets/img/avatar-estela.jpg" width="480" height="480" loading="lazy" alt="Retrato de Estela Puchalski"><div><small>Dirigida por</small><strong>Estela Puchalski</strong></div></div>
             <a class="url" href="https://fundacionholisticadelaselva.org/">fundacionholisticadelaselva.org</a>
             <div class="redes" role="group" aria-label="Redes de la Fundación Holística de la Selva">
               <a href="https://www.instagram.com/f.holisticadelaselva/" aria-label="Instagram de la Fundación Holística de la Selva" title="Instagram"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a>
@@ -523,6 +598,25 @@
         </ul>
 
         <p class="linea-final reveal">Equipo docente con formación universitaria y larga trayectoria en la práctica y enseñanza del <span class="skt">Haṭha Yoga</span>.</p>
+
+        <div class="galeria-t reveal" id="galeria">
+          <h3>Galería</h3>
+        </div>
+        <div class="galeria reveal">
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="640" height="427" loading="lazy" alt="El Dr. M. L. Gharote dibuja en una pizarra un esquema de cuerpo y alma"></button>
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="640" height="394" loading="lazy" alt="El Dr. M. L. Gharote, en blanco y negro, frente a una diapositiva con el linaje de maestros (Parampara)"></button>
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="640" height="425" loading="lazy" alt="El Dr. M. L. Gharote en una charla, con un manuscrito desenfocado en primer plano"></button>
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="640" height="477" loading="lazy" alt="El Dr. M. L. Gharote ajusta la postura de un alumno recostado durante una práctica"></button>
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="640" height="427" loading="lazy" alt="Una instructora junto a un pizarrón con las palabras Yoga Tradicional y el Om, con alumnas que levantan el brazo"></button>
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="640" height="798" loading="lazy" alt="Alumnas sentadas con las manos unidas sobre la cabeza durante una práctica de yoga"></button>
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="640" height="425" loading="lazy" alt="Grupo de alumnos con el Dr. M. L. Gharote en un parque arbolado"></button>
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="640" height="344" loading="lazy" alt="Foto grupal en blanco y negro de alumnos con el Dr. M. L. Gharote sentado al centro"></button>
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="640" height="425" loading="lazy" alt="Manos sosteniendo un manuscrito antiguo, con mats de yoga de fondo"></button>
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="640" height="564" loading="lazy" alt="Pila de libros con la Haṭhapradīpikā en primer plano"></button>
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="640" height="490" loading="lazy" alt="El Dr. M. L. Gharote sonríe con las manos en namasté frente a una diapositiva que dice Om Shantih"></button>
+          <button type="button" class="g-item" aria-haspopup="dialog"><img src="assets/img/thumbs/natalia-y-gharote.jpg" width="640" height="466" loading="lazy" alt="Natalia Solvey y el Dr. M. L. Gharote al aire libre"></button>
+        </div>
+
       </div>
     </section>
 
@@ -546,8 +640,8 @@
               </ol>
               <ul class="puntos">
                 <li>Sábados de 8:30 a 12:45 (teoría + práctica)</li>
-                <li>1 clase de práctica semanal obligatoria, con opciones de día y horario <span class="pend">Días y horarios [a confirmar]</span></li>
-                <li><span class="skt">Satsaṅga</span>: un domingo al mes</li>
+                <li>1 clase de práctica semanal obligatoria, con opciones de día y horario <span class="pend">Días y horarios de la clase de práctica [a confirmar]</span></li>
+                <li><span class="skt">Satsaṅga</span>: un domingo al mes, de 10:30 a 12, por Zoom</li>
                 <li>Las clases quedan grabadas</li>
               </ul>
               <div class="carga" role="group" aria-label="Carga horaria: 512 horas cátedra">
@@ -574,7 +668,7 @@
               <table>
                 <tbody>
                   <tr><th scope="row">Matrícula</th><td class="valor">AR$ 210.000</td></tr>
-                  <tr><th scope="row">10 cuotas</th><td class="valor">AR$ 180.000<small>cada una</small></td></tr>
+                  <tr><th scope="row">10 cuotas</th><td class="valor">AR$ 210.000<small>cada una</small></td></tr>
                   <tr><th scope="row">Afiliación a Lonavla</th><td class="valor">USD 60</td></tr>
                   <tr><th scope="row">Certificación de Lonavla</th><td class="valor">USD 99</td></tr>
                 </tbody>
@@ -655,6 +749,14 @@
     <span class="lbl">Inscribirme</span>
   </a>
 
+  <!-- Visor de la galería -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería de fotos" hidden>
+    <button type="button" class="lb-close" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <button type="button" class="lb-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button type="button" class="lb-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    <figure><img id="lbImg" src="" alt=""><figcaption id="lbCap"></figcaption></figure>
+  </div>
+
   <script>
     /* ====== Configuración (cambiar acá) ====== */
     // PENDIENTE: reemplazar XXXXXXXXXXX por el número de WhatsApp con código de país (ej. 5493764123456)
@@ -683,6 +785,55 @@
         setTimeout(() => { btn.textContent = original; btn.classList.remove('ok'); status.textContent = ''; }, 2000);
       });
     });
+
+    /* ====== Galería con visor (botones, sin ventanas nuevas) ====== */
+    (function () {
+      const thumbs = [...document.querySelectorAll('.g-item img')];
+      if (!thumbs.length) return;
+      const lb = document.getElementById('lb');
+      const img = document.getElementById('lbImg');
+      const cap = document.getElementById('lbCap');
+      let idx = 0, opener = null, startX = null;
+      const full = t => t.getAttribute('src').replace('/thumbs/', '/');
+      function show(i) {
+        idx = (i + thumbs.length) % thumbs.length;
+        img.src = full(thumbs[idx]);
+        img.alt = thumbs[idx].alt;
+        cap.textContent = thumbs[idx].alt;
+      }
+      function open(i, btn) {
+        opener = btn; show(i);
+        lb.hidden = false; document.body.classList.add('lb-open');
+        lb.querySelector('.lb-close').focus();
+      }
+      function close() {
+        lb.hidden = true; document.body.classList.remove('lb-open'); img.removeAttribute('src');
+        if (opener) opener.focus();
+      }
+      thumbs.forEach((t, i) => t.closest('button').addEventListener('click', e => open(i, e.currentTarget)));
+      lb.querySelector('.lb-close').addEventListener('click', close);
+      lb.querySelector('.lb-prev').addEventListener('click', () => show(idx - 1));
+      lb.querySelector('.lb-next').addEventListener('click', () => show(idx + 1));
+      lb.addEventListener('click', e => { if (e.target === lb) close(); });
+      document.addEventListener('keydown', e => {
+        if (lb.hidden) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowLeft') show(idx - 1);
+        else if (e.key === 'ArrowRight') show(idx + 1);
+        else if (e.key === 'Tab') {            // el foco se queda dentro del visor
+          const f = [...lb.querySelectorAll('button')];
+          const first = f[0], last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      });
+      lb.addEventListener('touchstart', e => { startX = e.changedTouches[0].clientX; }, { passive: true });
+      lb.addEventListener('touchend', e => {
+        if (startX === null) return;
+        const dx = e.changedTouches[0].clientX - startX; startX = null;
+        if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+      }, { passive: true });
+    })();
 
     /* ====== Aparición suave al hacer scroll ====== */
     (function () {

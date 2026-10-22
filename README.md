@@ -53,7 +53,7 @@ Las fotos están optimizadas: máximo 1600 px en el lado más largo, JPG calidad
 - `estela-natalia-gharote.jpg` — Estela Puchalski (izquierda), el Dr. M. L. Gharote (centro) y Natalia Solvey (derecha), sonriendo con las manos en namasté.
 - `estela-retrato.jpg` — Estela Puchalski (directora de la Fundación Holística de la Selva), sentada, de perfil y sonriendo (vertical).
 - `natalia-y-gharote.jpg` — retrato de Natalia Solvey (directora de Ātmabodha) junto a Gharote, al aire libre.
-- `avatar-gharote.jpg`, `avatar-natalia.jpg`, `avatar-estela.jpg` — recortes cuadrados de 240×240 de cada director/a (hoy no se usan en la página).
+- `avatar-gharote.jpg`, `avatar-natalia.jpg`, `avatar-estela.jpg` — retratos cuadrados de 480×480 de cada director/a, recortados de las fotos de arriba. Se muestran en las tarjetas de las instituciones.
 
 ### Grupos de alumnos
 
@@ -74,7 +74,11 @@ Es una sola página de venta (landing) que se manda por WhatsApp. `index.html` e
 
 Tiene exactamente los 7 bloques de `CONTENIDO-PAGINA-formacion-yoga.md`, en ese orden: apertura, la propuesta, frase central, qué vas a estudiar, quiénes nos respaldan, todo lo que necesitás saber y cierre. El estilo sale de `IDENTIDAD-VISUAL-formacion-yoga.md`.
 
-Fotos que usa la página (máximo 4): `gharote-clase-manuscritos.jpg` (apertura), `practica-sarvangasana-grupo.jpg` (módulo 8), `gharote-retrato.jpg` (maestro) y los logos. `gharote-retrato.jpg` es también la imagen de vista previa al compartir (`og:image`). El resto de las fotos queda disponible en `assets/img/` pero no se usa.
+Fotos de la página: `gharote-clase-manuscritos.jpg` (apertura), `practica-sarvangasana-grupo.jpg` (módulo 8), `gharote-sonriendo-manuscritos.jpg` (Satsaṅga), `gharote-retrato.jpg` (maestro), `estela-natalia-gharote.jpg` (los tres directores), los retratos `avatar-*.jpg` y los logos. `gharote-retrato.jpg` es también la imagen de vista previa al compartir (`og:image`).
+
+Galería: 12 fotos con miniaturas de 640 px en `assets/img/thumbs/` (mismo nombre que la foto grande). Para sumar una foto a la galería: agregar la foto en `assets/img/`, su miniatura en `assets/img/thumbs/` y un `<button class="g-item">` con la miniatura dentro de `.galeria` en `index.html`. El visor usa la foto grande automáticamente.
+
+Tipografía: Cormorant Garamond para títulos, números, frases y sánscrito; Jost para texto, etiquetas y botones; Fugi solo en la frase final de cierre.
 
 Links a las webs y redes de las tres instituciones: en el bloque 5 cada logo lleva a su web, debajo se ve la dirección escrita y después van los íconos de sus redes (SVG inline, definidos una vez al comienzo del `<body>` y reutilizados con `<use>`). El pie repite los logos con link y suma una fila con todas las webs y redes, con las direcciones a la vista.
 
