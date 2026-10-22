@@ -246,12 +246,17 @@
     .trio img { width: 100%; height: auto; }
     .trio figcaption { margin-top: 12px; text-align: center; font-size: .95rem; color: var(--topo-osc); }
 
-    /* Cinta de fotos que se desliza sola */
-    .cinta { margin-top: clamp(56px, 9vw, 96px); overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent); }
-    .cinta-pista { display: flex; width: max-content; animation: cinta 90s linear infinite; will-change: transform; }
-    .cinta.pausa .cinta-pista { animation-play-state: paused; }
-    .cinta img { height: 200px; width: auto; flex: none; margin-right: 12px; border-radius: 12px; background: var(--nude); -webkit-user-drag: none; user-select: none; }
-    @keyframes cinta { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    /* Cinta de fotos: avanza sola, se puede deslizar con el dedo y tiene flechas */
+    .cinta-wrap { position: relative; margin-top: clamp(56px, 9vw, 96px); }
+    .cinta { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -ms-overflow-style: none; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent); }
+    .cinta::-webkit-scrollbar { display: none; }
+    .cinta-pista { display: flex; width: max-content; }
+    .cinta img { height: 250px; width: auto; flex: none; margin-right: 12px; border-radius: 12px; background: var(--nude); -webkit-user-drag: none; user-select: none; }
+    .cinta-flecha { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--marino); background: rgba(254,252,246,.94); color: var(--marino); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; box-shadow: 0 4px 14px rgba(27,55,106,.22); transition: background-color .2s, color .2s; }
+    .cinta-flecha:hover { background: var(--marino); color: var(--crema); }
+    .cinta-flecha svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .cinta-flecha.prev { left: 12px; }
+    .cinta-flecha.next { right: 12px; }
 
     /* ============ 6 · TODO LO QUE NECESITÁS SABER ============ */
     .datos-grid { display: grid; gap: 22px; margin-top: 36px; align-items: start; }
@@ -327,7 +332,10 @@
     /* ---------- Tablet / escritorio ---------- */
     @media (min-width: 720px) {
       :root { --gutter: 32px; }
-      .cinta img { height: 250px; margin-right: 16px; }
+      .cinta img { height: 320px; margin-right: 16px; }
+      .cinta-flecha { width: 54px; height: 54px; }
+      .cinta-flecha.prev { left: max(20px, calc((100vw - 1040px) / 2)); }
+      .cinta-flecha.next { right: max(20px, calc((100vw - 1040px) / 2)); }
       body { font-size: 18px; }
       .dim-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
       .logos { grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -358,9 +366,6 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
       .js .reveal { opacity: 1; transform: none; }
-      .cinta { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
-      .cinta-pista { animation: none; }
-      .cinta .copia { display: none; }
     }
   </style>
 </head>
@@ -587,34 +592,50 @@
 
       </div>
 
-      <!-- Cinta de fotos: se desliza sola, sin textos -->
-      <div class="cinta" id="cinta" role="group" aria-label="Fotos de la formación">
-        <div class="cinta-pista">
-          <img src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="640" height="427" loading="lazy" alt="El Dr. M. L. Gharote dibuja en una pizarra un esquema de cuerpo y alma">
-          <img src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="640" height="394" loading="lazy" alt="El Dr. M. L. Gharote, en blanco y negro, frente a una diapositiva con el linaje de maestros (Parampara)">
-          <img src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="640" height="425" loading="lazy" alt="El Dr. M. L. Gharote en una charla, con un manuscrito desenfocado en primer plano">
-          <img src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="640" height="477" loading="lazy" alt="El Dr. M. L. Gharote ajusta la postura de un alumno recostado durante una práctica">
-          <img src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="640" height="427" loading="lazy" alt="Una instructora junto a un pizarrón con las palabras Yoga Tradicional y el Om, con alumnas que levantan el brazo">
-          <img src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="640" height="798" loading="lazy" alt="Alumnas sentadas con las manos unidas sobre la cabeza durante una práctica de yoga">
-          <img src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="640" height="425" loading="lazy" alt="Grupo de alumnos con el Dr. M. L. Gharote en un parque arbolado">
-          <img src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="640" height="344" loading="lazy" alt="Foto grupal en blanco y negro de alumnos con el Dr. M. L. Gharote sentado al centro">
-          <img src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="640" height="425" loading="lazy" alt="Manos sosteniendo un manuscrito antiguo, con mats de yoga de fondo">
-          <img src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="640" height="564" loading="lazy" alt="Pila de libros con la Haṭhapradīpikā en primer plano">
-          <img src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="640" height="490" loading="lazy" alt="El Dr. M. L. Gharote sonríe con las manos en namasté frente a una diapositiva que dice Om Shantih">
-          <img src="assets/img/thumbs/natalia-y-gharote.jpg" width="640" height="466" loading="lazy" alt="Natalia Solvey y el Dr. M. L. Gharote al aire libre">
-          <img class="copia" src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="640" height="427" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="640" height="394" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="640" height="425" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="640" height="477" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="640" height="427" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="640" height="798" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="640" height="425" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="640" height="344" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="640" height="425" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="640" height="564" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="640" height="490" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/natalia-y-gharote.jpg" width="640" height="466" loading="lazy" alt="" aria-hidden="true">
+      <!-- Cinta de fotos: avanza sola y también se maneja con flechas o deslizando; sin textos -->
+      <div class="cinta-wrap">
+        <div class="cinta" id="cinta" role="group" aria-label="Fotos de la formación">
+          <div class="cinta-pista">
+          <img src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="900" height="600" loading="lazy" alt="El Dr. M. L. Gharote dibuja en una pizarra un esquema de cuerpo y alma">
+          <img src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="900" height="554" loading="lazy" alt="El Dr. M. L. Gharote, en blanco y negro, frente a una diapositiva con el linaje de maestros (Parampara)">
+          <img src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="900" height="598" loading="lazy" alt="El Dr. M. L. Gharote en una charla, con un manuscrito desenfocado en primer plano">
+          <img src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="900" height="671" loading="lazy" alt="El Dr. M. L. Gharote ajusta la postura de un alumno recostado durante una práctica">
+          <img src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="900" height="601" loading="lazy" alt="Una instructora junto a un pizarrón con las palabras Yoga Tradicional y el Om, con alumnas que levantan el brazo">
+          <img src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="717" height="894" loading="lazy" alt="Alumnas sentadas con las manos unidas sobre la cabeza durante una práctica de yoga">
+          <img src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="900" height="598" loading="lazy" alt="Grupo de alumnos con el Dr. M. L. Gharote en un parque arbolado">
+          <img src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="900" height="484" loading="lazy" alt="Foto grupal en blanco y negro de alumnos con el Dr. M. L. Gharote sentado al centro">
+          <img src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="900" height="598" loading="lazy" alt="Manos sosteniendo un manuscrito antiguo, con mats de yoga de fondo">
+          <img src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="900" height="793" loading="lazy" alt="Pila de libros con la Haṭhapradīpikā en primer plano">
+          <img src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="900" height="688" loading="lazy" alt="El Dr. M. L. Gharote sonríe con las manos en namasté frente a una diapositiva que dice Om Shantih">
+          <img src="assets/img/thumbs/natalia-y-gharote.jpg" width="900" height="656" loading="lazy" alt="Natalia Solvey y el Dr. M. L. Gharote al aire libre">
+          <img class="copia" src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="900" height="600" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="900" height="554" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="900" height="671" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="900" height="601" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="717" height="894" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="900" height="484" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="900" height="793" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="900" height="688" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/natalia-y-gharote.jpg" width="900" height="656" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="900" height="600" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="900" height="554" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="900" height="671" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="900" height="601" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="717" height="894" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="900" height="484" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="900" height="793" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="900" height="688" loading="lazy" alt="" aria-hidden="true">
+          <img class="copia" src="assets/img/thumbs/natalia-y-gharote.jpg" width="900" height="656" loading="lazy" alt="" aria-hidden="true">
+          </div>
         </div>
+        <button type="button" class="cinta-flecha prev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="cinta-flecha next" aria-label="Fotos siguientes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
       </div>
     </section>
 
@@ -776,20 +797,63 @@
       });
     });
 
-    /* ====== Cinta de fotos: pausa al mantener apretado o pasar el mouse; carga las fotos al acercarse ====== */
+    /* ====== Cinta de fotos: avanza sola; las flechas y deslizar con el dedo la manejan a mano ====== */
     (function () {
       const cinta = document.getElementById('cinta');
       if (!cinta) return;
-      const pausar = v => cinta.classList.toggle('pausa', v);
-      cinta.addEventListener('mouseenter', () => pausar(true));
-      cinta.addEventListener('mouseleave', () => pausar(false));
-      cinta.addEventListener('touchstart', () => pausar(true), { passive: true });
-      ['touchend', 'touchcancel'].forEach(t => cinta.addEventListener(t, () => pausar(false), { passive: true }));
-      // las fotos arrancan en lazy; al acercarse a la cinta se cargan todas para que no aparezcan de golpe
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { cinta.querySelectorAll('img').forEach(i => { i.loading = 'eager'; }); io.disconnect(); } }, { rootMargin: '900px 0px' });
-        io.observe(cinta);
+      const fotos = [...cinta.querySelectorAll('img')];
+      const porJuego = fotos.length / 3;                          // la tira tiene 3 juegos iguales para dar la vuelta sin saltos
+      const reducir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const VELOCIDAD = 38;                                       // píxeles por segundo
+      const ESPERA = 4000;                                        // ms sin avanzar después de que alguien la toca
+      let juego = 0, pos = 0, visto = 0, pausaHasta = 0, encima = false, ultimo = 0, corriendo = false;
+
+      const medir = () => { juego = fotos[porJuego].offsetLeft - fotos[0].offsetLeft; };
+      const normalizar = () => {                                  // mantiene la posición en el juego del medio
+        if (!juego) return;
+        if (cinta.scrollLeft < juego * 0.5) cinta.scrollLeft += juego;
+        else if (cinta.scrollLeft > juego * 1.5) cinta.scrollLeft -= juego;
+      };
+      const iniciar = () => { medir(); if (!juego) return; cinta.scrollLeft = juego; pos = visto = cinta.scrollLeft; };
+      const tocada = () => { pausaHasta = performance.now() + ESPERA; };
+
+      function cuadro(t) {
+        const dt = Math.min(64, t - ultimo); ultimo = t;
+        if (Math.abs(cinta.scrollLeft - visto) > 1.5) { tocada(); pos = cinta.scrollLeft; }   // alguien la movió (dedo, rueda o flecha)
+        if (!reducir && !encima && t > pausaHasta && juego) {
+          pos += VELOCIDAD * dt / 1000;
+          cinta.scrollLeft = pos;
+        } else { pos = cinta.scrollLeft; }
+        normalizar();
+        visto = cinta.scrollLeft;
+        requestAnimationFrame(cuadro);
       }
+      function arrancar() {
+        if (corriendo) return; corriendo = true;
+        iniciar(); ultimo = performance.now(); requestAnimationFrame(cuadro);
+      }
+
+      // flechas: avanzan o retroceden un tramo y frenan la marcha automática un rato
+      const paso = () => Math.max(200, Math.round(cinta.clientWidth * 0.8));
+      const mover = dir => {
+        tocada();
+        if (dir < 0 && cinta.scrollLeft - paso() < juego * 0.25) cinta.scrollLeft += juego;
+        cinta.scrollBy({ left: dir * paso(), behavior: reducir ? 'auto' : 'smooth' });
+      };
+      document.querySelector('.cinta-flecha.prev').addEventListener('click', () => mover(-1));
+      document.querySelector('.cinta-flecha.next').addEventListener('click', () => mover(1));
+
+      cinta.addEventListener('mouseenter', () => { encima = true; });
+      cinta.addEventListener('mouseleave', () => { encima = false; tocada(); });
+      ['touchstart', 'pointerdown', 'wheel'].forEach(e => cinta.addEventListener(e, tocada, { passive: true }));
+
+      // las fotos arrancan en lazy; al acercarse a la cinta se cargan todas para que no aparezcan de golpe
+      const cargar = () => { fotos.forEach(i => { i.loading = 'eager'; }); };
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { cargar(); arrancar(); io.disconnect(); } }, { rootMargin: '900px 0px' });
+        io.observe(cinta);
+      } else { cargar(); arrancar(); }
+      window.addEventListener('resize', () => { const antes = juego; medir(); if (antes && juego) cinta.scrollLeft = cinta.scrollLeft / antes * juego; });
     })();
 
     /* ====== Aparición suave al hacer scroll ====== */
