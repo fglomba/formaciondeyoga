@@ -86,7 +86,7 @@ Ningún link usa `target="_blank"`: todos abren en la misma pestaña, porque el 
 
 Constante para editar, arriba del `<script>` al final de `index.html`:
 
-- `WHATSAPP_URL`: reemplazar `XXXXXXXXXXX` por el número con código de país. Los tres botones de inscripción y el botón flotante la usan.
+- `WHATSAPP_URL`: ya tiene el número +54 9 376 411-8610. Los tres botones de inscripción y el botón flotante la usan. Para cambiar el número, editar solo esa línea (y el `href` de respaldo `https://wa.me/5493764118610` de los botones).
 
 Para probarla en local hace falta un servidor (por ejemplo `npx serve` en esta carpeta), porque abrir el archivo directo no carga bien las fuentes.
 
@@ -98,12 +98,8 @@ La tarjeta de contacto también tiene un formulario (nombre, email y consulta) q
 
 El formulario se envía sin salir de la página y muestra un mensaje de gracias o de error. Si el navegador no tuviera JavaScript, Netlify lleva a `gracias.html`. Tiene un campo trampa (`bot-field`) contra el spam.
 
-### Pendientes (marcados en la página como `[a confirmar]`)
+### Pendientes
 
-- Días y horarios de las clases de práctica y del Satsaṅga.
-- Tercera resolución de la certificación nacional.
-
-### Pendientes que no se ven en la página
-
-- Número de WhatsApp (`WHATSAPP_URL`).
-- Dominio de Netlify en la meta `og:image` (reemplazar `SITIO-A-CONFIRMAR.netlify.app` en `index.html`), para que WhatsApp muestre la vista previa.
+- En la página no queda ningún dato marcado como `[a confirmar]`.
+- Fuera de la página: activar en Netlify la notificación por email del formulario `consulta` (ver arriba).
+- Los datos para pagar (alias, CBU, cuenta en dólares) no están en la página: se envían a quien se inscribe.

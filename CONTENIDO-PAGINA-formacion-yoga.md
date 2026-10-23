@@ -17,7 +17,7 @@
 - **Título:** Instructorado en Yoga Tradicional
 - **Frase:** "Una formación que integra tradición, conocimiento y experiencia personal."
 - **Texto:** Para quienes desean profundizar en la práctica del Yoga y adquirir las bases para transmitirlo con responsabilidad, respetando las enseñanzas de los antiguos maestros y los textos tradicionales.
-- **Datos en una línea:** 512 h cátedra · Online en vivo · Marzo a noviembre · Doble certificación
+- **Datos en una línea:** 512 h cátedra · 100 % online en vivo · Marzo a noviembre · Doble certificación
 - **Botón:** Quiero inscribirme (WhatsApp)
 - **Foto:** el Dr. Gharote dando clase.
 
@@ -62,10 +62,11 @@ Una lista compacta de los 8 módulos, sin acordeón, con una línea cada uno:
 Los módulos se numeran 1, 2, 3… 8 (sin ceros a la izquierda).
 
 **Satsaṅga** (tarjeta con foto, debajo del módulo 8):
-- Etiquetas: Un domingo al mes · De 10:30 a 12 · Por Zoom
+- Etiquetas: Un domingo al mes · De 10:30 a 12 · Por Zoom · Optativo
 - Encuentro en vivo desde la India con el Dr. M. L. Gharote
 - Traducción simultánea de Natalia Solvey
 - **Texto:** A lo largo del año, un domingo al mes de 10:30 a 12 nos encontramos para el estudio de los manuscritos antiguos de reciente publicación. Esto nos permite conocer de manera directa y guiada las enseñanzas originales de los maestros del Haṭha Yoga tradicional.
+- **Aclaración:** Es una actividad optativa y no está incluida en el valor de la formación.
 
 ---
 
@@ -84,10 +85,10 @@ Los módulos se numeran 1, 2, 3… 8 (sin ceros a la izquierda).
   - Web: https://yogatmabodha.com/
   - Instagram: https://www.instagram.com/yogatmabodha/
   - Facebook: https://www.facebook.com/atma.bodha.3
-  - Facebook: https://www.facebook.com/estudiaryoga
 - **Fundación Holística de la Selva** · Estela Puchalski
   - Web: https://fundacionholisticadelaselva.org/
   - Instagram: https://www.instagram.com/f.holisticadelaselva/
+  - Facebook: https://www.facebook.com/estudiaryoga
 
 **Línea final:** Equipo docente con formación universitaria y larga trayectoria en la práctica y enseñanza del Haṭha Yoga.
 
@@ -101,15 +102,18 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 
 **Cursada 2027**
 - Inicio: 13 de marzo · Receso: 15 al 30 de julio · Cierre: 27 de noviembre · Diciembre: evaluaciones
+- Modalidad 100 % online y sincrónica: clases en vivo
 - Sábados de 8:30 a 12:45 (teoría + práctica)
-- 1 clase de práctica semanal obligatoria, con opciones de día y horario ⚠️ PENDIENTE: días y horarios
-- Satsaṅga: un domingo al mes, de 10:30 a 12, por Zoom
+- 1 clase de práctica semanal obligatoria, con opciones de día y horario:
+  - Lunes y jueves, de 19:20 a 20:45
+  - Miércoles y viernes, de 8:00 a 9:20
 - Las clases quedan grabadas
 - 512 h cátedra: 297 en vivo + 215 de trabajo domiciliario
 
 **Doble certificación**
-- Nacional de Formación Profesional (Res. CSCYE N.º 261/06 y Res. CFE N.º 13/07) ⚠️ PENDIENTE: tercera resolución
-- Internacional de The Lonavla Yoga Institute (India)
+- Certificación Nacional de Formación Profesional (Res. CSCYE N.º 261/06, Res. CFE N.º 13/07 y Resolución 271/2024 SPEPM)
+  - Certificación del Instituto de Yoga Misiones Dr. M. L. Gharote · Código: 04114
+- Certificación Internacional de The Lonavla Yoga Institute (India)
 
 **Inversión**
 - Matrícula: AR$ 210.000
@@ -123,9 +127,16 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 - 15 % OFF con pago total antes del inicio de clases
 - 10 % OFF pagando en 2 veces (hasta marzo y antes de junio)
 
-**Transferencia:** Alias **YogaLonavla2026** · CBU **0110407740040788781212**, con un botón "Copiar" en cada dato.
+**Medios de pago** (sin datos bancarios en la página; los datos se envían a quien se inscribe):
+- Mercado Pago: se puede pagar en cuotas y con crédito, entre otras opciones de la plataforma.
+- Transferencia bancaria.
+- Transferencia en dólares.
+- Mensaje: "Cuando te inscribís, te enviamos los datos para pagar."
 
-**Nota chica:** En agosto y septiembre, durante la Gira del Yoga Tradicional con el Dr. Gharote, hay actividades optativas que no están incluidas en el valor: un retiro intensivo, un encuentro en Buenos Aires y seminarios en Bariloche.
+**Aclaración** (recuadro): La formación es 100 % online. Son actividades extracurriculares, optativas y no incluidas en el valor de la formación:
+- Retiros, seminarios y charlas abiertas de la Gira del Yoga Tradicional con el Dr. Gharote, en agosto y septiembre: un retiro intensivo, un encuentro en Buenos Aires y seminarios en Bariloche.
+- Los viajes a la India en enero.
+- El Satsaṅga de un domingo al mes con el Dr. Gharote.
 
 ---
 
@@ -142,4 +153,4 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
   - https://www.instagram.com/yogatmabodha/
   - https://www.instagram.com/f.holisticadelaselva/
   - https://www.facebook.com/atma.bodha.3
-  - https://www.facebook.com/estudiaryoga
+  - https://www.facebook.com/estudiaryoga (Facebook de la Fundación Holística de la Selva)

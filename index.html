@@ -7,14 +7,14 @@
   <meta name="description" content="Formación Profesional en Yoga Tradicional · Nivel I, con el Dr. M. L. Gharote. 512 horas cátedra, online en vivo, de marzo a noviembre de 2027. Doble certificación: nacional e internacional.">
   <meta name="theme-color" content="#F4ECE4">
 
-  <!-- Vista previa al compartir (WhatsApp, redes).
-       PENDIENTE: reemplazar SITIO-A-CONFIRMAR.netlify.app por el dominio real una vez publicado.
-       og:image tiene que ser una URL absoluta para que WhatsApp la muestre. -->
+  <!-- Vista previa al compartir (WhatsApp, redes). og:image tiene que ser una URL absoluta. -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
+  <link rel="canonical" href="https://hathayogaformacion.netlify.app/">
+  <meta property="og:url" content="https://hathayogaformacion.netlify.app/">
   <meta property="og:title" content="Instructorado en Yoga Tradicional · Nivel I">
-  <meta property="og:description" content="Una formación que integra tradición, conocimiento y experiencia personal. Con el Dr. M. L. Gharote. Online en vivo, marzo a noviembre de 2027.">
-  <meta property="og:image" content="https://SITIO-A-CONFIRMAR.netlify.app/assets/img/gharote-retrato.jpg">
+  <meta property="og:description" content="Una formación que integra tradición, conocimiento y experiencia personal. Con el Dr. M. L. Gharote. 100 % online en vivo, marzo a noviembre de 2027.">
+  <meta property="og:image" content="https://hathayogaformacion.netlify.app/assets/img/gharote-retrato.jpg">
   <meta property="og:image:width" content="1600">
   <meta property="og:image:height" content="1063">
   <meta property="og:image:alt" content="El Dr. M. L. Gharote sonriendo, con kurta amarilla">
@@ -162,9 +162,6 @@
     .hero h1 { font-size: clamp(2.6rem, 7.4vw, 4.2rem); margin-bottom: 22px; }
     .hero .frase { margin-bottom: 22px; }
     .hero .texto { max-width: 54ch; }
-    .datos { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 22px 0 30px; padding: 0; font-weight: 500; color: var(--marino); font-size: .98rem; }
-    .datos li { display: flex; align-items: center; gap: 8px; }
-    .datos li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--azafran); flex: none; }
     .hero-photo { padding: 14px; }
 
     /* ============ 2 · LA PROPUESTA ============ */
@@ -259,7 +256,6 @@
     .cinta-flecha.next { right: 12px; }
 
     /* ============ 6 · TODO LO QUE NECESITÁS SABER ============ */
-    .datos-grid { display: grid; gap: 22px; margin-top: 36px; align-items: start; }
     .col { display: grid; gap: 22px; }
     .card { background: var(--blanco); border: 1px solid rgba(154,139,120,.3); border-radius: var(--radius); padding: 26px 22px 24px; }
     .card h3 { font-size: var(--h-card); margin-bottom: 16px; }
@@ -295,12 +291,20 @@
     .promo .pct small { font-family: var(--f-sans); font-size: .78rem; font-weight: 600; margin-left: 3px; letter-spacing: .04em; }
     .promo p { margin: 0; font-size: 1.02rem; line-height: 1.4; }
     .promos-t { font-size: var(--h-card); margin: 0 0 14px; }
-    .dato { display: grid; grid-template-columns: 1fr; gap: 8px; justify-items: start; padding: 14px 0; border-top: 1px solid rgba(154,139,120,.3); }
-    .dato .k { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--topo-osc); font-weight: 500; line-height: 1; }
-    .dato .v { font-weight: 600; font-size: 1.2rem; color: var(--marino); word-break: break-all; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
     .copy { min-height: 44px; min-width: 104px; padding: 8px 18px; border-radius: 999px; background: transparent; cursor: pointer; border: 1.5px solid var(--salvia-osc); color: var(--salvia-osc); font-weight: 600; font-size: .98rem; transition: background-color .2s, color .2s; }
     .copy:hover, .copy.ok { background: var(--salvia-osc); color: var(--crema); }
-    .nota-chica { margin: 34px auto 0; max-width: 62ch; text-align: center; font-size: .95rem; color: var(--tinta); }
+    .extra { margin: 40px auto 0; max-width: 720px; background: var(--nude); border-left: 4px solid var(--azafran); border-radius: var(--radius); padding: 24px 26px 22px; }
+    .extra h3 { font-size: var(--h-card); margin-bottom: 10px; }
+    .extra p { margin: 0 0 12px; }
+    .extra ul.puntos li { position: relative; padding-left: 18px; margin-bottom: 10px; }
+    .extra ul.puntos li::before { content: ""; position: absolute; left: 0; top: .72em; width: 7px; height: 7px; border-radius: 50%; background: var(--azafran-texto); }
+    .extra ul.puntos li:last-child { margin-bottom: 0; }
+    .card ul.horarios { margin: 8px 0 2px; }
+    .card ul.horarios li { margin-bottom: 6px; font-weight: 600; color: var(--marino); }
+    .pagos-intro { margin: 0 0 14px; }
+    .pagos-nota { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid rgba(154,139,120,.3); font-weight: 500; color: var(--marino); }
+    .cert .detalle { display: block; margin-top: 4px; font-size: .95rem; color: var(--topo-osc); }
+    .satsang-aviso { margin: 14px 0 0; font-weight: 500; color: var(--azafran-texto); }
 
     /* ============ 7 · CIERRE ============ */
     .cierre { text-align: center; padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px)); }
@@ -373,14 +377,9 @@
       .maestro { grid-template-columns: 1fr 1.1fr; }
       .maestro .foto img { aspect-ratio: auto; height: 100%; min-height: 340px; }
       .maestro .cuerpo { padding: 40px 44px; }
-      .dato { grid-template-columns: 1fr auto; grid-template-areas: "k k" "v b"; align-items: center; justify-items: stretch; gap: 6px 14px; }
-      .dato .k { grid-area: k; }
-      .dato .v { grid-area: v; font-size: 1.12rem; }
-      .dato .copy { grid-area: b; justify-self: end; }
     }
     @media (min-width: 960px) {
       .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 64px; }
-      .datos-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
       .col { gap: 28px; }
       .wa-float { right: 28px; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); width: auto; height: 60px; padding: 0 26px 0 20px; }
       .wa-float .lbl { display: inline; }
@@ -414,11 +413,11 @@
           <p class="texto" style="margin-top:22px">Para quienes desean profundizar en la práctica del Yoga y adquirir las bases para transmitirlo con responsabilidad, respetando las enseñanzas de los antiguos maestros y los textos tradicionales.</p>
           <ul class="datos" aria-label="Datos clave">
             <li>512 h cátedra</li>
-            <li>Online en vivo</li>
+            <li>100 % online en vivo</li>
             <li>Marzo a noviembre</li>
             <li>Doble certificación</li>
           </ul>
-          <a class="btn btn-primary btn-lg" data-wa href="https://wa.me/">Quiero inscribirme</a>
+          <a class="btn btn-primary btn-lg" data-wa href="https://wa.me/5493764118610">Quiero inscribirme</a>
         </div>
         <div class="hero-photo">
           <div class="ring-photo">
@@ -547,11 +546,12 @@
                  alt="El Dr. M. L. Gharote, con kurta roja, sostiene sonriendo dos manuscritos antiguos">
           </div>
           <div class="cuerpo">
-            <ul class="chips" aria-label="Datos del Satsaṅga"><li>Un domingo al mes</li><li>De 10:30 a 12</li><li>Por Zoom</li></ul>
+            <ul class="chips" aria-label="Datos del Satsaṅga"><li>Un domingo al mes</li><li>De 10:30 a 12</li><li>Por Zoom</li><li>Optativo</li></ul>
             <h3 id="h-sat"><span class="skt">Satsaṅga</span></h3>
             <p class="linea-dato">Encuentro en vivo desde la India con el Dr. M. L. Gharote</p>
             <p class="linea-dato">Traducción simultánea de Natalia Solvey</p>
             <p class="texto">A lo largo del año, un domingo al mes de 10:30 a 12 nos encontramos para el estudio de los manuscritos antiguos de reciente publicación. Esto nos permite conocer de manera directa y guiada las enseñanzas originales de los maestros del <span class="skt">Haṭha Yoga</span> tradicional.</p>
+            <p class="satsang-aviso">Es una actividad optativa y no está incluida en el valor de la formación.</p>
           </div>
         </article>
       </div>
@@ -598,7 +598,6 @@
             <div class="redes" role="group" aria-label="Redes de Ātmabodha">
               <a href="https://www.instagram.com/yogatmabodha/" aria-label="Instagram de Ātmabodha" title="Instagram"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a>
               <a href="https://www.facebook.com/atma.bodha.3" aria-label="Facebook de Ātmabodha" title="Facebook"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a>
-              <a href="https://www.facebook.com/estudiaryoga" aria-label="Facebook Estudiar Yoga" title="Facebook Estudiar Yoga"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a>
             </div>
           </li>
           <li class="logo-item reveal">
@@ -608,6 +607,7 @@
             <a class="url" href="https://fundacionholisticadelaselva.org/">fundacionholisticadelaselva.org</a>
             <div class="redes" role="group" aria-label="Redes de la Fundación Holística de la Selva">
               <a href="https://www.instagram.com/f.holisticadelaselva/" aria-label="Instagram de la Fundación Holística de la Selva" title="Instagram"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a>
+              <a href="https://www.facebook.com/estudiaryoga" aria-label="Facebook de la Fundación Holística de la Selva" title="Facebook"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a>
             </div>
           </li>
         </ul>
@@ -682,9 +682,14 @@
                 <li><span class="fecha">Diciembre</span>Evaluaciones</li>
               </ol>
               <ul class="puntos">
+                <li>Modalidad 100 % online y sincrónica: clases en vivo</li>
                 <li>Sábados de 8:30 a 12:45 (teoría + práctica)</li>
-                <li>1 clase de práctica semanal obligatoria, con opciones de día y horario <span class="pend">Días y horarios de la clase de práctica [a confirmar]</span></li>
-                <li><span class="skt">Satsaṅga</span>: un domingo al mes, de 10:30 a 12, por Zoom</li>
+                <li>1 clase de práctica semanal obligatoria, con opciones de día y horario:
+                  <ul class="horarios">
+                    <li>Lunes y jueves, de 19:20 a 20:45</li>
+                    <li>Miércoles y viernes, de 8:00 a 9:20</li>
+                  </ul>
+                </li>
                 <li>Las clases quedan grabadas</li>
               </ul>
               <div class="carga" role="group" aria-label="Carga horaria: 512 horas cátedra">
@@ -698,8 +703,8 @@
             <article class="card cert reveal">
               <h3>Doble certificación</h3>
               <ul class="puntos">
-                <li>Nacional de Formación Profesional (Res. CSCYE N.º 261/06 y Res. CFE N.º 13/07) <span class="pend">Tercera resolución [a confirmar]</span></li>
-                <li>Internacional de The Lonavla Yoga Institute (India)</li>
+                <li>Certificación Nacional de Formación Profesional (Res. CSCYE N.º 261/06, Res. CFE N.º 13/07 y Resolución 271/2024 SPEPM)<span class="detalle">Certificación del Instituto de Yoga Misiones Dr. M. L. Gharote · Código: 04114</span></li>
+                <li>Certificación Internacional de The Lonavla Yoga Institute (India)</li>
               </ul>
             </article>
           </div>
@@ -729,30 +734,34 @@
               </ul>
             </div>
 
-            <!-- Transferencia -->
-            <article class="card reveal">
-              <h3>Transferencia</h3>
-              <div class="dato">
-                <span class="k">Alias</span>
-                <span class="v">YogaLonavla2026</span>
-                <button class="copy" type="button" data-copy="YogaLonavla2026" aria-label="Copiar alias">Copiar</button>
-              </div>
-              <div class="dato">
-                <span class="k">CBU</span>
-                <span class="v">0110407740040788781212</span>
-                <button class="copy" type="button" data-copy="0110407740040788781212" aria-label="Copiar CBU">Copiar</button>
-              </div>
-              <p class="sr-only" role="status" aria-live="polite" id="copyStatus"></p>
+            <!-- Medios de pago -->
+            <article class="card pagos reveal">
+              <h3>Medios de pago</h3>
+              <p class="pagos-intro">Elegí la forma que te resulte más cómoda para organizar tu inversión.</p>
+              <ul class="puntos">
+                <li><strong>Mercado Pago:</strong> podés pagar en cuotas y con crédito, entre otras opciones de la plataforma.</li>
+                <li><strong>Transferencia bancaria.</strong></li>
+                <li><strong>Transferencia en dólares.</strong></li>
+              </ul>
+              <p class="pagos-nota">Cuando te inscribís, te enviamos los datos para pagar.</p>
             </article>
           </div>
         </div>
 
         <div class="cta-centro reveal">
-          <a class="btn btn-primary btn-lg" data-wa href="https://wa.me/">Quiero inscribirme</a>
+          <a class="btn btn-primary btn-lg" data-wa href="https://wa.me/5493764118610">Quiero inscribirme</a>
           <p class="cta-mail">O escribinos a <a href="mailto:yoga.lonavla@gmail.com?subject=Consulta%20%C2%B7%20Formaci%C3%B3n%20en%20Yoga%20Tradicional%20Nivel%20I%202027">yoga.lonavla@gmail.com</a></p>
         </div>
 
-        <p class="nota-chica reveal">En agosto y septiembre, durante la Gira del Yoga Tradicional con el Dr. Gharote, hay actividades optativas que no están incluidas en el valor: un retiro intensivo, un encuentro en Buenos Aires y seminarios en Bariloche.</p>
+        <aside class="extra reveal" aria-labelledby="h-extra">
+          <h3 id="h-extra">La formación es 100 % online</h3>
+          <p>Estas actividades son extracurriculares y optativas, y no están incluidas en el valor de la formación:</p>
+          <ul class="puntos">
+            <li>Retiros, seminarios y charlas abiertas de la Gira del Yoga Tradicional con el Dr. Gharote, en agosto y septiembre: un retiro intensivo, un encuentro en Buenos Aires y seminarios en Bariloche.</li>
+            <li>Los viajes a la India en enero.</li>
+            <li>El <span class="skt">Satsaṅga</span> de un domingo al mes con el Dr. Gharote.</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
@@ -761,7 +770,7 @@
       <div class="wrap">
         <div class="reveal">
           <h2 id="h-cierre">Formarse para enseñar. Practicar para comprender.</h2>
-          <a class="btn btn-primary btn-lg" data-wa href="https://wa.me/">
+          <a class="btn btn-primary btn-lg" data-wa href="https://wa.me/5493764118610">
             <svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.18 1.6 6L4 28l7.1-1.86a12 12 0 0 0 4.94 1.06h.01C22.68 27.2 28 21.8 28 15.16 28 8.4 22.68 3 16.04 3Zm0 21.9h-.01a10 10 0 0 1-5.1-1.4l-.37-.22-4.2 1.1 1.12-4.1-.24-.38a9.9 9.9 0 0 1-1.52-5.3c0-5.5 4.5-10 10.02-10 5.5 0 9.98 4.5 9.98 10.02 0 5.5-4.48 9.28-9.98 9.28Zm5.5-7.5c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.65-.93-2.25-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.1 4.5.72.3 1.28.5 1.7.63.72.23 1.37.2 1.88.12.58-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35Z"/></svg>
             Inscribirme por WhatsApp
           </a>
@@ -785,6 +794,7 @@
             <button class="btn btn-primary" type="submit">Enviar consulta</button>
             <p class="form-estado" id="formEstado" role="status" aria-live="polite"></p>
           </form>
+          <p class="sr-only" role="status" aria-live="polite" id="copyStatus"></p>
         </div>
 
         <footer class="pie">
@@ -801,7 +811,7 @@
             <a href="https://www.instagram.com/yogatmabodha/"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg>Instagram @yogatmabodha</a>
             <a href="https://www.instagram.com/f.holisticadelaselva/"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg>Instagram @f.holisticadelaselva</a>
             <a href="https://www.facebook.com/atma.bodha.3"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg>Facebook Ātmabodha</a>
-            <a href="https://www.facebook.com/estudiaryoga"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg>Facebook Estudiar Yoga</a>
+            <a href="https://www.facebook.com/estudiaryoga"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg>Facebook FHS</a>
           </nav>
         </footer>
       </div>
@@ -809,15 +819,15 @@
   </main>
 
   <!-- Botón flotante de WhatsApp -->
-  <a class="wa-float" data-wa href="https://wa.me/" aria-label="Inscribirme por WhatsApp">
+  <a class="wa-float" data-wa href="https://wa.me/5493764118610" aria-label="Inscribirme por WhatsApp">
     <svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.18 1.6 6L4 28l7.1-1.86a12 12 0 0 0 4.94 1.06h.01C22.68 27.2 28 21.8 28 15.16 28 8.4 22.68 3 16.04 3Zm0 21.9h-.01a10 10 0 0 1-5.1-1.4l-.37-.22-4.2 1.1 1.12-4.1-.24-.38a9.9 9.9 0 0 1-1.52-5.3c0-5.5 4.5-10 10.02-10 5.5 0 9.98 4.5 9.98 10.02 0 5.5-4.48 9.28-9.98 9.28Zm5.5-7.5c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.65-.93-2.25-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.1 4.5.72.3 1.28.5 1.7.63.72.23 1.37.2 1.88.12.58-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35Z"/></svg>
     <span class="lbl">Inscribirme</span>
   </a>
 
   <script>
     /* ====== Configuración (cambiar acá) ====== */
-    // PENDIENTE: reemplazar XXXXXXXXXXX por el número de WhatsApp con código de país (ej. 5493764123456)
-    const WHATSAPP_URL = "https://wa.me/XXXXXXXXXXX?text=" + encodeURIComponent("Hola! Quiero inscribirme en la Formación Profesional en Yoga Tradicional Nivel I 2027 🙏");
+    // Número de WhatsApp con código de país (+54 9 376 411-8610)
+    const WHATSAPP_URL = "https://wa.me/5493764118610?text=" + encodeURIComponent("Hola! Quiero inscribirme en la Formación Profesional en Yoga Tradicional Nivel I 2027 🙏");
 
     /* ====== Botones de WhatsApp ====== */
     document.querySelectorAll('[data-wa]').forEach(a => { a.href = WHATSAPP_URL; });
