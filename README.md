@@ -90,6 +90,14 @@ Constante para editar, arriba del `<script>` al final de `index.html`:
 
 Para probarla en local hace falta un servidor (por ejemplo `npx serve` en esta carpeta), porque abrir el archivo directo no carga bien las fuentes.
 
+### Contacto por email y formulario
+
+El email de contacto es yoga.lonavla@gmail.com. Aparece en el cierre (dentro de la tarjeta de contacto, con botones para escribir y para copiarlo), junto al botón de inscripción del bloque 6 y en el pie. Todos son links `mailto:` normales, sin `target`.
+
+La tarjeta de contacto también tiene un formulario (nombre, email y consulta) que usa **Netlify Forms**: no hace falta servidor propio. Al publicar, Netlify detecta el formulario `consulta` y guarda cada envío en la solapa **Forms** del sitio. Para que además llegue un email a yoga.lonavla@gmail.com hay que activarlo una sola vez en Netlify: en el sitio, ir a **Forms**, abrir el formulario `consulta` y, en la configuración de notificaciones del sitio, agregar una notificación por email para el envío de formularios, eligiendo ese formulario y poniendo el email de destino. Hasta que eso se active, las consultas quedan guardadas en Netlify pero no se avisan por correo.
+
+El formulario se envía sin salir de la página y muestra un mensaje de gracias o de error. Si el navegador no tuviera JavaScript, Netlify lleva a `gracias.html`. Tiene un campo trampa (`bot-field`) contra el spam.
+
 ### Pendientes (marcados en la página como `[a confirmar]`)
 
 - Días y horarios de las clases de práctica y del Satsaṅga.

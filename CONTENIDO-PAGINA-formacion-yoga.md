@@ -134,6 +134,7 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 > FORMARSE PARA ENSEÑAR. PRACTICAR PARA COMPRENDER.
 
 - **Botón grande:** Inscribirme por WhatsApp
+- **Contacto por email:** tarjeta debajo del botón con el email yoga.lonavla@gmail.com bien visible, botón "Escribir un email", botón "Copiar" y un formulario corto (nombre, email y consulta) que se envía sin salir de la página. El email también aparece junto al botón de inscripción del bloque 6 y en el pie.
 - **Pie:** los 3 logos chicos, cada uno con el link a su web, y una fila de links con todas las webs y redes:
   - https://www.lonavlayoga.org/
   - https://yogatmabodha.com/
