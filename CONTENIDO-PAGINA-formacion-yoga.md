@@ -17,7 +17,7 @@
 - **Título:** Instructorado en Yoga Tradicional
 - **Frase:** "Una formación que integra tradición, conocimiento y experiencia personal."
 - **Texto:** Para quienes desean profundizar en la práctica del Yoga y adquirir las bases para transmitirlo con responsabilidad, respetando las enseñanzas de los antiguos maestros y los textos tradicionales.
-- **Datos en una línea:** 512 h cátedra · 100 % online en vivo · Marzo a noviembre · Doble certificación
+- **Datos en una línea:** 512 h cátedra · 100 % online en vivo · Marzo a noviembre · Triple certificación
 - **Botón:** Quiero inscribirme (WhatsApp)
 - **Foto:** el Dr. Gharote dando clase.
 
@@ -110,9 +110,9 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 - Las clases quedan grabadas
 - 512 h cátedra: 297 en vivo + 215 de trabajo domiciliario
 
-**Doble certificación**
-- Certificación Nacional de Formación Profesional (Res. CSCYE N.º 261/06, Res. CFE N.º 13/07 y Resolución 271/2024 SPEPM)
-  - Certificación del Instituto de Yoga Misiones Dr. M. L. Gharote · Código: 04114
+**Triple certificación**
+- Certificación Nacional de Formación Profesional (Res. CSCYE N.º 261/06 y Res. CFE N.º 13/07)
+- Certificación del Instituto de Yoga Misiones Dr. M. L. Gharote · Código: 04114 · Resolución 271/2024 SPEPM
 - Certificación Internacional de The Lonavla Yoga Institute (India)
 
 **Inversión**

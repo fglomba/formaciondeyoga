@@ -94,7 +94,15 @@ Para probarla en local hace falta un servidor (por ejemplo `npx serve` en esta c
 
 El email de contacto es yoga.lonavla@gmail.com. Aparece en el cierre (dentro de la tarjeta de contacto, con botones para escribir y para copiarlo), junto al botón de inscripción del bloque 6 y en el pie. Todos son links `mailto:` normales, sin `target`.
 
-La tarjeta de contacto también tiene un formulario (nombre, email y consulta) que usa **Netlify Forms**: no hace falta servidor propio. Al publicar, Netlify detecta el formulario `consulta` y guarda cada envío en la solapa **Forms** del sitio. Para que además llegue un email a yoga.lonavla@gmail.com hay que activarlo una sola vez en Netlify: en el sitio, ir a **Forms**, abrir el formulario `consulta` y, en la configuración de notificaciones del sitio, agregar una notificación por email para el envío de formularios, eligiendo ese formulario y poniendo el email de destino. Hasta que eso se active, las consultas quedan guardadas en Netlify pero no se avisan por correo.
+La tarjeta de contacto también tiene un formulario (nombre, email y consulta) que usa **Netlify Forms**: no hace falta servidor propio. Cada consulta se guarda en Netlify (solapa **Forms** del sitio), pero para que además llegue un aviso por email hay que activarlo una sola vez:
+
+1. Entrar a app.netlify.com y abrir el sitio.
+2. Ir a **Forms** y abrir **Submission notifications** (link directo: https://app.netlify.com/projects/hathayogaformacion/forms?tab=notifications).
+3. Tocar **Add notification** y elegir **Email notification**.
+4. En el email de destino poner yoga.lonavla@gmail.com y elegir el formulario `consulta` (o todos).
+5. Guardar.
+
+Los nombres exactos de los botones pueden variar un poco, porque Netlify los cambia de vez en cuando. Los avisos salen de formresponses@netlify.com (revisar la carpeta de spam la primera vez). Como el formulario tiene un campo `email`, al tocar Responder en ese aviso la respuesta va directo a la persona que escribió.
 
 El formulario se envía sin salir de la página y muestra un mensaje de gracias o de error. Si el navegador no tuviera JavaScript, Netlify lleva a `gracias.html`. Tiene un campo trampa (`bot-field`) contra el spam.
 
