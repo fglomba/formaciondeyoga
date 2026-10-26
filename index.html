@@ -251,16 +251,17 @@
     .trio figcaption { margin-top: 12px; text-align: center; font-size: .95rem; color: var(--topo-osc); }
 
     /* Cinta de fotos: avanza sola, se puede deslizar con el dedo y tiene flechas */
-    .cinta-wrap { position: relative; margin-top: clamp(56px, 9vw, 96px); }
+    .con-banda { padding-bottom: 0; }
+    .cinta-wrap { position: relative; margin-top: clamp(56px, 9vw, 96px); background: var(--noche); padding-block: clamp(32px, 6vw, 72px); }
     .cinta { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -ms-overflow-style: none; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent); }
     .cinta::-webkit-scrollbar { display: none; }
     .cinta-pista { display: flex; width: max-content; }
-    .cinta img { height: 250px; width: auto; flex: none; margin-right: 12px; border-radius: 12px; background: var(--nude); -webkit-user-drag: none; user-select: none; }
-    .cinta-flecha { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--marino); background: rgba(254,252,246,.94); color: var(--marino); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; box-shadow: 0 4px 14px rgba(27,55,106,.22); transition: background-color .2s, color .2s; }
+    .cinta img { height: clamp(320px, 92vw, 400px); width: auto; flex: none; margin-right: 14px; border-radius: 14px; background: rgba(244,236,228,.12); -webkit-user-drag: none; user-select: none; }
+    .cinta-flecha { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 56px; height: 56px; border-radius: 50%; border: 0; background: rgba(254,252,246,.96); color: var(--marino); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; box-shadow: 0 4px 14px rgba(27,55,106,.22); transition: background-color .2s, color .2s; }
     .cinta-flecha:hover { background: var(--marino); color: var(--crema); }
-    .cinta-flecha svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-    .cinta-flecha.prev { left: 12px; }
-    .cinta-flecha.next { right: 12px; }
+    .cinta-flecha svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .cinta-flecha.prev { left: 10px; }
+    .cinta-flecha.next { right: 10px; }
 
     /* ============ 6 · TODO LO QUE NECESITÁS SABER ============ */
     .datos-grid { display: grid; gap: 22px; margin-top: 36px; align-items: start; }
@@ -322,16 +323,6 @@
     .logo-item .desc-dir { font-size: .92rem; color: var(--topo-osc); }
     .logo-item a.url { margin-top: 14px; }
     /* Plantel docente */
-    .docentes { margin-top: clamp(56px, 9vw, 96px); }
-    .docentes-t { font-size: var(--h-feature); margin-bottom: 8px; }
-    .docentes-grid { display: grid; gap: 22px; margin-top: 30px; align-items: stretch; }
-    .docente { background: var(--blanco); border: 1px solid rgba(154,139,120,.3); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
-    .d-foto { aspect-ratio: 4 / 4.4; background: var(--nude); }
-    .d-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
-    .d-foto.sin-foto { display: flex; align-items: center; justify-content: center; background: var(--crema-fhs); border-bottom: 1px solid var(--line); }
-    .d-foto.sin-foto span { display: flex; align-items: center; justify-content: center; width: 112px; height: 112px; border-radius: 50%; border: 1.5px dashed var(--salvia); color: var(--salvia-osc); font-family: var(--f-serif); font-weight: 700; font-size: 2.4rem; letter-spacing: .04em; }
-    .d-cuerpo { padding: 22px 22px 24px; }
-    .docente h4 { font-family: var(--f-serif); font-weight: 700; color: var(--marino); font-size: var(--h-card); line-height: 1.15; margin: 0 0 12px; }
     .d-roles li { position: relative; padding-left: 18px; margin-bottom: 9px; font-size: .98rem; line-height: 1.55; }
     .d-roles li::before { content: ""; position: absolute; left: 0; top: .66em; width: 7px; height: 7px; border-radius: 50%; background: var(--salvia); }
     .d-roles li:last-child { margin-bottom: 0; }
@@ -345,7 +336,38 @@
     .d-mas .ver-menos { display: none; }
     .d-mas[open] .ver-menos { display: inline; }
     .d-mas[open] .ver-mas { display: none; }
-    .d-extra { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(154,139,120,.3); }
+    /* Plantel docente: hilera informativa que se corre con flechas */
+    .docentes { margin-top: clamp(48px, 8vw, 80px); }
+    .d-cab { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+    .docentes-t { font-size: var(--h-card); }
+    .d-flechas { display: flex; gap: 8px; flex: none; }
+    .d-flecha { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--salvia-osc); background: transparent; color: var(--salvia-osc); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; transition: background-color .2s, color .2s, opacity .2s; }
+    .d-flecha:hover:not(:disabled) { background: var(--salvia-osc); color: var(--crema); }
+    .d-flecha:disabled { opacity: .35; cursor: default; }
+    .d-flecha svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .d-fila { display: flex; gap: 14px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; padding: 2px 2px 6px; margin-inline: -2px; }
+    .d-fila::-webkit-scrollbar { display: none; }
+    .d-card { flex: 0 0 min(78vw, 270px); scroll-snap-align: start; background: var(--blanco); border: 1px solid rgba(154,139,120,.3); border-radius: var(--radius); padding: 18px 18px 18px; display: flex; flex-direction: column; align-items: flex-start; }
+    .d-av { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; object-position: 50% 18%; flex: none; margin-bottom: 12px; border: 2px solid var(--blanco); box-shadow: 0 0 0 1px var(--salvia); background: var(--nude); }
+    .d-av.sin-foto { display: flex; align-items: center; justify-content: center; background: var(--crema-fhs); box-shadow: none; border: 1.5px dashed var(--salvia); color: var(--salvia-osc); font-family: var(--f-serif); font-weight: 700; font-size: 1.6rem; letter-spacing: .04em; }
+    .d-card h4 { font-family: var(--f-serif); font-weight: 700; color: var(--marino); font-size: 1.3rem; line-height: 1.15; margin: 0 0 8px; }
+    .d-card .d-roles li { font-size: .92rem; line-height: 1.5; margin-bottom: 6px; padding-left: 15px; }
+    .d-card .d-roles li::before { width: 6px; height: 6px; top: .62em; }
+    .d-leer { margin-top: auto; padding-top: 0; align-self: flex-start; background: none; border: 0; border-bottom: 1.5px solid var(--salvia-osc); border-radius: 0; color: var(--salvia-osc); font-weight: 600; font-size: .95rem; cursor: pointer; min-height: 44px; padding: 10px 0 2px; }
+    .d-leer:hover { color: var(--marino); border-color: var(--marino); }
+    .d-card .d-roles { margin-bottom: 8px; }
+    .d-dialog { border: 0; border-radius: var(--radius); padding: 24px 22px 26px; width: calc(100% - 32px); max-width: 560px; max-height: 86vh; max-height: 86dvh; overflow-y: auto; background: var(--blanco); color: var(--tinta); box-shadow: 0 20px 60px rgba(14,28,56,.45); }
+    .d-dialog::backdrop { background: rgba(14,28,56,.72); }
+    .dn-cab { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; padding-right: 44px; position: relative; min-height: 64px; }
+    .dn-cab img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid var(--blanco); box-shadow: 0 0 0 1px var(--salvia); }
+    .dn-cab h4 { font-family: var(--f-serif); font-weight: 700; color: var(--marino); font-size: var(--h-card); line-height: 1.15; margin: 0; }
+    .dn-cerrar { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--salvia-osc); background: transparent; color: var(--salvia-osc); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; }
+    .dn-cerrar:hover { background: var(--salvia-osc); color: var(--crema); }
+    .dn-cerrar svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+    .d-dialog .d-roles li { font-size: 1rem; line-height: 1.6; margin-bottom: 10px; }
+    body.modal-abierto { overflow: hidden; }
+    .d-dialog :focus-visible { outline-color: var(--marino); }
+    .d-pend { margin: 0; }
     /* Resumen + "Leer más" en las instituciones, y alineación de las tarjetas */
     .logo-item .d-inst { margin-top: 14px; text-align: center; }
     .logo-item .mas-txt { text-align: left; padding-top: 4px; }
@@ -425,8 +447,9 @@
     /* ---------- Tablet / escritorio ---------- */
     @media (min-width: 720px) {
       :root { --gutter: 32px; }
-      .cinta img { height: 320px; margin-right: 16px; }
-      .cinta-flecha { width: 54px; height: 54px; }
+      .cinta img { height: clamp(440px, 46vw, 560px); margin-right: 20px; border-radius: 16px; }
+      .cinta-flecha { width: 64px; height: 64px; }
+      .cinta-flecha svg { width: 30px; height: 30px; }
       .cinta-flecha.prev { left: max(20px, calc((100vw - 1040px) / 2)); }
       .cinta-flecha.next { right: max(20px, calc((100vw - 1040px) / 2)); }
       body { font-size: 18px; }
@@ -440,7 +463,8 @@
       .mod-destacado .cuerpo { order: -1; padding: 36px 34px; align-self: center; }
       .satsang { grid-template-columns: 1fr 1.25fr; }
       .biblioteca { grid-template-columns: 1.25fr 1fr; }
-      .docentes-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .d-card { flex-basis: 285px; }
+      .d-fila { gap: 16px; }
       .biblioteca .cuerpo { order: -1; padding: 34px 32px; }
       .biblioteca .foto img { aspect-ratio: auto; height: 100%; min-height: 100%; }
       .satsang .foto img { aspect-ratio: auto; height: 100%; min-height: 100%; }
@@ -465,12 +489,6 @@
       .i-promos { grid-column: 2; grid-row: 2; }
       .i-cert { grid-column: 1; grid-row: 3; }
       .i-medios { grid-column: 2; grid-row: 3; }
-      .docentes-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
-      .docente { flex-direction: row; }
-      .d-foto { flex: 0 0 40%; aspect-ratio: auto; min-height: 280px; }
-      .d-foto img { height: 100%; }
-      .d-foto.sin-foto { border-bottom: 0; border-right: 1px solid var(--line); }
-      .d-cuerpo { flex: 1; min-width: 0; padding: 26px 24px; align-self: center; }
       .col { gap: 28px; }
       .wa-float { right: 28px; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); width: auto; height: 60px; padding: 0 26px 0 20px; }
       .wa-float .lbl { display: inline; }
@@ -660,7 +678,7 @@
     </section>
 
     <!-- ================= BLOQUE 5 · QUIÉNES NOS RESPALDAN ================= -->
-    <section class="bloque alt" aria-labelledby="h-resp">
+    <section class="bloque alt con-banda" aria-labelledby="h-resp">
       <div class="wrap">
         <div class="narrow center reveal">
           <h2 class="sr-only" id="h-resp">Quiénes nos respaldan</h2>
@@ -755,99 +773,102 @@
 
         <p class="linea-final reveal">Equipo docente con formación universitaria y larga trayectoria en la práctica y enseñanza del <span class="skt">Haṭha Yoga</span>.</p>
 
-        <!-- Plantel docente -->
+        <!-- Plantel docente: hilera chica que se corre hacia el costado -->
         <div class="docentes" id="docentes">
-          <div class="center reveal">
+          <div class="d-cab reveal">
             <h3 class="docentes-t">Plantel docente</h3>
+            <div class="d-flechas">
+              <button type="button" class="d-flecha prev" aria-label="Docentes anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+              <button type="button" class="d-flecha next" aria-label="Docentes siguientes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+            </div>
           </div>
-          <div class="docentes-grid">
+          <div class="d-fila reveal" id="dFila" role="group" aria-label="Plantel docente" tabindex="0">
 
-            <article class="docente reveal" aria-labelledby="d-andrea">
-              <div class="d-foto"><img src="assets/img/docente-andrea-glomba.jpg" width="576" height="630" loading="lazy" alt="Retrato de Andrea Valeria Glomba, con guardapolvo blanco y estetoscopio"></div>
-              <div class="d-cuerpo">
-                <h4 id="d-andrea">Andrea Valeria Glomba</h4>
-                <ul class="d-roles">
-                  <li>Médica, recibida de la Universidad Nacional de Misiones.</li>
-                  <li>Consultora de Anatomía y Fisiología.</li>
-                  <li>Instructora de <span class="skt">Haṭha Yoga</span> Tradicional.</li>
-                </ul>
-              </div>
+            <article class="d-card" aria-labelledby="d-andrea">
+              <img class="d-av" src="assets/img/docente-andrea-glomba.jpg" width="576" height="630" loading="lazy" alt="Retrato de Andrea Valeria Glomba, con guardapolvo blanco y estetoscopio">
+              <h4 id="d-andrea">Andrea Valeria Glomba</h4>
+              <ul class="d-roles">
+                <li>Médica, recibida de la Universidad Nacional de Misiones.</li>
+                <li>Consultora de Anatomía y Fisiología.</li>
+                <li>Instructora de <span class="skt">Haṭha Yoga</span> Tradicional.</li>
+              </ul>
             </article>
 
-            <article class="docente reveal" aria-labelledby="d-natalia">
-              <div class="d-foto"><img src="assets/img/docente-natalia-solvey.jpg" width="492" height="732" loading="lazy" style="object-position: 50% 8%" alt="Retrato de Natalia Solvey"></div>
-              <div class="d-cuerpo">
-                <h4 id="d-natalia">Natalia Solvey</h4>
-                <ul class="d-roles">
-                  <li>Licenciada en Estudios Orientales por la Universidad del Salvador, especializada en India y Yoga.</li>
-                  <li>Directora de la Escuela de Yoga Tradicional Ātmabodha, filial oficial de The Lonavla Yoga Institute (India) en Argentina.</li>
-                </ul>
-                <details class="d-mas">
-                  <summary><span class="ver-mas">Leer más</span><span class="ver-menos">Leer menos</span></summary>
-                  <ul class="d-roles d-extra">
-                    <li>Experta en India y Yoga por la Universidad del Salvador.</li>
-                    <li>Diplomada como Yoga Terapeuta por The Lonavla Yoga Institute (India).</li>
-                    <li>Fue docente y participó en la puesta en marcha del Instructorado de Yoga de Lonavla en Buenos Aires.</li>
-                    <li>Desde 2018 es la traductora del Dr. Manmath Gharote y representante de The Lonavla Yoga Institute en el mundo de habla hispana.</li>
-                    <li>Conferencista y escritora: publicó <em>Yoga Tradicional - 9 Lecciones</em> y <em>El Yoga tiene sus Razones</em>.</li>
-                    <li>En el ámbito universitario fue titular de cátedra en la carrera de Técnico Superior en Yoga de la USAL, donde dictó los cuatro niveles de Teoría y Práctica de las Técnicas de Yoga, y en la Tecnicatura en Yoga y Salud Integral de la Universidad del Gran Rosario.</li>
-                  </ul>
-                </details>
-              </div>
+            <article class="d-card" aria-labelledby="d-natalia">
+              <img class="d-av" src="assets/img/docente-natalia-solvey.jpg" width="492" height="732" loading="lazy" style="object-position: 50% 8%" alt="Retrato de Natalia Solvey">
+              <h4 id="d-natalia">Natalia Solvey</h4>
+              <ul class="d-roles">
+                <li>Licenciada en Estudios Orientales por la Universidad del Salvador, especializada en India y Yoga.</li>
+                <li>Directora de la Escuela de Yoga Tradicional Ātmabodha.</li>
+              </ul>
+              <button type="button" class="d-leer" id="dLeer" aria-haspopup="dialog">Leer más</button>
             </article>
 
-            <article class="docente reveal" aria-labelledby="d-marcela">
-              <div class="d-foto sin-foto" role="img" aria-label="Espacio para la foto de Marcela Peper"><span aria-hidden="true">MP</span></div>
-              <div class="d-cuerpo">
-                <h4 id="d-marcela">Marcela Peper</h4>
-                <ul class="d-roles">
-                  <li>Doctorado en Ciencias Biológicas en la Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos Aires (UBA).</li>
-                  <li>Profesora adjunta de la cátedra Hatha Yoga 1 en la Tecnicatura en Yoga y Salud Integral de la Universidad del Gran Rosario (2026).</li>
-                </ul>
-              </div>
+            <article class="d-card" aria-labelledby="d-marcela">
+              <div class="d-av sin-foto" role="img" aria-label="Espacio para la foto de Marcela Peper"><span aria-hidden="true">MP</span></div>
+              <h4 id="d-marcela">Marcela Peper</h4>
+              <ul class="d-roles">
+                <li>Doctorado en Ciencias Biológicas, Universidad de Buenos Aires (UBA).</li>
+                <li>Profesora adjunta de Hatha Yoga 1 en la Tecnicatura en Yoga y Salud Integral, Universidad del Gran Rosario (2026).</li>
+              </ul>
             </article>
 
-            <article class="docente reveal" aria-labelledby="d-graciela">
-              <div class="d-foto sin-foto" role="img" aria-label="Espacio para la foto de Graciela Bonboni"><span aria-hidden="true">GB</span></div>
-              <div class="d-cuerpo">
-                <h4 id="d-graciela">Graciela Bonboni</h4>
-                <p class="d-pend"><span class="pend">Información [a confirmar]</span></p>
-              </div>
+            <article class="d-card" aria-labelledby="d-graciela">
+              <div class="d-av sin-foto" role="img" aria-label="Espacio para la foto de Graciela Bonboni"><span aria-hidden="true">GB</span></div>
+              <h4 id="d-graciela">Graciela Bonboni</h4>
+              <p class="d-pend"><span class="pend">Información [a confirmar]</span></p>
             </article>
 
           </div>
+
+          <!-- Biografía completa de Natalia Solvey -->
+          <dialog class="d-dialog" id="dNatalia" aria-labelledby="dn-t">
+            <div class="dn-cab">
+              <img src="assets/img/avatar-natalia.jpg" width="480" height="480" loading="lazy" alt="">
+              <h4 id="dn-t">Natalia Solvey</h4>
+              <button type="button" class="dn-cerrar" id="dCerrar" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+            </div>
+            <ul class="d-roles">
+              <li>Licenciada en Estudios Orientales por la Universidad del Salvador, especializada en India y Yoga, con el título de Experta por esa universidad.</li>
+              <li>Directora de la Escuela de Yoga Tradicional Ātmabodha, filial oficial de The Lonavla Yoga Institute (India) en Argentina.</li>
+              <li>Diplomada como Yoga Terapeuta por The Lonavla Yoga Institute (India).</li>
+              <li>Fue docente y participó en la puesta en marcha del Instructorado de Yoga de Lonavla en Buenos Aires.</li>
+              <li>Desde 2018 es la traductora del Dr. Manmath Gharote y representante de The Lonavla Yoga Institute en el mundo de habla hispana.</li>
+              <li>Conferencista y escritora: publicó <em>Yoga Tradicional - 9 Lecciones</em> y <em>El Yoga tiene sus Razones</em>.</li>
+              <li>En el ámbito universitario fue titular de cátedra en la carrera de Técnico Superior en Yoga de la USAL, donde dictó los cuatro niveles de Teoría y Práctica de las Técnicas de Yoga, y en la Tecnicatura en Yoga y Salud Integral de la Universidad del Gran Rosario.</li>
+            </ul>
+          </dialog>
         </div>
-
       </div>
 
       <!-- Cinta de fotos: avanza sola y también se maneja con flechas o deslizando; sin textos -->
       <div class="cinta-wrap">
         <div class="cinta" id="cinta" role="group" aria-label="Fotos de la formación">
           <div class="cinta-pista">
-          <img src="assets/img/thumbs/practica-yoga-rio-selva.jpg" width="900" height="900" loading="lazy" alt="Grupo practicando yoga sobre mats en una terraza de madera, rodeada de selva y con un río de fondo">
-          <img src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="900" height="600" loading="lazy" alt="El Dr. Manmath Gharote dibuja en una pizarra un esquema de cuerpo y alma">
-          <img src="assets/img/thumbs/viaje-india-stupa.jpg" width="900" height="675" loading="lazy" alt="Grupo de viajeros posando en un parque frente a un gran stupa de ladrillo, durante el viaje a la India">
-          <img src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="900" height="554" loading="lazy" alt="El Dr. Manmath Gharote, en blanco y negro, frente a una diapositiva con el linaje de maestros (Parampara)">
-          <img src="assets/img/thumbs/egresadas-diplomas-escuela-hatha-yoga-misiones.jpg" width="675" height="900" loading="lazy" alt="Siete mujeres sonrientes sostienen sus diplomas de instructoras de Haṭha Yoga de la Escuela Hatha Yoga Misiones">
-          <img src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="900" height="598" loading="lazy" alt="El Dr. Manmath Gharote en una charla, con un manuscrito desenfocado en primer plano">
-          <img src="assets/img/thumbs/viaje-india-palacio.jpg" width="900" height="675" loading="lazy" alt="Grupo posando en las escalinatas de un palacio blanco en la India">
-          <img src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="900" height="601" loading="lazy" alt="Una instructora junto a un pizarrón con las palabras Yoga Tradicional y el Om, con alumnas que levantan el brazo">
-          <img src="assets/img/thumbs/viaje-india-desierto-atardecer.jpg" width="900" height="675" loading="lazy" alt="Tres personas sentadas en las dunas, con las manos unidas sobre la cabeza, frente al sol que se pone">
-          <img src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="900" height="671" loading="lazy" alt="El Dr. Manmath Gharote ajusta la postura de un alumno recostado durante una práctica">
-          <img src="assets/img/thumbs/diploma-escuela-hatha-yoga-misiones.jpg" width="720" height="900" loading="lazy" alt="Una alumna sostiene su diploma de Instructor de Hatha Yoga entre compañeras que sonríen y levantan el pulgar">
-          <img src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="900" height="598" loading="lazy" alt="Grupo de alumnos con el Dr. Manmath Gharote en un parque arbolado">
-          <img src="assets/img/thumbs/viaje-india-fachada-pintada.jpg" width="675" height="900" loading="lazy" alt="Grupo posando bajo un gran arco de una fachada india decorada con pinturas y mosaicos">
+          <img src="assets/img/thumbs/practica-yoga-rio-selva.jpg" width="960" height="960" loading="lazy" alt="Grupo practicando yoga sobre mats en una terraza de madera, rodeada de selva y con un río de fondo">
+          <img src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="1100" height="734" loading="lazy" alt="El Dr. Manmath Gharote dibuja en una pizarra un esquema de cuerpo y alma">
+          <img src="assets/img/thumbs/viaje-india-stupa.jpg" width="1100" height="825" loading="lazy" alt="Grupo de viajeros posando en un parque frente a un gran stupa de ladrillo, durante el viaje a la India">
+          <img src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="1100" height="676" loading="lazy" alt="El Dr. Manmath Gharote, en blanco y negro, frente a una diapositiva con el linaje de maestros (Parampara)">
+          <img src="assets/img/thumbs/egresadas-diplomas-escuela-hatha-yoga-misiones.jpg" width="825" height="1100" loading="lazy" alt="Siete mujeres sonrientes sostienen sus diplomas de instructoras de Haṭha Yoga de la Escuela Hatha Yoga Misiones">
+          <img src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="1100" height="731" loading="lazy" alt="El Dr. Manmath Gharote en una charla, con un manuscrito desenfocado en primer plano">
+          <img src="assets/img/thumbs/viaje-india-palacio.jpg" width="1024" height="768" loading="lazy" alt="Grupo posando en las escalinatas de un palacio blanco en la India">
+          <img src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="1100" height="734" loading="lazy" alt="Una instructora junto a un pizarrón con las palabras Yoga Tradicional y el Om, con alumnas que levantan el brazo">
+          <img src="assets/img/thumbs/viaje-india-desierto-atardecer.jpg" width="1100" height="825" loading="lazy" alt="Tres personas sentadas en las dunas, con las manos unidas sobre la cabeza, frente al sol que se pone">
+          <img src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="1100" height="820" loading="lazy" alt="El Dr. Manmath Gharote ajusta la postura de un alumno recostado durante una práctica">
+          <img src="assets/img/thumbs/diploma-escuela-hatha-yoga-misiones.jpg" width="880" height="1100" loading="lazy" alt="Una alumna sostiene su diploma de Instructor de Hatha Yoga entre compañeras que sonríen y levantan el pulgar">
+          <img src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="1100" height="731" loading="lazy" alt="Grupo de alumnos con el Dr. Manmath Gharote en un parque arbolado">
+          <img src="assets/img/thumbs/viaje-india-fachada-pintada.jpg" width="825" height="1100" loading="lazy" alt="Grupo posando bajo un gran arco de una fachada india decorada con pinturas y mosaicos">
           <img src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="717" height="894" loading="lazy" alt="Alumnas sentadas con las manos unidas sobre la cabeza durante una práctica de yoga">
-          <img src="assets/img/thumbs/workshop-internacional-india-certificados.jpg" width="900" height="675" loading="lazy" alt="Grupo con sus certificados en un taller internacional de yoga en la India, con flores y fotografías de fondo">
-          <img src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="900" height="484" loading="lazy" alt="Foto grupal en blanco y negro de alumnos con el Dr. Manmath Gharote sentado al centro">
-          <img src="assets/img/thumbs/egresados-certificados-lonavla.jpg" width="722" height="900" loading="lazy" alt="Grupo de egresados en una escalera sostienen sus certificados de The Lonavla Yoga Institute">
-          <img src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="900" height="598" loading="lazy" alt="Manos sosteniendo un manuscrito antiguo, con mats de yoga de fondo">
-          <img src="assets/img/thumbs/viaje-india-micro.jpg" width="900" height="674" loading="lazy" alt="Grupo muy alegre dentro de un micro durante el viaje a la India">
-          <img src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="900" height="793" loading="lazy" alt="Pila de libros con la Haṭhapradīpikā en primer plano">
-          <img src="assets/img/thumbs/banner-escuela-hatha-yoga-misiones.jpg" width="720" height="900" loading="lazy" alt="Dos personas posan junto al cartel de la Escuela Hatha Yoga Misiones">
-          <img src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="900" height="688" loading="lazy" alt="El Dr. Manmath Gharote sonríe con las manos en namasté frente a una diapositiva que dice Om Shantih">
-          <img src="assets/img/thumbs/grupo-india-sala-conferencias.jpg" width="900" height="675" loading="lazy" alt="Grupo de mujeres y dos hombres posando en una sala de conferencias en la India">
-          <img src="assets/img/thumbs/natalia-y-gharote.jpg" width="900" height="656" loading="lazy" alt="Natalia Solvey y el Dr. Manmath Gharote al aire libre">
+          <img src="assets/img/thumbs/workshop-internacional-india-certificados.jpg" width="1024" height="768" loading="lazy" alt="Grupo con sus certificados en un taller internacional de yoga en la India, con flores y fotografías de fondo">
+          <img src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="1100" height="591" loading="lazy" alt="Foto grupal en blanco y negro de alumnos con el Dr. Manmath Gharote sentado al centro">
+          <img src="assets/img/thumbs/egresados-certificados-lonavla.jpg" width="883" height="1100" loading="lazy" alt="Grupo de egresados en una escalera sostienen sus certificados de The Lonavla Yoga Institute">
+          <img src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="1100" height="731" loading="lazy" alt="Manos sosteniendo un manuscrito antiguo, con mats de yoga de fondo">
+          <img src="assets/img/thumbs/viaje-india-micro.jpg" width="1100" height="823" loading="lazy" alt="Grupo muy alegre dentro de un micro durante el viaje a la India">
+          <img src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="1100" height="969" loading="lazy" alt="Pila de libros con la Haṭhapradīpikā en primer plano">
+          <img src="assets/img/thumbs/banner-escuela-hatha-yoga-misiones.jpg" width="880" height="1100" loading="lazy" alt="Dos personas posan junto al cartel de la Escuela Hatha Yoga Misiones">
+          <img src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="1100" height="842" loading="lazy" alt="El Dr. Manmath Gharote sonríe con las manos en namasté frente a una diapositiva que dice Om Shantih">
+          <img src="assets/img/thumbs/grupo-india-sala-conferencias.jpg" width="1024" height="768" loading="lazy" alt="Grupo de mujeres y dos hombres posando en una sala de conferencias en la India">
+          <img src="assets/img/thumbs/natalia-y-gharote.jpg" width="1100" height="802" loading="lazy" alt="Natalia Solvey y el Dr. Manmath Gharote al aire libre">
           </div>
         </div>
         <button type="button" class="cinta-flecha prev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
@@ -1089,6 +1110,44 @@
         }
         boton.disabled = false; boton.textContent = textoBoton;
       });
+    })();
+
+    /* ====== Plantel docente: hilera con flechas + biografía de Natalia en un recuadro ====== */
+    (function () {
+      const fila = document.getElementById('dFila');
+      if (!fila) return;
+      const prev = document.querySelector('.d-flecha.prev');
+      const next = document.querySelector('.d-flecha.next');
+      const flechas = document.querySelector('.d-flechas');
+      const reducir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const paso = () => { const c = fila.querySelector('.d-card'); return (c ? c.getBoundingClientRect().width : 260) + 14; };
+      function estado() {
+        const sobra = fila.scrollWidth - fila.clientWidth;
+        flechas.hidden = sobra < 4;                       // si todo entra, no hacen falta flechas
+        prev.disabled = fila.scrollLeft < 4;
+        next.disabled = fila.scrollLeft > sobra - 4;
+      }
+      prev.addEventListener('click', () => fila.scrollBy({ left: -paso(), behavior: reducir ? 'auto' : 'smooth' }));
+      next.addEventListener('click', () => fila.scrollBy({ left: paso(), behavior: reducir ? 'auto' : 'smooth' }));
+      fila.addEventListener('scroll', estado, { passive: true });
+      window.addEventListener('resize', estado);
+      window.addEventListener('load', estado);
+      estado();
+
+      // recuadro con la biografía completa
+      const dlg = document.getElementById('dNatalia');
+      const abrir = document.getElementById('dLeer');
+      const cerrar = document.getElementById('dCerrar');
+      if (!dlg || !abrir) return;
+      const bloquear = v => document.body.classList.toggle('modal-abierto', v);
+      abrir.addEventListener('click', () => {
+        if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+        bloquear(true); cerrar.focus();
+      });
+      const salir = () => { if (typeof dlg.close === 'function') dlg.close(); else dlg.removeAttribute('open'); bloquear(false); abrir.focus(); };
+      cerrar.addEventListener('click', salir);
+      dlg.addEventListener('click', e => { if (e.target === dlg) salir(); });      // toque fuera del recuadro
+      dlg.addEventListener('cancel', e => { e.preventDefault(); salir(); });        // tecla Esc
     })();
 
     /* ====== Cinta de fotos: avanza sola; las flechas y deslizar con el dedo la manejan a mano ====== */
