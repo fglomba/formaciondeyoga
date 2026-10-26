@@ -1,6 +1,6 @@
 # formaciondeyoga
 
-Página estática (HTML) de la Formación Profesional en Yoga Tradicional con el Dr. M. L. Gharote, para publicar en Netlify.
+Página estática (HTML) de la Formación Profesional en Yoga Tradicional con el Dr. Manmath Gharote, para publicar en Netlify.
 
 ## Estructura de carpetas
 
@@ -37,7 +37,7 @@ Las fotos están optimizadas: máximo 1600 px en el lado más largo, JPG calidad
 - `logo-lonavla.png` — sello de The Lonavla Yoga Institute (India), PNG con fondo transparente, 360×360.
 - `branding-fhs.png` — lámina del manual de marca FHS (logo, paleta, tipografía Fugi, íconos). Solo referencia.
 
-### Dr. M. L. Gharote
+### Dr. Manmath Gharote
 
 - `gharote-retrato.jpg` — retrato sonriente de Gharote con kurta amarilla, frente a una diapositiva proyectada.
 - `gharote-clase-manuscritos.jpg` — Gharote en el aula mostrando manuscritos antiguos a las alumnas (de espaldas en primer plano). Foto usada en el boceto `preview-mix.png`.
@@ -50,7 +50,7 @@ Las fotos están optimizadas: máximo 1600 px en el lado más largo, JPG calidad
 
 ### Directores de las tres instituciones
 
-- `estela-natalia-gharote.jpg` — Estela Puchalski (izquierda), el Dr. M. L. Gharote (centro) y Natalia Solvey (derecha), sonriendo con las manos en namasté.
+- `estela-natalia-gharote.jpg` — Estela Puchalski (izquierda), el Dr. Manmath Gharote (centro) y Natalia Solvey (derecha), sonriendo con las manos en namasté.
 - `estela-retrato.jpg` — Estela Puchalski (directora de la Fundación Holística de la Selva), sentada, de perfil y sonriendo (vertical).
 - `natalia-y-gharote.jpg` — retrato de Natalia Solvey (directora de Ātmabodha) junto a Gharote, al aire libre.
 - `avatar-gharote.jpg`, `avatar-natalia.jpg`, `avatar-estela.jpg` — retratos cuadrados de 480×480 de cada director/a, recortados de las fotos de arriba. Se muestran en las tarjetas de las instituciones.
@@ -76,7 +76,15 @@ Tiene exactamente los 7 bloques de `CONTENIDO-PAGINA-formacion-yoga.md`, en ese 
 
 Fotos de la página: `gharote-clase-manuscritos.jpg` (apertura), `practica-sarvangasana-grupo.jpg` (módulo 8), `gharote-sonriendo-manuscritos.jpg` (Satsaṅga), `gharote-retrato.jpg` (maestro), `estela-natalia-gharote.jpg` (los tres directores), los retratos `avatar-*.jpg` y los logos. `gharote-retrato.jpg` es también la imagen de vista previa al compartir (`og:image`).
 
-Cinta de fotos: al final del bloque 5 hay una tira con 12 fotos grandes, sin textos. Avanza sola hacia un costado y también se maneja a mano, con flechas a los lados o deslizando con el dedo; al tocarla se frena unos segundos y retoma. Usa miniaturas de hasta 900 px en `assets/img/thumbs/` (mismo nombre que la foto grande). La tira repite el juego de fotos tres veces para que el recorrido dé la vuelta sin saltos. Para sumar una foto: agregar su miniatura en `assets/img/thumbs/` y un `<img>` con su `alt` en el primer juego dentro de `.cinta-pista` en `index.html`, y el mismo `<img>` con `class="copia" alt="" aria-hidden="true"` en cada uno de los otros dos juegos, en el mismo orden. La velocidad se cambia con `VELOCIDAD` en el script. Las fotos no son links. Con la opción de reducir movimiento activada no avanza sola, pero las flechas y el dedo siguen funcionando.
+Cinta de fotos: al final del bloque 5 hay una tira con 24 fotos (incluye las de las cursadas en Misiones y los viajes a la India), sin textos. Avanza sola hacia un costado y también se maneja a mano, con flechas a los lados o deslizando con el dedo; al tocarla se frena unos segundos y retoma. Usa miniaturas de hasta 900 px en `assets/img/thumbs/` (mismo nombre que la foto grande, que queda disponible en `assets/img/`). Para sumar una foto: agregar su miniatura en `assets/img/thumbs/` y un `<img>` con su `alt` dentro de `.cinta-pista` en `index.html`. Nada más: el script repite el juego de fotos solo, para que el recorrido dé la vuelta sin saltos. La velocidad se cambia con `VELOCIDAD` en el script. Las fotos no son links. Con la opción de reducir movimiento activada no avanza sola, pero las flechas y el dedo siguen funcionando.
+
+Instituciones (bloque 5): cada tarjeta muestra las primeras líneas de su descripción y el resto en un "Leer más" (un `<details class="d-mas d-inst">` nativo, sin JavaScript). En escritorio las tres tarjetas reservan el mismo alto para que el título, el "Leer más", el link y las redes queden a la misma altura; en celular y tablet van en una columna.
+
+Todo lo que necesitás saber (bloque 6): en escritorio es una grilla de dos columnas con las piezas `i-cursada`, `i-inv`, `i-promos`, `i-cert` e `i-medios`, ubicadas para que las dos columnas terminen en la misma línea. Si se agrega o quita contenido en alguna de esas tarjetas, conviene volver a revisar que sigan parejas.
+
+Plantel docente (dentro del bloque 5, antes de la cinta de fotos): cuatro tarjetas con foto. Fotos en `assets/img/`: `docente-andrea-glomba.jpg` y `docente-natalia-solvey.jpg`. La tarjeta de Natalia tiene un "Leer más" que se abre y se cierra (es un `<details>` nativo, sin JavaScript). Marcela Peper y Graciela Bonboni todavía no tienen foto: sus tarjetas muestran un círculo con las iniciales. Para poner la foto, subir el archivo a `assets/img/` y reemplazar el `<div class="d-foto sin-foto">` por `<div class="d-foto"><img src="assets/img/NOMBRE.jpg" width="..." height="..." loading="lazy" alt="Retrato de ..."></div>`. Para Graciela falta también su información: reemplazar el `<p class="d-pend">` por una lista `<ul class="d-roles">`.
+
+En las fotos `diploma-escuela-hatha-yoga-misiones.jpg` y `egresadas-diplomas-escuela-hatha-yoga-misiones.jpg` están tapados con un mosaico los nombres y DNI de los diplomas. Si se agregan fotos con documentos o datos personales legibles, conviene taparlos antes de publicarlas.
 
 Tipografía: Cormorant Garamond para títulos, números, frases y sánscrito; Jost para texto, etiquetas y botones; Fugi solo en la frase final de cierre.
 
@@ -108,6 +116,7 @@ El formulario se envía sin salir de la página y muestra un mensaje de gracias 
 
 ### Pendientes
 
+- Foto de Marcela Peper, y foto e información de Graciela Bonboni (plantel docente; Graciela aparece marcada como `[a confirmar]`).
 - En la página no queda ningún dato marcado como `[a confirmar]`.
 - Fuera de la página: activar en Netlify la notificación por email del formulario `consulta` (ver arriba).
 - Los datos para pagar (alias, CBU, cuenta en dólares) no están en la página: se envían a quien se inscribe.

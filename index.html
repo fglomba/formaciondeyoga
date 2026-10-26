@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Instructorado en Yoga Tradicional · Nivel I · Formación 2027</title>
-  <meta name="description" content="Formación Profesional en Yoga Tradicional · Nivel I, con el Dr. M. L. Gharote. 512 horas cátedra, online en vivo, de marzo a noviembre de 2027. Triple certificación: nacional, del Instituto de Yoga Misiones e internacional.">
+  <meta name="description" content="Formación Profesional en Yoga Tradicional · Nivel I, con el Dr. Manmath Gharote. 512 horas cátedra, online en vivo, de marzo a noviembre de 2027. Triple certificación: nacional, del Instituto de Yoga Misiones e internacional.">
   <meta name="theme-color" content="#F4ECE4">
 
   <!-- Vista previa al compartir (WhatsApp, redes). og:image tiene que ser una URL absoluta. -->
@@ -13,11 +13,11 @@
   <link rel="canonical" href="https://hathayogaformacion.netlify.app/">
   <meta property="og:url" content="https://hathayogaformacion.netlify.app/">
   <meta property="og:title" content="Instructorado en Yoga Tradicional · Nivel I">
-  <meta property="og:description" content="Una formación que integra tradición, conocimiento y experiencia personal. Con el Dr. M. L. Gharote. 100 % online en vivo, marzo a noviembre de 2027.">
+  <meta property="og:description" content="Una formación que integra tradición, conocimiento y experiencia personal. Con el Dr. Manmath Gharote. 100 % online en vivo, marzo a noviembre de 2027.">
   <meta property="og:image" content="https://hathayogaformacion.netlify.app/assets/img/gharote-retrato.jpg">
   <meta property="og:image:width" content="1600">
   <meta property="og:image:height" content="1063">
-  <meta property="og:image:alt" content="El Dr. M. L. Gharote sonriendo, con kurta amarilla">
+  <meta property="og:image:alt" content="El Dr. Manmath Gharote sonriendo, con kurta amarilla">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="assets/img/logo-fhs.png" type="image/png">
@@ -163,6 +163,9 @@
     .hero .frase { margin-bottom: 22px; }
     .hero .texto { max-width: 54ch; }
     .hero-photo { padding: 14px; }
+    .datos { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 22px 0 30px; padding: 0; font-weight: 500; color: var(--marino); font-size: .98rem; }
+    .datos li { display: flex; align-items: center; gap: 8px; }
+    .datos li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--azafran); flex: none; }
 
     /* ============ 2 · LA PROPUESTA ============ */
     .dim-grid { display: grid; gap: 22px; margin-top: 44px; }
@@ -219,6 +222,10 @@
     .maestro .cuerpo { padding: 28px 24px 32px; display: flex; flex-direction: column; justify-content: center; }
     .maestro h3 { font-size: var(--h-feature); color: var(--crema); margin-bottom: 8px; }
     .maestro .rol { color: var(--azafran-claro); font-weight: 500; margin-bottom: 14px; }
+    .maestro .d-mas { margin-top: 16px; }
+    .maestro .d-mas summary { border-color: var(--azafran-claro); color: var(--azafran-claro); }
+    .maestro .d-mas summary:hover { background: var(--azafran-claro); color: var(--marino); }
+    .maestro .mas-txt p { margin: 12px 0 0; font-size: 1.02rem; line-height: 1.6; }
     .maestro .texto { margin: 0; font-size: 1.08rem; }
     .logos { display: grid; gap: 22px; margin-top: 44px; }
     .logo-item { background: var(--blanco); border: 1px solid rgba(154,139,120,.3); border-radius: var(--radius); padding: 26px 20px 24px; text-align: center; display: flex; flex-direction: column; }
@@ -256,6 +263,7 @@
     .cinta-flecha.next { right: 12px; }
 
     /* ============ 6 · TODO LO QUE NECESITÁS SABER ============ */
+    .datos-grid { display: grid; gap: 22px; margin-top: 36px; align-items: start; }
     .col { display: grid; gap: 22px; }
     .card { background: var(--blanco); border: 1px solid rgba(154,139,120,.3); border-radius: var(--radius); padding: 26px 22px 24px; }
     .card h3 { font-size: var(--h-card); margin-bottom: 16px; }
@@ -301,6 +309,64 @@
     .extra ul.puntos li:last-child { margin-bottom: 0; }
     .card ul.horarios { margin: 8px 0 2px; }
     .card ul.horarios li { margin-bottom: 6px; font-weight: 600; color: var(--marino); }
+    /* Biblioteca de textos yoguis */
+    .biblioteca { margin-top: 28px; background: var(--blanco); border: 1px solid rgba(154,139,120,.35); border-left: 4px solid var(--azafran); border-radius: var(--radius); overflow: hidden; display: grid; }
+    .biblioteca .foto img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 60%; }
+    .biblioteca .cuerpo { padding: 26px 22px 30px; display: flex; flex-direction: column; justify-content: center; }
+    .biblioteca h3 { font-size: var(--h-feature); margin-bottom: 10px; }
+    .biblioteca .texto { margin: 0; font-size: 1.08rem; }
+    /* Información de las instituciones */
+    .logo-item .desc { margin: 16px 0 0; text-align: left; font-size: .97rem; line-height: 1.6; }
+    .logo-item .desc + .desc { margin-top: 10px; }
+    .logo-item .desc-frase { font-family: var(--f-serif); font-style: italic; font-weight: 500; font-size: 1.2rem; line-height: 1.3; color: var(--marino); }
+    .logo-item .desc-dir { font-size: .92rem; color: var(--topo-osc); }
+    .logo-item a.url { margin-top: 14px; }
+    /* Plantel docente */
+    .docentes { margin-top: clamp(56px, 9vw, 96px); }
+    .docentes-t { font-size: var(--h-feature); margin-bottom: 8px; }
+    .docentes-grid { display: grid; gap: 22px; margin-top: 30px; align-items: stretch; }
+    .docente { background: var(--blanco); border: 1px solid rgba(154,139,120,.3); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+    .d-foto { aspect-ratio: 4 / 4.4; background: var(--nude); }
+    .d-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+    .d-foto.sin-foto { display: flex; align-items: center; justify-content: center; background: var(--crema-fhs); border-bottom: 1px solid var(--line); }
+    .d-foto.sin-foto span { display: flex; align-items: center; justify-content: center; width: 112px; height: 112px; border-radius: 50%; border: 1.5px dashed var(--salvia); color: var(--salvia-osc); font-family: var(--f-serif); font-weight: 700; font-size: 2.4rem; letter-spacing: .04em; }
+    .d-cuerpo { padding: 22px 22px 24px; }
+    .docente h4 { font-family: var(--f-serif); font-weight: 700; color: var(--marino); font-size: var(--h-card); line-height: 1.15; margin: 0 0 12px; }
+    .d-roles li { position: relative; padding-left: 18px; margin-bottom: 9px; font-size: .98rem; line-height: 1.55; }
+    .d-roles li::before { content: ""; position: absolute; left: 0; top: .66em; width: 7px; height: 7px; border-radius: 50%; background: var(--salvia); }
+    .d-roles li:last-child { margin-bottom: 0; }
+    .d-pend { margin: 0; }
+    .d-mas { margin-top: 14px; }
+    .d-mas summary { list-style: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 18px; border-radius: 999px; border: 1.5px solid var(--salvia-osc); color: var(--salvia-osc); font-weight: 600; font-size: .98rem; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: background-color .2s, color .2s; }
+    .d-mas summary::-webkit-details-marker { display: none; }
+    .d-mas summary::after { content: ""; width: 9px; height: 9px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); transition: transform .2s; }
+    .d-mas summary:hover { background: var(--salvia-osc); color: var(--crema); }
+    .d-mas[open] summary::after { transform: rotate(-135deg) translateY(-2px); }
+    .d-mas .ver-menos { display: none; }
+    .d-mas[open] .ver-menos { display: inline; }
+    .d-mas[open] .ver-mas { display: none; }
+    .d-extra { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(154,139,120,.3); }
+    /* Resumen + "Leer más" en las instituciones, y alineación de las tarjetas */
+    .logo-item .d-inst { margin-top: 14px; text-align: center; }
+    .logo-item .mas-txt { text-align: left; padding-top: 4px; }
+    .logo-item .mas-txt p { margin: 12px 0 0; font-size: .97rem; line-height: 1.6; }
+    .logo-item .mas-txt .mas-frase { font-family: var(--f-serif); font-style: italic; font-weight: 500; font-size: 1.2rem; line-height: 1.3; color: var(--marino); }
+    .logo-item .mas-txt .mas-dir { font-size: .92rem; color: var(--topo-osc); }
+    .logo-item .acciones { margin-top: auto; padding-top: 6px; display: flex; flex-direction: column; align-items: center; }
+    .logo-item .acciones .redes { margin-top: 0; padding-top: 10px; }
+    .logos { align-items: stretch; }
+    .inv-nota { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid rgba(154,139,120,.3); font-size: .95rem; }
+    .extra-sat { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid rgba(154,139,120,.45); font-weight: 500; }
+    .card.destacada h3 { font-size: var(--h-feature); line-height: 1.1; }
+    .insc-grid { display: grid; gap: 22px; margin-top: 36px; }
+    .card.destacada { border: 2px solid var(--azafran); }
+    .insc-linea { margin: 0 0 10px; font-family: var(--f-serif); font-weight: 700; font-size: var(--h-item); line-height: 1.25; color: var(--marino); }
+    .insc-desc { margin: 0; }
+    .insc-desc strong { color: var(--azafran-texto); }
+    .charlas li { position: relative; padding-left: 18px; margin-bottom: 12px; line-height: 1.35; }
+    .charlas li:last-child { margin-bottom: 0; }
+    .charlas li::before { content: ""; position: absolute; left: 0; top: .55em; width: 9px; height: 9px; border-radius: 50%; background: var(--azafran); }
+    .charlas .mes { display: block; font-family: var(--f-serif); font-weight: 700; font-size: var(--h-item); color: var(--marino); line-height: 1.2; }
     .pagos-intro { margin: 0 0 14px; }
     .pagos-nota { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid rgba(154,139,120,.3); font-weight: 500; color: var(--marino); }
     .cert .detalle { display: block; margin-top: 4px; font-size: .95rem; color: var(--topo-osc); }
@@ -365,13 +431,18 @@
       .cinta-flecha.next { right: max(20px, calc((100vw - 1040px) / 2)); }
       body { font-size: 18px; }
       .dim-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-      .logos { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+      .insc-grid { grid-template-columns: 1.2fr 1fr; gap: 28px; }
+      .logos { max-width: 600px; margin-inline: auto; }
       .mods { padding: 8px 36px; }
       .mod { grid-template-columns: 4rem 1fr; gap: 0 20px; padding: 22px 0; }
       .mod-destacado { display: grid; grid-template-columns: 1.1fr 1fr; }
       .mod-destacado .foto img { aspect-ratio: auto; height: 100%; }
       .mod-destacado .cuerpo { order: -1; padding: 36px 34px; align-self: center; }
       .satsang { grid-template-columns: 1fr 1.25fr; }
+      .biblioteca { grid-template-columns: 1.25fr 1fr; }
+      .docentes-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .biblioteca .cuerpo { order: -1; padding: 34px 32px; }
+      .biblioteca .foto img { aspect-ratio: auto; height: 100%; min-height: 100%; }
       .satsang .foto img { aspect-ratio: auto; height: 100%; min-height: 100%; }
       .satsang .cuerpo { padding: 34px 32px; }
       .maestro { grid-template-columns: 1fr 1.1fr; }
@@ -380,6 +451,26 @@
     }
     @media (min-width: 960px) {
       .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 64px; }
+      .logos { max-width: none; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+      .logo-item h3 { min-height: 2.35em; display: flex; align-items: center; justify-content: center; }
+      .logo-item .acciones { min-height: 124px; }
+      .logo-item .desc:first-of-type { min-height: 12.9em; }
+      /* Todo lo que necesitás saber: Cursada a la izquierda, Inversión y Promociones a la derecha, y abajo Certificación y Medios de pago */
+      .datos-grid { grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
+      .col { display: contents; }
+      .i-cursada { grid-column: 1; grid-row: 1 / span 2; display: flex; flex-direction: column; }
+      .i-cursada .carga { margin-top: auto; }
+      .i-cursada .puntos { margin-bottom: 20px; }
+      .i-inv { grid-column: 2; grid-row: 1; }
+      .i-promos { grid-column: 2; grid-row: 2; }
+      .i-cert { grid-column: 1; grid-row: 3; }
+      .i-medios { grid-column: 2; grid-row: 3; }
+      .docentes-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .docente { flex-direction: row; }
+      .d-foto { flex: 0 0 40%; aspect-ratio: auto; min-height: 280px; }
+      .d-foto img { height: 100%; }
+      .d-foto.sin-foto { border-bottom: 0; border-right: 1px solid var(--line); }
+      .d-cuerpo { flex: 1; min-width: 0; padding: 26px 24px; align-self: center; }
       .col { gap: 28px; }
       .wa-float { right: 28px; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); width: auto; height: 60px; padding: 0 26px 0 20px; }
       .wa-float .lbl { display: inline; }
@@ -422,7 +513,7 @@
         <div class="hero-photo">
           <div class="ring-photo">
             <img src="assets/img/gharote-clase-manuscritos.jpg" width="1600" height="1504" fetchpriority="high" style="object-position: 62% 30%"
-                 alt="El Dr. M. L. Gharote, de pie en el aula, muestra manuscritos antiguos a un grupo de alumnas sentadas">
+                 alt="El Dr. Manmath Gharote, de pie en el aula, muestra manuscritos antiguos a un grupo de alumnas sentadas">
           </div>
         </div>
       </div>
@@ -440,7 +531,7 @@
           <article class="dim reveal">
             <h3><span class="skt">Prāṇasaṃyama Yoga</span></h3>
             <p class="sub">La transformación psicofísica</p>
-            <p>Las prácticas tradicionales de <em class="skt">āsana</em>, <em class="skt">prāṇāyāma</em> y <em class="skt">dhāraṇā</em> para regular cuerpo y mente, interiorizar la atención y desarrollar la concentración.</p>
+            <p>Las prácticas tradicionales de <em class="skt">āsana</em>, <em class="skt">prāṇāyāma</em>, <em class="skt">mudrā</em>, <em class="skt">kriyā</em> y <em class="skt">dhāraṇā</em> para regular cuerpo y mente, interiorizar la atención y desarrollar la concentración.</p>
           </article>
           <article class="dim reveal">
             <h3><span class="skt">Bhāvanā Yoga</span></h3>
@@ -535,23 +626,34 @@
             <div class="top"><span class="mod-num" aria-hidden="true">8</span></div>
             <h3 id="h-m8"><span class="sr-only">Módulo 8: </span>Práctica del Yoga Tradicional</h3>
             <p class="horas"><span class="num">240</span> h</p>
-            <p class="mod-sum">El corazón de la formación.</p>
+            <p class="mod-sum">El corazón de la formación: <span class="skt">āsana</span>, <span class="skt">prāṇāyāma</span>, <span class="skt">mudrā</span>, <span class="skt">kriyā</span> y <span class="skt">dhāraṇā</span>.</p>
           </div>
         </article>
 
-        <!-- Satsaṅga: encuentros mensuales con el Dr. Gharote -->
+        <!-- Satsaṅga: encuentros mensuales con el Dr. Manmath Gharote -->
         <article class="satsang reveal" aria-labelledby="h-sat">
           <div class="foto">
             <img src="assets/img/gharote-sonriendo-manuscritos.jpg" width="1600" height="1161" loading="lazy"
-                 alt="El Dr. M. L. Gharote, con kurta roja, sostiene sonriendo dos manuscritos antiguos">
+                 alt="El Dr. Manmath Gharote, con kurta roja, sostiene sonriendo dos manuscritos antiguos">
           </div>
           <div class="cuerpo">
-            <ul class="chips" aria-label="Datos del Satsaṅga"><li>Un domingo al mes</li><li>De 10:30 a 12</li><li>Por Zoom</li><li>Optativo</li></ul>
+            <ul class="chips" aria-label="Datos del Satsaṅga"><li>Un domingo al mes</li><li>De 10:30 a 12</li><li>Por Zoom</li><li>Obligatorio</li></ul>
             <h3 id="h-sat"><span class="skt">Satsaṅga</span></h3>
-            <p class="linea-dato">Encuentro en vivo desde la India con el Dr. M. L. Gharote</p>
+            <p class="linea-dato">Encuentro en vivo desde la India con el Dr. Manmath Gharote</p>
             <p class="linea-dato">Traducción simultánea de Natalia Solvey</p>
             <p class="texto">A lo largo del año, un domingo al mes de 10:30 a 12 nos encontramos para el estudio de los manuscritos antiguos de reciente publicación. Esto nos permite conocer de manera directa y guiada las enseñanzas originales de los maestros del <span class="skt">Haṭha Yoga</span> tradicional.</p>
-            <p class="satsang-aviso">Es una actividad optativa y no está incluida en el valor de la formación.</p>
+            <p class="satsang-aviso">Es obligatorio y forma parte de las 297 horas cátedra en vivo, pero se abona aparte: no está incluido en el valor de la formación.</p>
+          </div>
+        </article>
+
+        <!-- Biblioteca de textos yoguis -->
+        <article class="biblioteca reveal" aria-labelledby="h-bib">
+          <div class="foto">
+            <img src="assets/img/libros-hatha-pradipika.jpg" width="1600" height="1409" loading="lazy" alt="Pila de libros con la Haṭhapradīpikā en primer plano">
+          </div>
+          <div class="cuerpo">
+            <h3 id="h-bib">Biblioteca de textos yoguis</h3>
+            <p class="texto">Una vez inscriptos, acceden a una biblioteca llena de textos yoguis.</p>
           </div>
         </article>
       </div>
@@ -568,51 +670,153 @@
         <article class="maestro reveal">
           <div class="foto">
             <img src="assets/img/gharote-retrato.jpg" width="1600" height="1063" loading="lazy"
-                 alt="Retrato del Dr. M. L. Gharote sonriendo, con kurta amarilla, frente a una diapositiva proyectada">
+                 alt="Retrato del Dr. Manmath Gharote sonriendo, con kurta amarilla, frente a una diapositiva proyectada">
           </div>
           <div class="cuerpo">
-            <h3>Dr. M. L. Gharote</h3>
-            <p class="rol">Director de The Lonavla Yoga Institute (India) y Director Honorario de la formación.</p>
-            <p class="texto">Viaja cada año desde la India para compartir con nuestra comunidad.</p>
+            <h3>Dr. Manmath M. Gharote</h3>
+            <p class="rol">Consultor de The Lonavla Yoga Institute (India).</p>
+            <p class="texto">Viaja cada año desde la India para compartir con nuestra comunidad. Se dedica a la enseñanza, la investigación y la difusión del Yoga Tradicional.</p>
+            <details class="d-mas d-maestro">
+              <summary><span class="ver-mas">Leer más</span><span class="ver-menos">Leer menos</span></summary>
+              <div class="mas-txt">
+                <p>Nació en Lonavla, India, en 1966, y se formó en Educación Física y Yoga, Yoga Terapéutico, Medicina Deportiva, Fisioterapia y Periodismo Deportivo.</p>
+                <p>Colabora de cerca con Ātmabodha: participa en los <span class="skt">satsaṅga</span> mensuales, conferencias, seminarios, retiros intensivos y actividades de formación para practicantes de habla hispana.</p>
+              </div>
+            </details>
           </div>
         </article>
 
 
         <figure class="trio reveal">
-          <div class="photo"><img src="assets/img/estela-natalia-gharote.jpg" width="1280" height="960" loading="lazy" alt="Estela Puchalski, el Dr. M. L. Gharote y Natalia Solvey sonriendo, con las manos en namasté"></div>
-          <figcaption>Estela Puchalski, el Dr. M. L. Gharote y Natalia Solvey</figcaption>
+          <div class="photo"><img src="assets/img/estela-natalia-gharote.jpg" width="1280" height="960" loading="lazy" alt="Estela Puchalski, el Dr. Manmath Gharote y Natalia Solvey sonriendo, con las manos en namasté"></div>
+          <figcaption>Estela Puchalski, el Dr. Manmath Gharote y Natalia Solvey</figcaption>
         </figure>
 
         <ul class="logos">
           <li class="logo-item reveal">
             <a class="l" href="https://www.lonavlayoga.org/" aria-label="Sitio web de The Lonavla Yoga Institute"><img src="assets/img/logo-lonavla.png" width="360" height="360" loading="lazy" alt="Logo de The Lonavla Yoga Institute, India"></a>
             <h3>The Lonavla Yoga Institute (India)</h3>
-            <div class="director"><img src="assets/img/avatar-gharote.jpg" width="480" height="480" loading="lazy" alt="Retrato del Dr. M. L. Gharote"><div><small>Dirigido por</small><strong>Dr. M. L. Gharote</strong></div></div>
-            <a class="url" href="https://www.lonavlayoga.org/">www.lonavlayoga.org</a>
+            <div class="director"><img src="assets/img/avatar-gharote.jpg" width="480" height="480" loading="lazy" alt="Retrato del Dr. Manmath Gharote"><div><small>Consultor</small><strong>Dr. Manmath M. Gharote</strong></div></div>
+            <p class="desc">Fundado en 1996, se dedica a preservar, investigar, enseñar y difundir el Yoga Tradicional, con atención especial a sus fuentes originales y a los antiguos manuscritos.</p>
+            <details class="d-mas d-inst">
+              <summary><span class="ver-mas">Leer más</span><span class="ver-menos">Leer menos</span></summary>
+              <div class="mas-txt">
+                <p>Publica ediciones críticas de textos tradicionales, traducciones, catálogos y glosarios, y organiza cursos y seminarios en la India y en el extranjero.</p>
+              </div>
+            </details>
+            <div class="acciones">
+              <a class="url" href="https://www.lonavlayoga.org/">www.lonavlayoga.org</a>
+            </div>
           </li>
           <li class="logo-item reveal">
             <a class="l" href="https://yogatmabodha.com/" aria-label="Sitio web de Ātmabodha"><img src="assets/img/logo-atmabodha.png" width="480" height="480" loading="lazy" alt="Logo de Ātmabodha, Escuela de Yoga Tradicional: figura meditando con alas y el lema En camino hacia la Sabiduría"></a>
             <h3>Ātmabodha · Escuela de Yoga Tradicional</h3>
             <div class="director"><img src="assets/img/avatar-natalia.jpg" width="480" height="480" loading="lazy" alt="Retrato de Natalia Solvey"><div><small>Dirigida por</small><strong>Natalia Solvey</strong></div></div>
-            <a class="url" href="https://yogatmabodha.com/">yogatmabodha.com</a>
-            <div class="redes" role="group" aria-label="Redes de Ātmabodha">
-              <a href="https://www.instagram.com/yogatmabodha/" aria-label="Instagram de Ātmabodha" title="Instagram"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a>
-              <a href="https://www.facebook.com/atma.bodha.3" aria-label="Facebook de Ātmabodha" title="Facebook"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a>
+            <p class="desc">Fundada en 2018 por Leda Pilello y Natalia Solvey, licenciadas en Estudios Orientales con formación en Hinduismo y Yoga, para promover el Yoga Tradicional en el mundo de habla hispana. Desde la pandemia es una escuela de formación 100 % a distancia.</p>
+            <details class="d-mas d-inst">
+              <summary><span class="ver-mas">Leer más</span><span class="ver-menos">Leer menos</span></summary>
+              <div class="mas-txt">
+                <p>Mantiene un vínculo permanente con The Lonavla Yoga Institute: viajes de estudio a la India, participación anual en su International Yoga Workshop, la Gira del Yoga Tradicional y el <span class="skt">satsaṅga</span> mensual con traducción simultánea.</p>
+                <p>Su misión: contribuir al renacimiento del Yoga Tradicional, recuperando la profundidad de sus enseñanzas y promoviendo su integración en la vida contemporánea.</p>
+              </div>
+            </details>
+            <div class="acciones">
+              <a class="url" href="https://yogatmabodha.com/">yogatmabodha.com</a>
+              <div class="redes" role="group" aria-label="Redes de Ātmabodha">
+                <a href="https://www.instagram.com/yogatmabodha/" aria-label="Instagram de Ātmabodha" title="Instagram"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a>
+                <a href="https://www.facebook.com/atma.bodha.3" aria-label="Facebook de Ātmabodha" title="Facebook"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a>
+              </div>
             </div>
           </li>
           <li class="logo-item reveal">
             <a class="l" href="https://fundacionholisticadelaselva.org/" aria-label="Sitio web de la Fundación Holística de la Selva"><img src="assets/img/logo-fhs.png" width="1080" height="1080" loading="lazy" alt="Logo de la Fundación Holística de la Selva: figura con brazos abiertos sostenida por dos manos"></a>
             <h3>Fundación Holística de la Selva</h3>
             <div class="director"><img src="assets/img/avatar-estela.jpg" width="480" height="480" loading="lazy" alt="Retrato de Estela Puchalski"><div><small>Dirigida por</small><strong>Estela Puchalski</strong></div></div>
-            <a class="url" href="https://fundacionholisticadelaselva.org/">fundacionholisticadelaselva.org</a>
-            <div class="redes" role="group" aria-label="Redes de la Fundación Holística de la Selva">
-              <a href="https://www.instagram.com/f.holisticadelaselva/" aria-label="Instagram de la Fundación Holística de la Selva" title="Instagram"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a>
-              <a href="https://www.facebook.com/estudiaryoga" aria-label="Facebook de la Fundación Holística de la Selva" title="Facebook"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a>
+            <p class="desc">Creada en 2022 en Posadas, Misiones, por Estela Marisa Puchalski y María Luisa Gómez de Oliveira, para preservar, transmitir y expandir el conocimiento del yoga tradicional recibido del Dr. Manmath Gharote, de Alicia Souto y de Vivian Lagier.</p>
+            <details class="d-mas d-inst">
+              <summary><span class="ver-mas">Leer más</span><span class="ver-menos">Leer menos</span></summary>
+              <div class="mas-txt">
+                <p>Respalda institucionalmente al Instituto de Yoga Misiones Dr. M. L. Gharote, inscripto en el ámbito educativo de Misiones a través del SPEPM, y promueve la formación de profesores. Colabora con la difusión de las enseñanzas de The Lonavla Yoga Institute y coopera con Ātmabodha.</p>
+                <p>Su misión trasciende el yoga: impulsa las terapias alternativas y holísticas, la formación integral y actividades como retiros, seminarios y encuentros, y trabaja por el reconocimiento institucional y social de estas disciplinas.</p>
+                <p class="mas-frase">Desde Misiones hacia el mundo, hacemos del conocimiento un camino de transformación.</p>
+                <p class="mas-dir">Bermúdez 1620, Posadas, Misiones, Argentina.</p>
+              </div>
+            </details>
+            <div class="acciones">
+              <a class="url" href="https://fundacionholisticadelaselva.org/">fundacionholisticadelaselva.org</a>
+              <div class="redes" role="group" aria-label="Redes de la Fundación Holística de la Selva">
+                <a href="https://www.instagram.com/f.holisticadelaselva/" aria-label="Instagram de la Fundación Holística de la Selva" title="Instagram"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a>
+                <a href="https://www.facebook.com/estudiaryoga" aria-label="Facebook de la Fundación Holística de la Selva" title="Facebook"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a>
+              </div>
             </div>
           </li>
         </ul>
 
+
         <p class="linea-final reveal">Equipo docente con formación universitaria y larga trayectoria en la práctica y enseñanza del <span class="skt">Haṭha Yoga</span>.</p>
+
+        <!-- Plantel docente -->
+        <div class="docentes" id="docentes">
+          <div class="center reveal">
+            <h3 class="docentes-t">Plantel docente</h3>
+          </div>
+          <div class="docentes-grid">
+
+            <article class="docente reveal" aria-labelledby="d-andrea">
+              <div class="d-foto"><img src="assets/img/docente-andrea-glomba.jpg" width="576" height="630" loading="lazy" alt="Retrato de Andrea Valeria Glomba, con guardapolvo blanco y estetoscopio"></div>
+              <div class="d-cuerpo">
+                <h4 id="d-andrea">Andrea Valeria Glomba</h4>
+                <ul class="d-roles">
+                  <li>Médica, recibida de la Universidad Nacional de Misiones.</li>
+                  <li>Consultora de Anatomía y Fisiología.</li>
+                  <li>Instructora de <span class="skt">Haṭha Yoga</span> Tradicional.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="docente reveal" aria-labelledby="d-natalia">
+              <div class="d-foto"><img src="assets/img/docente-natalia-solvey.jpg" width="492" height="732" loading="lazy" style="object-position: 50% 8%" alt="Retrato de Natalia Solvey"></div>
+              <div class="d-cuerpo">
+                <h4 id="d-natalia">Natalia Solvey</h4>
+                <ul class="d-roles">
+                  <li>Licenciada en Estudios Orientales por la Universidad del Salvador, especializada en India y Yoga.</li>
+                  <li>Directora de la Escuela de Yoga Tradicional Ātmabodha, filial oficial de The Lonavla Yoga Institute (India) en Argentina.</li>
+                </ul>
+                <details class="d-mas">
+                  <summary><span class="ver-mas">Leer más</span><span class="ver-menos">Leer menos</span></summary>
+                  <ul class="d-roles d-extra">
+                    <li>Experta en India y Yoga por la Universidad del Salvador.</li>
+                    <li>Diplomada como Yoga Terapeuta por The Lonavla Yoga Institute (India).</li>
+                    <li>Fue docente y participó en la puesta en marcha del Instructorado de Yoga de Lonavla en Buenos Aires.</li>
+                    <li>Desde 2018 es la traductora del Dr. Manmath Gharote y representante de The Lonavla Yoga Institute en el mundo de habla hispana.</li>
+                    <li>Conferencista y escritora: publicó <em>Yoga Tradicional - 9 Lecciones</em> y <em>El Yoga tiene sus Razones</em>.</li>
+                    <li>En el ámbito universitario fue titular de cátedra en la carrera de Técnico Superior en Yoga de la USAL, donde dictó los cuatro niveles de Teoría y Práctica de las Técnicas de Yoga, y en la Tecnicatura en Yoga y Salud Integral de la Universidad del Gran Rosario.</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="docente reveal" aria-labelledby="d-marcela">
+              <div class="d-foto sin-foto" role="img" aria-label="Espacio para la foto de Marcela Peper"><span aria-hidden="true">MP</span></div>
+              <div class="d-cuerpo">
+                <h4 id="d-marcela">Marcela Peper</h4>
+                <ul class="d-roles">
+                  <li>Doctorado en Ciencias Biológicas en la Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos Aires (UBA).</li>
+                  <li>Profesora adjunta de la cátedra Hatha Yoga 1 en la Tecnicatura en Yoga y Salud Integral de la Universidad del Gran Rosario (2026).</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="docente reveal" aria-labelledby="d-graciela">
+              <div class="d-foto sin-foto" role="img" aria-label="Espacio para la foto de Graciela Bonboni"><span aria-hidden="true">GB</span></div>
+              <div class="d-cuerpo">
+                <h4 id="d-graciela">Graciela Bonboni</h4>
+                <p class="d-pend"><span class="pend">Información [a confirmar]</span></p>
+              </div>
+            </article>
+
+          </div>
+        </div>
 
       </div>
 
@@ -620,42 +824,30 @@
       <div class="cinta-wrap">
         <div class="cinta" id="cinta" role="group" aria-label="Fotos de la formación">
           <div class="cinta-pista">
-          <img src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="900" height="600" loading="lazy" alt="El Dr. M. L. Gharote dibuja en una pizarra un esquema de cuerpo y alma">
-          <img src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="900" height="554" loading="lazy" alt="El Dr. M. L. Gharote, en blanco y negro, frente a una diapositiva con el linaje de maestros (Parampara)">
-          <img src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="900" height="598" loading="lazy" alt="El Dr. M. L. Gharote en una charla, con un manuscrito desenfocado en primer plano">
-          <img src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="900" height="671" loading="lazy" alt="El Dr. M. L. Gharote ajusta la postura de un alumno recostado durante una práctica">
+          <img src="assets/img/thumbs/practica-yoga-rio-selva.jpg" width="900" height="900" loading="lazy" alt="Grupo practicando yoga sobre mats en una terraza de madera, rodeada de selva y con un río de fondo">
+          <img src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="900" height="600" loading="lazy" alt="El Dr. Manmath Gharote dibuja en una pizarra un esquema de cuerpo y alma">
+          <img src="assets/img/thumbs/viaje-india-stupa.jpg" width="900" height="675" loading="lazy" alt="Grupo de viajeros posando en un parque frente a un gran stupa de ladrillo, durante el viaje a la India">
+          <img src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="900" height="554" loading="lazy" alt="El Dr. Manmath Gharote, en blanco y negro, frente a una diapositiva con el linaje de maestros (Parampara)">
+          <img src="assets/img/thumbs/egresadas-diplomas-escuela-hatha-yoga-misiones.jpg" width="675" height="900" loading="lazy" alt="Siete mujeres sonrientes sostienen sus diplomas de instructoras de Haṭha Yoga de la Escuela Hatha Yoga Misiones">
+          <img src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="900" height="598" loading="lazy" alt="El Dr. Manmath Gharote en una charla, con un manuscrito desenfocado en primer plano">
+          <img src="assets/img/thumbs/viaje-india-palacio.jpg" width="900" height="675" loading="lazy" alt="Grupo posando en las escalinatas de un palacio blanco en la India">
           <img src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="900" height="601" loading="lazy" alt="Una instructora junto a un pizarrón con las palabras Yoga Tradicional y el Om, con alumnas que levantan el brazo">
+          <img src="assets/img/thumbs/viaje-india-desierto-atardecer.jpg" width="900" height="675" loading="lazy" alt="Tres personas sentadas en las dunas, con las manos unidas sobre la cabeza, frente al sol que se pone">
+          <img src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="900" height="671" loading="lazy" alt="El Dr. Manmath Gharote ajusta la postura de un alumno recostado durante una práctica">
+          <img src="assets/img/thumbs/diploma-escuela-hatha-yoga-misiones.jpg" width="720" height="900" loading="lazy" alt="Una alumna sostiene su diploma de Instructor de Hatha Yoga entre compañeras que sonríen y levantan el pulgar">
+          <img src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="900" height="598" loading="lazy" alt="Grupo de alumnos con el Dr. Manmath Gharote en un parque arbolado">
+          <img src="assets/img/thumbs/viaje-india-fachada-pintada.jpg" width="675" height="900" loading="lazy" alt="Grupo posando bajo un gran arco de una fachada india decorada con pinturas y mosaicos">
           <img src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="717" height="894" loading="lazy" alt="Alumnas sentadas con las manos unidas sobre la cabeza durante una práctica de yoga">
-          <img src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="900" height="598" loading="lazy" alt="Grupo de alumnos con el Dr. M. L. Gharote en un parque arbolado">
-          <img src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="900" height="484" loading="lazy" alt="Foto grupal en blanco y negro de alumnos con el Dr. M. L. Gharote sentado al centro">
+          <img src="assets/img/thumbs/workshop-internacional-india-certificados.jpg" width="900" height="675" loading="lazy" alt="Grupo con sus certificados en un taller internacional de yoga en la India, con flores y fotografías de fondo">
+          <img src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="900" height="484" loading="lazy" alt="Foto grupal en blanco y negro de alumnos con el Dr. Manmath Gharote sentado al centro">
+          <img src="assets/img/thumbs/egresados-certificados-lonavla.jpg" width="722" height="900" loading="lazy" alt="Grupo de egresados en una escalera sostienen sus certificados de The Lonavla Yoga Institute">
           <img src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="900" height="598" loading="lazy" alt="Manos sosteniendo un manuscrito antiguo, con mats de yoga de fondo">
+          <img src="assets/img/thumbs/viaje-india-micro.jpg" width="900" height="674" loading="lazy" alt="Grupo muy alegre dentro de un micro durante el viaje a la India">
           <img src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="900" height="793" loading="lazy" alt="Pila de libros con la Haṭhapradīpikā en primer plano">
-          <img src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="900" height="688" loading="lazy" alt="El Dr. M. L. Gharote sonríe con las manos en namasté frente a una diapositiva que dice Om Shantih">
-          <img src="assets/img/thumbs/natalia-y-gharote.jpg" width="900" height="656" loading="lazy" alt="Natalia Solvey y el Dr. M. L. Gharote al aire libre">
-          <img class="copia" src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="900" height="600" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="900" height="554" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="900" height="671" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="900" height="601" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="717" height="894" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="900" height="484" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="900" height="793" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="900" height="688" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/natalia-y-gharote.jpg" width="900" height="656" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-pizarra-alma-cuerpo.jpg" width="900" height="600" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-parampara-linaje-bn.jpg" width="900" height="554" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-conferencia-kriti-rakshana.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-corrigiendo-postura.jpg" width="900" height="671" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/clase-yoga-tradicional-pizarra.jpg" width="900" height="601" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/practica-asana-manos-arriba.jpg" width="717" height="894" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-parque.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/grupo-alumnos-gharote-bn.jpg" width="900" height="484" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/manos-manuscrito-antiguo.jpg" width="900" height="598" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/libros-hatha-pradipika.jpg" width="900" height="793" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="900" height="688" loading="lazy" alt="" aria-hidden="true">
-          <img class="copia" src="assets/img/thumbs/natalia-y-gharote.jpg" width="900" height="656" loading="lazy" alt="" aria-hidden="true">
+          <img src="assets/img/thumbs/banner-escuela-hatha-yoga-misiones.jpg" width="720" height="900" loading="lazy" alt="Dos personas posan junto al cartel de la Escuela Hatha Yoga Misiones">
+          <img src="assets/img/thumbs/gharote-conferencia-om-shanti.jpg" width="900" height="688" loading="lazy" alt="El Dr. Manmath Gharote sonríe con las manos en namasté frente a una diapositiva que dice Om Shantih">
+          <img src="assets/img/thumbs/grupo-india-sala-conferencias.jpg" width="900" height="675" loading="lazy" alt="Grupo de mujeres y dos hombres posando en una sala de conferencias en la India">
+          <img src="assets/img/thumbs/natalia-y-gharote.jpg" width="900" height="656" loading="lazy" alt="Natalia Solvey y el Dr. Manmath Gharote al aire libre">
           </div>
         </div>
         <button type="button" class="cinta-flecha prev" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
@@ -673,7 +865,7 @@
         <div class="datos-grid">
           <div class="col">
             <!-- Cursada 2027 -->
-            <article class="card reveal">
+            <article class="card i-cursada reveal">
               <h3>Cursada 2027</h3>
               <ol class="timeline">
                 <li class="hito"><span class="fecha">13 de marzo</span>Inicio</li>
@@ -691,6 +883,7 @@
                   </ul>
                 </li>
                 <li>Las clases quedan grabadas</li>
+                <li><span class="skt">Satsaṅga</span> mensual obligatorio: un domingo al mes, de 10:30 a 12, por Zoom. Forma parte de las 297 h cátedra en vivo y se abona aparte.</li>
               </ul>
               <div class="carga" role="group" aria-label="Carga horaria: 512 horas cátedra">
                 <div><span class="num">297</span><span class="lbl">h en vivo</span></div>
@@ -700,7 +893,7 @@
             </article>
 
             <!-- Triple certificación -->
-            <article class="card cert reveal">
+            <article class="card cert i-cert reveal">
               <h3>Triple certificación</h3>
               <ul class="puntos">
                 <li>Certificación Nacional de Formación Profesional (Res. CSCYE N.º 261/06 y Res. CFE N.º 13/07)</li>
@@ -712,7 +905,7 @@
 
           <div class="col">
             <!-- Inversión -->
-            <article class="card reveal">
+            <article class="card i-inv reveal">
               <h3>Inversión</h3>
               <table>
                 <tbody>
@@ -722,10 +915,11 @@
                   <tr><th scope="row">Certificación de Lonavla</th><td class="valor">USD 99</td></tr>
                 </tbody>
               </table>
+              <p class="inv-nota">El <span class="skt">Satsaṅga</span> mensual se abona aparte.</p>
             </article>
 
             <!-- Promociones -->
-            <div class="reveal">
+            <div class="i-promos reveal">
               <h3 class="promos-t">Promociones</h3>
               <ul class="promos">
                 <li class="promo"><span class="pct">50<small>% OFF</small></span><p>En la <strong>matrícula</strong> pagándola antes de enero de 2027.</p></li>
@@ -736,7 +930,7 @@
             </div>
 
             <!-- Medios de pago -->
-            <article class="card pagos reveal">
+            <article class="card pagos i-medios reveal">
               <h3>Medios de pago</h3>
               <p class="pagos-intro">Elegí la forma que te resulte más cómoda para organizar tu inversión.</p>
               <ul class="puntos">
@@ -749,6 +943,22 @@
           </div>
         </div>
 
+        <!-- Cómo inscribirte y charlas informativas -->
+        <div class="insc-grid">
+          <article class="card destacada reveal" aria-labelledby="h-insc">
+            <h3 id="h-insc">Te inscribís pagando la matrícula</h3>
+            <p class="insc-linea">La inscripción se realiza abonando la matrícula.</p>
+            <p class="insc-desc">Si te inscribís antes de que termine 2026, tenés el descuento: <strong>50 % OFF en la matrícula</strong>.</p>
+          </article>
+          <article class="card reveal" aria-labelledby="h-charlas">
+            <h3 id="h-charlas">Charlas informativas</h3>
+            <ul class="charlas">
+              <li><span class="mes">Diciembre</span>Charla informativa</li>
+              <li><span class="mes">Marzo</span>Charla informativa, antes del inicio de clases</li>
+            </ul>
+          </article>
+        </div>
+
         <div class="cta-centro reveal">
           <a class="btn btn-primary btn-lg" data-wa href="https://wa.me/5493764118610">Quiero inscribirme</a>
           <p class="cta-mail">O escribinos a <a href="mailto:yoga.lonavla@gmail.com?subject=Consulta%20%C2%B7%20Formaci%C3%B3n%20en%20Yoga%20Tradicional%20Nivel%20I%202027">yoga.lonavla@gmail.com</a></p>
@@ -758,10 +968,10 @@
           <h3 id="h-extra">La formación es 100 % online</h3>
           <p>Estas actividades son extracurriculares y optativas, y no están incluidas en el valor de la formación:</p>
           <ul class="puntos">
-            <li>Retiros, seminarios y charlas abiertas de la Gira del Yoga Tradicional con el Dr. Gharote, en agosto y septiembre: un retiro intensivo, un encuentro en Buenos Aires y seminarios en Bariloche.</li>
+            <li>Retiros, seminarios y charlas abiertas de la Gira del Yoga Tradicional con el Dr. Manmath Gharote, en agosto y septiembre: un retiro intensivo, un encuentro en Buenos Aires y seminarios en Bariloche.</li>
             <li>Los viajes a la India en enero.</li>
-            <li>El <span class="skt">Satsaṅga</span> de un domingo al mes con el Dr. Gharote.</li>
           </ul>
+          <p class="extra-sat">El <span class="skt">Satsaṅga</span> mensual no es optativo: es obligatorio y forma parte de las horas cátedra en vivo, pero se abona aparte.</p>
         </aside>
       </div>
     </section>
@@ -885,8 +1095,12 @@
     (function () {
       const cinta = document.getElementById('cinta');
       if (!cinta) return;
-      const fotos = [...cinta.querySelectorAll('img')];
-      const porJuego = fotos.length / 3;                          // la tira tiene 3 juegos iguales para dar la vuelta sin saltos
+      const pista = cinta.querySelector('.cinta-pista');
+      const originales = [...pista.querySelectorAll('img')];
+      // se repite el juego de fotos dos veces más para que el recorrido dé la vuelta sin saltos (las copias no se leen en voz alta)
+      for (let k = 0; k < 2; k++) originales.forEach(i => { const c = i.cloneNode(); c.className = 'copia'; c.alt = ''; c.setAttribute('aria-hidden', 'true'); pista.appendChild(c); });
+      const fotos = [...pista.querySelectorAll('img')];
+      const porJuego = originales.length;
       const reducir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const VELOCIDAD = 38;                                       // píxeles por segundo
       const ESPERA = 4000;                                        // ms sin avanzar después de que alguien la toca

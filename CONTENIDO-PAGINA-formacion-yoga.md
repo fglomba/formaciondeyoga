@@ -29,7 +29,7 @@
 
 La formación integra **dos dimensiones**, presentadas en dos columnas cortas:
 
-- ***Prāṇasaṃyama Yoga* · La transformación psicofísica.** Las prácticas tradicionales de *āsana*, *prāṇāyāma* y *dhāraṇā* para regular cuerpo y mente, interiorizar la atención y desarrollar la concentración.
+- ***Prāṇasaṃyama Yoga* · La transformación psicofísica.** Las prácticas tradicionales de *āsana*, *prāṇāyāma*, *mudrā*, *kriyā* y *dhāraṇā* para regular cuerpo y mente, interiorizar la atención y desarrollar la concentración.
 - ***Bhāvanā Yoga* · La transformación de las actitudes.** Los principios éticos y filosóficos del Yoga aplicados a la vida cotidiana, para cultivar paz interior y relaciones armoniosas.
 
 **Frase de cierre del bloque:** "Una escuela de vida y un camino de liberación."
@@ -57,16 +57,18 @@ Una lista compacta de los 8 módulos, sin acordeón, con una línea cada uno:
 5. **Purificación · Nāḍī Śuddhi** · 40 h. Armonizar cuerpo, mente, emociones y energía.
 6. **Organización de la práctica personal** · 32 h. Una práctica sólida, segura y progresiva.
 7. **Filosofía del Yoga** · 40 h. Yogasūtra de Patañjali y los ocho miembros del Aṣṭāṅga Yoga.
-8. **Práctica del Yoga Tradicional** · 240 h. El corazón de la formación. *(destacar)*
+8. **Práctica del Yoga Tradicional** · 240 h. El corazón de la formación: *āsana*, *prāṇāyāma*, *mudrā*, *kriyā* y *dhāraṇā*. *(destacar)*
 
 Los módulos se numeran 1, 2, 3… 8 (sin ceros a la izquierda).
 
 **Satsaṅga** (tarjeta con foto, debajo del módulo 8):
-- Etiquetas: Un domingo al mes · De 10:30 a 12 · Por Zoom · Optativo
-- Encuentro en vivo desde la India con el Dr. M. L. Gharote
+- Etiquetas: Un domingo al mes · De 10:30 a 12 · Por Zoom · Obligatorio
+- Encuentro en vivo desde la India con el Dr. Manmath Gharote
 - Traducción simultánea de Natalia Solvey
 - **Texto:** A lo largo del año, un domingo al mes de 10:30 a 12 nos encontramos para el estudio de los manuscritos antiguos de reciente publicación. Esto nos permite conocer de manera directa y guiada las enseñanzas originales de los maestros del Haṭha Yoga tradicional.
-- **Aclaración:** Es una actividad optativa y no está incluida en el valor de la formación.
+- **Aclaración:** Es obligatorio y forma parte de las 297 horas cátedra en vivo, pero se abona aparte: no está incluido en el valor de la formación.
+
+**Biblioteca de textos yoguis** (tarjeta con foto, debajo del Satsaṅga): Una vez inscriptos, acceden a una biblioteca llena de textos yoguis.
 
 ---
 
@@ -74,12 +76,12 @@ Los módulos se numeran 1, 2, 3… 8 (sin ceros a la izquierda).
 
 **Texto:** Esta formación nace de tres instituciones unidas por el Yoga Tradicional y por un mismo maestro.
 
-**El maestro, con foto:** **Dr. M. L. Gharote**, director de The Lonavla Yoga Institute (India) y Director Honorario de la formación. Viaja cada año desde la India para compartir con nuestra comunidad.
+**El maestro, con foto:** **Dr. Manmath M. Gharote**, consultor de The Lonavla Yoga Institute (India). Viaja cada año desde la India para compartir con nuestra comunidad. Se dedica a la enseñanza, la investigación y la difusión del Yoga Tradicional. *Leer más* (se abre y se cierra): nació en Lonavla, India, en 1966, y se formó en Educación Física y Yoga, Yoga Terapéutico, Medicina Deportiva, Fisioterapia y Periodismo Deportivo; colabora de cerca con Ātmabodha (satsaṅga mensuales, conferencias, seminarios, retiros intensivos y actividades de formación para practicantes de habla hispana).
 
-**Foto de los tres juntos** (Estela Puchalski, el Dr. M. L. Gharote y Natalia Solvey), debajo de la tarjeta del maestro.
+**Foto de los tres juntos** (Estela Puchalski, el Dr. Manmath Gharote y Natalia Solvey), debajo de la tarjeta del maestro.
 
 **Una fila con los tres logos, el nombre debajo y sus links**, cada uno con el retrato de su director/a. Cada logo lleva a su web, y debajo van los íconos de sus redes. Todos abren en pestaña nueva.
-- **The Lonavla Yoga Institute (India)** · Dr. M. L. Gharote
+- **The Lonavla Yoga Institute (India)** · Dr. Manmath M. Gharote (consultor)
   - Web: https://www.lonavlayoga.org/
 - **Ātmabodha · Escuela de Yoga Tradicional** · Natalia Solvey
   - Web: https://yogatmabodha.com/
@@ -90,9 +92,21 @@ Los módulos se numeran 1, 2, 3… 8 (sin ceros a la izquierda).
   - Instagram: https://www.instagram.com/f.holisticadelaselva/
   - Facebook: https://www.facebook.com/estudiaryoga
 
+**Información de cada institución** (en su tarjeta: las primeras líneas a la vista y el resto en un "Leer más" que se abre y se cierra):
+- **The Lonavla Yoga Institute:** Fundado en 1996, se dedica a preservar, investigar, enseñar y difundir el Yoga Tradicional, con atención especial a sus fuentes originales y a los antiguos manuscritos. Publica ediciones críticas de textos tradicionales, traducciones, catálogos y glosarios, y organiza cursos y seminarios en la India y en el extranjero.
+- **Ātmabodha:** Fundada en 2018 por Leda Pilello y Natalia Solvey, licenciadas en Estudios Orientales con formación en Hinduismo y Yoga, para promover el conocimiento y la práctica del Yoga Tradicional en el mundo de habla hispana. Desde la pandemia es una escuela de formación 100 % a distancia. Mantiene un vínculo permanente con The Lonavla Yoga Institute: viajes de estudio a la India, participación anual en su International Yoga Workshop, la Gira del Yoga Tradicional y el satsaṅga mensual con traducción simultánea. Su misión: contribuir al renacimiento del Yoga Tradicional, recuperando la profundidad de sus enseñanzas y promoviendo su integración en la vida contemporánea.
+- **Fundación Holística de la Selva:** Creada en 2022 en Posadas, Misiones, por Estela Marisa Puchalski y María Luisa Gómez de Oliveira, para preservar, transmitir y expandir el conocimiento del yoga tradicional recibido del Dr. Manmath Gharote, de Alicia Souto y de Vivian Lagier. Respalda institucionalmente al Instituto de Yoga Misiones Dr. M. L. Gharote, inscripto en el ámbito educativo de Misiones a través del SPEPM, y promueve la formación de profesores. Colabora con la difusión de las enseñanzas de The Lonavla Yoga Institute y coopera con Ātmabodha. Su misión trasciende el yoga: impulsa las terapias alternativas y holísticas, la formación integral y actividades como retiros, seminarios y encuentros, y trabaja por el reconocimiento institucional y social de estas disciplinas. Cierre: "Desde Misiones hacia el mundo, hacemos del conocimiento un camino de transformación." Dirección: Bermúdez 1620, Posadas, Misiones, Argentina.
+
+
 **Línea final:** Equipo docente con formación universitaria y larga trayectoria en la práctica y enseñanza del Haṭha Yoga.
 
-**Cinta de fotos** (al final del bloque): una tira de fotos grandes que avanza sola hacia un costado, sin textos ni descripciones. También se maneja a mano: con flechas a los lados (anterior y siguiente) o deslizando con el dedo. Al tocarla se frena unos segundos y después retoma sola.
+**Plantel docente** (dentro del bloque, después de la línea final; tarjetas con foto):
+- **Andrea Valeria Glomba:** Médica, recibida de la Universidad Nacional de Misiones. Consultora de Anatomía y Fisiología. Instructora de Haṭha Yoga Tradicional.
+- **Natalia Solvey:** Licenciada en Estudios Orientales por la Universidad del Salvador, especializada en India y Yoga. Directora de la Escuela de Yoga Tradicional Ātmabodha, filial oficial de The Lonavla Yoga Institute (India) en Argentina. *Leer más* (se abre y se cierra): Experta en India y Yoga por la USAL; diplomada como Yoga Terapeuta por The Lonavla Yoga Institute; docente y parte de la puesta en marcha del Instructorado de Yoga de Lonavla en Buenos Aires; desde 2018 traductora del Dr. Manmath Gharote y representante de The Lonavla Yoga Institute en el mundo de habla hispana; conferencista y escritora (*Yoga Tradicional - 9 Lecciones* y *El Yoga tiene sus Razones*); titular de cátedra en la Tecnicatura Superior en Yoga de la USAL (los cuatro niveles de Teoría y Práctica de las Técnicas de Yoga) y en la Tecnicatura en Yoga y Salud Integral de la Universidad del Gran Rosario.
+- **Marcela Peper:** Doctorado en Ciencias Biológicas en la Facultad de Ciencias Exactas y Naturales de la UBA. Profesora adjunta de la cátedra Hatha Yoga 1 en la Tecnicatura en Yoga y Salud Integral de la Universidad del Gran Rosario (2026). ⚠️ PENDIENTE: foto.
+- **Graciela Bonboni:** ⚠️ PENDIENTE: información y foto.
+
+**Cinta de fotos** (al final del bloque; 24 fotos, incluidas las de las cursadas y los viajes a la India): una tira de fotos grandes que avanza sola hacia un costado, sin textos ni descripciones. También se maneja a mano: con flechas a los lados (anterior y siguiente) o deslizando con el dedo. Al tocarla se frena unos segundos y después retoma sola.
 
 ---
 
@@ -108,6 +122,7 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
   - Lunes y jueves, de 19:20 a 20:45
   - Miércoles y viernes, de 8:00 a 9:20
 - Las clases quedan grabadas
+- Satsaṅga mensual obligatorio: un domingo al mes, de 10:30 a 12, por Zoom. Forma parte de las 297 h cátedra en vivo y se abona aparte.
 - 512 h cátedra: 297 en vivo + 215 de trabajo domiciliario
 
 **Triple certificación**
@@ -127,6 +142,14 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 - 15 % OFF con pago total antes del inicio de clases
 - 10 % OFF pagando en 2 veces (hasta marzo y antes de junio)
 
+**Te inscribís pagando la matrícula** (tarjeta destacada, antes del botón de inscripción):
+- La inscripción se realiza abonando la matrícula.
+- Si te inscribís antes de que termine 2026, tenés el descuento: 50 % OFF en la matrícula.
+
+**Charlas informativas** (tarjeta junto a la anterior):
+- Diciembre: charla informativa.
+- Marzo: charla informativa, antes del inicio de clases.
+
 **Medios de pago** (sin datos bancarios en la página; los datos se envían a quien se inscribe):
 - Mercado Pago: se puede pagar en cuotas y con crédito, entre otras opciones de la plataforma.
 - Transferencia bancaria.
@@ -136,7 +159,7 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 **Aclaración** (recuadro): La formación es 100 % online. Son actividades extracurriculares, optativas y no incluidas en el valor de la formación:
 - Retiros, seminarios y charlas abiertas de la Gira del Yoga Tradicional con el Dr. Gharote, en agosto y septiembre: un retiro intensivo, un encuentro en Buenos Aires y seminarios en Bariloche.
 - Los viajes a la India en enero.
-- El Satsaṅga de un domingo al mes con el Dr. Gharote.
+- Aparte: el Satsaṅga mensual no es optativo; es obligatorio y forma parte de las horas cátedra en vivo, pero se abona aparte.
 
 ---
 
