@@ -66,9 +66,9 @@ Los módulos se numeran 1, 2, 3… 8 (sin ceros a la izquierda).
 - Encuentro en vivo desde la India con el Dr. Manmath Gharote
 - Traducción simultánea de Natalia Solvey
 - **Texto:** En este módulo se estudian los manuscritos antiguos de reciente publicación, en vivo con el Dr. Manmath Gharote desde la India.
-- **Aclaración:** Está incluido en las horas cátedra. Se abona aparte.
+- **Aclaración:** Está incluido en las horas cátedra.
 
-**Biblioteca** (tarjeta con foto, debajo del Módulo 9): Una vez inscriptos, acceden a una biblioteca virtual llena de publicaciones.
+**Biblioteca de textos** (tarjeta con foto, debajo del Módulo 9): Una vez inscriptos, acceden a una biblioteca virtual llena de publicaciones.
 
 ---
 
@@ -136,7 +136,7 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 **Inversión**
 - Matrícula: AR$ 210.000
 - 10 cuotas de AR$ 210.000
-- Afiliación a Lonavla: USD 60
+- Afiliación a Lonavla (Satsaṅga): USD 60
 - Certificación de Lonavla: USD 99
 
 **Promociones** (destacadas):
@@ -159,10 +159,10 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 - Transferencia en dólares.
 - Mensaje: "Cuando te inscribís, te enviamos los datos para pagar."
 
-**Aclaración** (recuadro): La formación es 100 % online. Son actividades extracurriculares, optativas y no incluidas en el valor de la formación:
-- Retiros, seminarios y charlas abiertas de la Gira del Yoga Tradicional con el Dr. Gharote, en agosto y septiembre: un retiro intensivo, un encuentro en Buenos Aires y seminarios en Bariloche.
-- Los viajes a la India en enero.
-- Aparte: el Módulo 9 (Satsaṅga) no es optativo: es obligatorio, está incluido en las horas cátedra y se abona aparte.
+**Aclaración** (recuadro): La formación es 100 % online. Esto no está incluido en la cuota mensual ni en la inscripción:
+- **Obligatorio:** Módulo 9: los Satsaṅgas mensuales y la afiliación a The Lonavla Yoga Institute.
+- **Optativo:** retiros presenciales anuales; seminarios presenciales; viajes a la India, en el mes de enero.
+- Nota: las fechas y los detalles se irán informando (todavía no se publican fechas).
 
 ---
 
