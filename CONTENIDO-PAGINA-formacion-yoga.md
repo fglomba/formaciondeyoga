@@ -61,14 +61,14 @@ Una lista compacta de los 8 módulos, sin acordeón, con una línea cada uno:
 
 Los módulos se numeran 1, 2, 3… 8 (sin ceros a la izquierda).
 
-**Satsaṅga** (tarjeta con foto, debajo del módulo 8):
-- Etiquetas: Un domingo al mes · De 10:30 a 12 · Por Zoom · Obligatorio
+**Módulo 9 · Satsaṅga** (tarjeta con foto, debajo del módulo 8):
+- Etiquetas: Un domingo al mes · De 10:30 a 12 · Por Zoom
 - Encuentro en vivo desde la India con el Dr. Manmath Gharote
 - Traducción simultánea de Natalia Solvey
-- **Texto:** A lo largo del año, un domingo al mes de 10:30 a 12 nos encontramos para el estudio de los manuscritos antiguos de reciente publicación. Esto nos permite conocer de manera directa y guiada las enseñanzas originales de los maestros del Haṭha Yoga tradicional.
-- **Aclaración:** Es obligatorio y forma parte de las 297 horas cátedra en vivo, pero se abona aparte: no está incluido en el valor de la formación.
+- **Texto:** En este módulo se estudian los manuscritos antiguos de reciente publicación, en vivo con el Dr. Manmath Gharote desde la India.
+- **Aclaración:** Está incluido en las horas cátedra. Se abona aparte.
 
-**Biblioteca de textos yoguis** (tarjeta con foto, debajo del Satsaṅga): Una vez inscriptos, acceden a una biblioteca llena de textos yoguis.
+**Biblioteca** (tarjeta con foto, debajo del Módulo 9): Una vez inscriptos, acceden a una biblioteca virtual llena de publicaciones.
 
 ---
 
@@ -91,6 +91,7 @@ Los módulos se numeran 1, 2, 3… 8 (sin ceros a la izquierda).
   - Web: https://fundacionholisticadelaselva.org/
   - Instagram: https://www.instagram.com/f.holisticadelaselva/
   - Facebook: https://www.facebook.com/estudiaryoga
+  - Facebook (segunda página): https://www.facebook.com/profile.php?id=61555878812645&locale=es_LA
 
 **Información de cada institución** (en su tarjeta: las primeras líneas a la vista y el resto en un "Leer más" que se abre y se cierra):
 - **The Lonavla Yoga Institute:** Fundado en 1996, se dedica a preservar, investigar, enseñar y difundir el Yoga Tradicional, con atención especial a sus fuentes originales y a los antiguos manuscritos. Publica ediciones críticas de textos tradicionales, traducciones, catálogos y glosarios, y organiza cursos y seminarios en la India y en el extranjero.
@@ -103,8 +104,10 @@ Los módulos se numeran 1, 2, 3… 8 (sin ceros a la izquierda).
 **Plantel docente** (dentro del bloque, después de la línea final; hilera chica de tarjetas con foto que se corre hacia el costado con flechas, de bajo perfil, no avanza sola):
 - **Andrea Valeria Glomba:** Médica, recibida de la Universidad Nacional de Misiones. Consultora de Anatomía y Fisiología. Instructora de Haṭha Yoga Tradicional.
 - **Natalia Solvey:** Licenciada en Estudios Orientales por la Universidad del Salvador, especializada en India y Yoga. Directora de la Escuela de Yoga Tradicional Ātmabodha, filial oficial de The Lonavla Yoga Institute (India) en Argentina. *Leer más* (se abre en un recuadro): Experta en India y Yoga por la USAL; diplomada como Yoga Terapeuta por The Lonavla Yoga Institute; docente y parte de la puesta en marcha del Instructorado de Yoga de Lonavla en Buenos Aires; desde 2018 traductora del Dr. Manmath Gharote y representante de The Lonavla Yoga Institute en el mundo de habla hispana; conferencista y escritora (*Yoga Tradicional - 9 Lecciones* y *El Yoga tiene sus Razones*); titular de cátedra en la Tecnicatura Superior en Yoga de la USAL (los cuatro niveles de Teoría y Práctica de las Técnicas de Yoga) y en la Tecnicatura en Yoga y Salud Integral de la Universidad del Gran Rosario.
-- **Marcela Peper:** Doctorado en Ciencias Biológicas en la Facultad de Ciencias Exactas y Naturales de la UBA. Profesora adjunta de la cátedra Hatha Yoga 1 en la Tecnicatura en Yoga y Salud Integral de la Universidad del Gran Rosario (2026). ⚠️ PENDIENTE: foto.
-- **Graciela Bonboni:** ⚠️ PENDIENTE: información y foto.
+- **Marcela Peper:** Doctorado en Ciencias Biológicas en la Facultad de Ciencias Exactas y Naturales de la UBA. Profesora adjunta de la cátedra Hatha Yoga 1 en la Tecnicatura en Yoga y Salud Integral de la Universidad del Gran Rosario (2026).
+- **Graciela Bonboni:** Maestra en Artes Visuales. Técnica Universitaria en Yoga por la Universidad del Salvador. *Leer más* (se abre en un recuadro): Formación, Perfeccionamiento y Especialización Terapéutica y Pedagógica en Yoga Tradicional en la Escuela Ātmabodha; dedicada a la práctica, el estudio y la docencia en Haṭha Yoga a nivel internacional; entre sus maestros se mencionan el Dr. Manmath Gharote, el Prof. Carlos Laporte, el Prof. Esteban Piltch, la Lic. Natalia Solvey y la Prof. Leda Pilello.
+- **Florencia Taylor:** Licenciada en Ciencias Políticas (Diploma de Honor), Universidad de Buenos Aires (UBA). Representante de la Escuela Ātmabodha en Bariloche. *Leer más* (se abre en un recuadro): dedicada a la práctica, el estudio y la docencia en Haṭha Yoga desde 2010; formada como instructora de Haṭha Yoga y de meditación; entre sus maestros se mencionan la Lic. Maite Fernandez de Bobadilla, el Dr. Manmath Gharote, la Lic. Natalia Solvey y la Escuela Vassanti Veda Yoga.
+- **Luz Genova:** ⚠️ PENDIENTE: información y foto (la tarjeta queda con un círculo de iniciales y "[a confirmar]").
 
 **Cinta de fotos** (banda de ancho completo con fondo azul marino al final del bloque; 24 fotos, incluidas las de las cursadas y los viajes a la India): una tira de fotos muy grandes que avanza sola hacia un costado, sin textos ni descripciones. También se maneja a mano: con flechas a los lados (anterior y siguiente) o deslizando con el dedo. Al tocarla se frena unos segundos y después retoma sola.
 
@@ -122,7 +125,7 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
   - Lunes y jueves, de 19:20 a 20:45
   - Miércoles y viernes, de 8:00 a 9:20
 - Las clases quedan grabadas
-- Satsaṅga mensual obligatorio: un domingo al mes, de 10:30 a 12, por Zoom. Forma parte de las 297 h cátedra en vivo y se abona aparte.
+- Un domingo al mes, de 10:30 a 12, por Zoom: Módulo 9 (Satsaṅga), incluido en las horas cátedra.
 - 512 h cátedra: 297 en vivo + 215 de trabajo domiciliario
 
 **Triple certificación**
@@ -147,7 +150,7 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 - Si te inscribís antes de que termine 2026, tenés el descuento: 50 % OFF en la matrícula.
 
 **Charlas informativas** (tarjeta junto a la anterior):
-- Diciembre: charla informativa.
+- 4 de diciembre, 18:30 h, por Zoom: charla informativa.
 - Marzo: charla informativa, antes del inicio de clases.
 
 **Medios de pago** (sin datos bancarios en la página; los datos se envían a quien se inscribe):
@@ -159,7 +162,7 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
 **Aclaración** (recuadro): La formación es 100 % online. Son actividades extracurriculares, optativas y no incluidas en el valor de la formación:
 - Retiros, seminarios y charlas abiertas de la Gira del Yoga Tradicional con el Dr. Gharote, en agosto y septiembre: un retiro intensivo, un encuentro en Buenos Aires y seminarios en Bariloche.
 - Los viajes a la India en enero.
-- Aparte: el Satsaṅga mensual no es optativo; es obligatorio y forma parte de las horas cátedra en vivo, pero se abona aparte.
+- Aparte: el Módulo 9 (Satsaṅga) no es optativo: es obligatorio, está incluido en las horas cátedra y se abona aparte.
 
 ---
 
@@ -177,3 +180,4 @@ Un solo bloque de datos, ordenado en tarjetas o en columnas.
   - https://www.instagram.com/f.holisticadelaselva/
   - https://www.facebook.com/atma.bodha.3
   - https://www.facebook.com/estudiaryoga (Facebook de la Fundación Holística de la Selva)
+  - https://www.facebook.com/profile.php?id=61555878812645&locale=es_LA (segunda página de Facebook de la Fundación Holística de la Selva)

@@ -215,6 +215,8 @@
     .satsang h3 { font-size: var(--h-feature); margin-bottom: 10px; }
     .satsang .linea-dato { font-family: var(--f-serif); font-weight: 700; font-size: var(--h-item); line-height: 1.25; color: var(--salvia-osc); margin: 0 0 4px; }
     .satsang .texto { margin: 16px 0 0; }
+    .satsang .top { margin-bottom: 4px; }
+    .satsang .mod-num { font-size: 2.6rem; text-align: left; color: var(--salvia); }
 
     /* ============ 5 · QUIÉNES NOS RESPALDAN ============ */
     .maestro { margin-top: 44px; background: var(--noche); color: var(--crema); border-radius: var(--radius); overflow: hidden; display: grid; }
@@ -648,19 +650,20 @@
           </div>
         </article>
 
-        <!-- Satsaṅga: encuentros mensuales con el Dr. Manmath Gharote -->
+        <!-- Módulo 9 · Satsaṅga: encuentros mensuales con el Dr. Manmath Gharote -->
         <article class="satsang reveal" aria-labelledby="h-sat">
           <div class="foto">
             <img src="assets/img/gharote-sonriendo-manuscritos.jpg" width="1600" height="1161" loading="lazy"
                  alt="El Dr. Manmath Gharote, con kurta roja, sostiene sonriendo dos manuscritos antiguos">
           </div>
           <div class="cuerpo">
-            <ul class="chips" aria-label="Datos del Satsaṅga"><li>Un domingo al mes</li><li>De 10:30 a 12</li><li>Por Zoom</li><li>Obligatorio</li></ul>
-            <h3 id="h-sat"><span class="skt">Satsaṅga</span></h3>
+            <div class="top"><span class="mod-num" aria-hidden="true">9</span></div>
+            <h3 id="h-sat"><span class="sr-only">Módulo 9: </span><span class="skt">Satsaṅga</span></h3>
+            <ul class="chips" aria-label="Datos del Satsaṅga"><li>Un domingo al mes</li><li>De 10:30 a 12</li><li>Por Zoom</li></ul>
             <p class="linea-dato">Encuentro en vivo desde la India con el Dr. Manmath Gharote</p>
             <p class="linea-dato">Traducción simultánea de Natalia Solvey</p>
-            <p class="texto">A lo largo del año, un domingo al mes de 10:30 a 12 nos encontramos para el estudio de los manuscritos antiguos de reciente publicación. Esto nos permite conocer de manera directa y guiada las enseñanzas originales de los maestros del <span class="skt">Haṭha Yoga</span> tradicional.</p>
-            <p class="satsang-aviso">Es obligatorio y forma parte de las 297 horas cátedra en vivo, pero se abona aparte: no está incluido en el valor de la formación.</p>
+            <p class="texto">En este módulo se estudian los manuscritos antiguos de reciente publicación, en vivo con el Dr. Manmath Gharote desde la India.</p>
+            <p class="satsang-aviso">Está incluido en las horas cátedra. Se abona aparte.</p>
           </div>
         </article>
 
@@ -671,7 +674,7 @@
           </div>
           <div class="cuerpo">
             <h3 id="h-bib">Biblioteca de textos yoguis</h3>
-            <p class="texto">Una vez inscriptos, acceden a una biblioteca llena de textos yoguis.</p>
+            <p class="texto">Una vez inscriptos, acceden a una biblioteca virtual llena de publicaciones.</p>
           </div>
         </article>
       </div>
@@ -765,6 +768,7 @@
               <div class="redes" role="group" aria-label="Redes de la Fundación Holística de la Selva">
                 <a href="https://www.instagram.com/f.holisticadelaselva/" aria-label="Instagram de la Fundación Holística de la Selva" title="Instagram"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></a>
                 <a href="https://www.facebook.com/estudiaryoga" aria-label="Facebook de la Fundación Holística de la Selva" title="Facebook"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a>
+                <a href="https://www.facebook.com/profile.php?id=61555878812645&amp;locale=es_LA" aria-label="Facebook de la Fundación Holística de la Selva (segunda página)" title="Facebook (segunda página)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg></a>
               </div>
             </div>
           </li>
@@ -801,11 +805,11 @@
                 <li>Licenciada en Estudios Orientales por la Universidad del Salvador, especializada en India y Yoga.</li>
                 <li>Directora de la Escuela de Yoga Tradicional Ātmabodha.</li>
               </ul>
-              <button type="button" class="d-leer" id="dLeer" aria-haspopup="dialog">Leer más</button>
+              <button type="button" class="d-leer" data-dialogo="dNatalia" aria-haspopup="dialog">Leer más</button>
             </article>
 
             <article class="d-card" aria-labelledby="d-marcela">
-              <div class="d-av sin-foto" role="img" aria-label="Espacio para la foto de Marcela Peper"><span aria-hidden="true">MP</span></div>
+              <img class="d-av" src="assets/img/docente-marcela-peper.jpg" width="480" height="480" loading="lazy" alt="Retrato de Marcela Peper, de perfil, con el pelo oscuro ondulado y un pulóver rojo">
               <h4 id="d-marcela">Marcela Peper</h4>
               <ul class="d-roles">
                 <li>Doctorado en Ciencias Biológicas, Universidad de Buenos Aires (UBA).</li>
@@ -814,8 +818,28 @@
             </article>
 
             <article class="d-card" aria-labelledby="d-graciela">
-              <div class="d-av sin-foto" role="img" aria-label="Espacio para la foto de Graciela Bonboni"><span aria-hidden="true">GB</span></div>
+              <img class="d-av" src="assets/img/docente-graciela-bonboni.jpg" width="480" height="480" loading="lazy" alt="Retrato de Graciela Bonboni, sonriendo, con anteojos y un pañuelo violeta">
               <h4 id="d-graciela">Graciela Bonboni</h4>
+              <ul class="d-roles">
+                <li>Maestra en Artes Visuales.</li>
+                <li>Técnica Universitaria en Yoga por la Universidad del Salvador.</li>
+              </ul>
+              <button type="button" class="d-leer" data-dialogo="dGraciela" aria-haspopup="dialog">Leer más</button>
+            </article>
+
+            <article class="d-card" aria-labelledby="d-florencia">
+              <img class="d-av" src="assets/img/docente-florencia-taylor.jpg" width="480" height="480" loading="lazy" alt="Retrato de Florencia Taylor, sonriendo, con el pelo largo y castaño rojizo">
+              <h4 id="d-florencia">Florencia Taylor</h4>
+              <ul class="d-roles">
+                <li>Licenciada en Ciencias Políticas (Diploma de Honor), Universidad de Buenos Aires (UBA).</li>
+                <li>Representante de la Escuela Ātmabodha en Bariloche.</li>
+              </ul>
+              <button type="button" class="d-leer" data-dialogo="dFlorencia" aria-haspopup="dialog">Leer más</button>
+            </article>
+
+            <article class="d-card" aria-labelledby="d-luz">
+              <div class="d-av sin-foto" role="img" aria-label="Espacio para la foto de Luz Genova"><span aria-hidden="true">LG</span></div>
+              <h4 id="d-luz">Luz Genova</h4>
               <p class="d-pend"><span class="pend">Información [a confirmar]</span></p>
             </article>
 
@@ -826,7 +850,7 @@
             <div class="dn-cab">
               <img src="assets/img/avatar-natalia.jpg" width="480" height="480" loading="lazy" alt="">
               <h4 id="dn-t">Natalia Solvey</h4>
-              <button type="button" class="dn-cerrar" id="dCerrar" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+              <button type="button" class="dn-cerrar" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
             </div>
             <ul class="d-roles">
               <li>Licenciada en Estudios Orientales por la Universidad del Salvador, especializada en India y Yoga, con el título de Experta por esa universidad.</li>
@@ -836,6 +860,38 @@
               <li>Desde 2018 es la traductora del Dr. Manmath Gharote y representante de The Lonavla Yoga Institute en el mundo de habla hispana.</li>
               <li>Conferencista y escritora: publicó <em>Yoga Tradicional - 9 Lecciones</em> y <em>El Yoga tiene sus Razones</em>.</li>
               <li>En el ámbito universitario fue titular de cátedra en la carrera de Técnico Superior en Yoga de la USAL, donde dictó los cuatro niveles de Teoría y Práctica de las Técnicas de Yoga, y en la Tecnicatura en Yoga y Salud Integral de la Universidad del Gran Rosario.</li>
+            </ul>
+          </dialog>
+
+          <!-- Información completa de Graciela Bonboni -->
+          <dialog class="d-dialog" id="dGraciela" aria-labelledby="dg-t">
+            <div class="dn-cab">
+              <img src="assets/img/docente-graciela-bonboni.jpg" width="480" height="480" loading="lazy" alt="">
+              <h4 id="dg-t">Graciela Bonboni</h4>
+              <button type="button" class="dn-cerrar" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+            </div>
+            <ul class="d-roles">
+              <li>Maestra en Artes Visuales.</li>
+              <li>Técnica Universitaria en Yoga por la Universidad del Salvador.</li>
+              <li>Formación, Perfeccionamiento y Especialización Terapéutica y Pedagógica en Yoga Tradicional en la Escuela Ātmabodha.</li>
+              <li>Dedicada a la práctica, el estudio y la docencia en <span class="skt">Haṭha Yoga</span> a nivel internacional.</li>
+              <li>Entre sus maestros se mencionan el Dr. Manmath Gharote, el Prof. Carlos Laporte, el Prof. Esteban Piltch, la Lic. Natalia Solvey y la Prof. Leda Pilello.</li>
+            </ul>
+          </dialog>
+
+          <!-- Información completa de Florencia Taylor -->
+          <dialog class="d-dialog" id="dFlorencia" aria-labelledby="df-t">
+            <div class="dn-cab">
+              <img src="assets/img/docente-florencia-taylor.jpg" width="480" height="480" loading="lazy" alt="">
+              <h4 id="df-t">Florencia Taylor</h4>
+              <button type="button" class="dn-cerrar" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+            </div>
+            <ul class="d-roles">
+              <li>Licenciada en Ciencias Políticas (Diploma de Honor) por la Universidad de Buenos Aires (UBA).</li>
+              <li>Dedicada a la práctica, el estudio y la docencia en <span class="skt">Haṭha Yoga</span> desde 2010.</li>
+              <li>Formada como instructora de <span class="skt">Haṭha Yoga</span> y de meditación.</li>
+              <li>Representante de la Escuela Ātmabodha en Bariloche.</li>
+              <li>Entre sus maestros se mencionan la Lic. Maite Fernandez de Bobadilla, el Dr. Manmath Gharote, la Lic. Natalia Solvey y la Escuela Vassanti Veda Yoga.</li>
             </ul>
           </dialog>
         </div>
@@ -904,7 +960,7 @@
                   </ul>
                 </li>
                 <li>Las clases quedan grabadas</li>
-                <li><span class="skt">Satsaṅga</span> mensual obligatorio: un domingo al mes, de 10:30 a 12, por Zoom. Forma parte de las 297 h cátedra en vivo y se abona aparte.</li>
+                <li>Un domingo al mes, de 10:30 a 12, por Zoom: Módulo 9 (<span class="skt">Satsaṅga</span>), incluido en las horas cátedra.</li>
               </ul>
               <div class="carga" role="group" aria-label="Carga horaria: 512 horas cátedra">
                 <div><span class="num">297</span><span class="lbl">h en vivo</span></div>
@@ -936,7 +992,7 @@
                   <tr><th scope="row">Certificación de Lonavla</th><td class="valor">USD 99</td></tr>
                 </tbody>
               </table>
-              <p class="inv-nota">El <span class="skt">Satsaṅga</span> mensual se abona aparte.</p>
+              <p class="inv-nota">El Módulo 9 (<span class="skt">Satsaṅga</span>) se abona aparte.</p>
             </article>
 
             <!-- Promociones -->
@@ -974,7 +1030,7 @@
           <article class="card reveal" aria-labelledby="h-charlas">
             <h3 id="h-charlas">Charlas informativas</h3>
             <ul class="charlas">
-              <li><span class="mes">Diciembre</span>Charla informativa</li>
+              <li><span class="mes">4 de diciembre</span>Charla informativa, a las 18:30 h por Zoom</li>
               <li><span class="mes">Marzo</span>Charla informativa, antes del inicio de clases</li>
             </ul>
           </article>
@@ -992,7 +1048,7 @@
             <li>Retiros, seminarios y charlas abiertas de la Gira del Yoga Tradicional con el Dr. Manmath Gharote, en agosto y septiembre: un retiro intensivo, un encuentro en Buenos Aires y seminarios en Bariloche.</li>
             <li>Los viajes a la India en enero.</li>
           </ul>
-          <p class="extra-sat">El <span class="skt">Satsaṅga</span> mensual no es optativo: es obligatorio y forma parte de las horas cátedra en vivo, pero se abona aparte.</p>
+          <p class="extra-sat">El Módulo 9 (<span class="skt">Satsaṅga</span>) no es optativo: es obligatorio, está incluido en las horas cátedra y se abona aparte.</p>
         </aside>
       </div>
     </section>
@@ -1044,6 +1100,7 @@
             <a href="https://www.instagram.com/f.holisticadelaselva/"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg>Instagram @f.holisticadelaselva</a>
             <a href="https://www.facebook.com/atma.bodha.3"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg>Facebook Ātmabodha</a>
             <a href="https://www.facebook.com/estudiaryoga"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg>Facebook FHS</a>
+            <a href="https://www.facebook.com/profile.php?id=61555878812645&amp;locale=es_LA"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fb"/></svg>Facebook FHS (2)</a>
           </nav>
         </footer>
       </div>
@@ -1134,20 +1191,21 @@
       window.addEventListener('load', estado);
       estado();
 
-      // recuadro con la biografía completa
-      const dlg = document.getElementById('dNatalia');
-      const abrir = document.getElementById('dLeer');
-      const cerrar = document.getElementById('dCerrar');
-      if (!dlg || !abrir) return;
+      // recuadros con la información completa de cada docente (uno por botón "Leer más")
       const bloquear = v => document.body.classList.toggle('modal-abierto', v);
-      abrir.addEventListener('click', () => {
-        if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
-        bloquear(true); cerrar.focus();
+      document.querySelectorAll('.d-leer[data-dialogo]').forEach(abrir => {
+        const dlg = document.getElementById(abrir.dataset.dialogo);
+        const cerrar = dlg && dlg.querySelector('.dn-cerrar');
+        if (!dlg || !cerrar) return;
+        abrir.addEventListener('click', () => {
+          if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+          bloquear(true); cerrar.focus();
+        });
+        const salir = () => { if (typeof dlg.close === 'function') dlg.close(); else dlg.removeAttribute('open'); bloquear(false); abrir.focus(); };
+        cerrar.addEventListener('click', salir);
+        dlg.addEventListener('click', e => { if (e.target === dlg) salir(); });      // toque fuera del recuadro
+        dlg.addEventListener('cancel', e => { e.preventDefault(); salir(); });        // tecla Esc
       });
-      const salir = () => { if (typeof dlg.close === 'function') dlg.close(); else dlg.removeAttribute('open'); bloquear(false); abrir.focus(); };
-      cerrar.addEventListener('click', salir);
-      dlg.addEventListener('click', e => { if (e.target === dlg) salir(); });      // toque fuera del recuadro
-      dlg.addEventListener('cancel', e => { e.preventDefault(); salir(); });        // tecla Esc
     })();
 
     /* ====== Cinta de fotos: avanza sola; las flechas y deslizar con el dedo la manejan a mano ====== */
